@@ -1,26 +1,30 @@
 # shaunjayachandran.com
 
-Personal site for Shaun Jayachandran — Founder & CEO, Crossover Basketball and
-Scholars Academy, and AI Product Advisor at GameRun.ai. Static HTML/CSS/JS,
-no build step required.
+Speaker/personal site for Shaun Jayachandran — Founder & Executive Director,
+Hoops Creating Hope, and Senior Product Manager at GameRun.ai. Static
+HTML/CSS/JS, no build step required.
 
 ## Why this content
 
 The original site (`sites.google.com/view/shaunjayachandran`) wasn't
-reachable from this environment's network, so this version was rebuilt from
-verified public sources (LinkedIn, GameRun.ai, Crossover Basketball's site,
-and press coverage — linked in the Press section). **Before publishing,
-please review every section for accuracy** — titles, dates, stats, and bio
-details — and swap in a real headshot photo in place of the "SJ" monogram.
+reachable from this environment's network. Content was rebuilt to match
+screenshots of the live site provided directly, so copy, pricing, and
+credentials should match the source closely. Photos referenced on the
+original site were broken/unavailable, so this version uses labeled
+placeholder blocks (`.photo-placeholder`) in their place —
+**swap in real photos before publishing.**
 
 ## Structure
 
 ```
-index.html      All page content/sections
-css/style.css   Styling (single stylesheet, CSS variables at the top)
-js/main.js      Mobile nav toggle + scroll-reveal animation
-images/         favicon.svg, og-card.svg (social preview card)
-vercel.json     Basic security headers
+index.html                  Home: hero, speaking topics (3 tiers + tracks), why book Shaun, stats
+about.html                  About Shaun: bio + background & credentials
+hoops-creating-hope.html    Hoops Creating Hope: org overview + impact stats
+book.html                   Book Now: stats banner + booking CTA + contact
+css/style.css               Styling (single stylesheet, CSS variables at the top)
+js/main.js                  Mobile nav toggle + scroll-reveal animation
+images/                     favicon.svg, og-card.svg (social preview card)
+vercel.json                 Basic security headers
 ```
 
 ## Local preview
@@ -50,8 +54,8 @@ vercel --prod # promote to production
 
 ## Customizing
 
-- Update copy directly in `index.html` (sections are labeled with HTML comments
-  via their `id`s: `about`, `impact`, `experience`, `speaking`, `press`, `contact`).
-- Swap the monogram in the About section for a real photo by replacing the
-  `.monogram` div with an `<img>` tag.
+- Each page's copy is directly in its HTML file — no templating/build step.
+- Replace `.photo-placeholder` divs with real `<img>` tags once photos are available.
 - Colors/fonts live as CSS variables at the top of `css/style.css`.
+- The "Request Speaking Engagement" and "Book Me to Speak" buttons are `mailto:`
+  links today. Wire up a real form/service if you want submissions captured.

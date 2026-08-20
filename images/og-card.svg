@@ -16,7 +16,7 @@
   <rect width="1200" height="630" fill="url(#bg)"/>
   <rect width="1200" height="630" fill="url(#glow1)"/>
   <rect width="1200" height="630" fill="url(#glow2)"/>
-  <text x="80" y="270" font-family="Arial, sans-serif" font-weight="700" font-size="72" fill="#ffffff">Shaun Jayachandran</text>
-  <text x="80" y="330" font-family="Arial, sans-serif" font-weight="400" font-size="32" fill="#cbd5e1">Founder, Crossover Basketball · AI Product Advisor, GameRun.ai</text>
-  <text x="80" y="400" font-family="Arial, sans-serif" font-weight="400" font-size="28" fill="#94a3b8">Speaker on gender equity, youth development &amp; sports technology</text>
+  <text x="80" y="250" font-family="Arial, sans-serif" font-weight="700" font-size="64" fill="#ffffff">Shaun Jayachandran</text>
+  <text x="80" y="310" font-family="Arial, sans-serif" font-weight="400" font-size="30" fill="#cbd5e1">Keynote Speaker on AI, Youth Development &amp; Social Impact</text>
+  <text x="80" y="370" font-family="Arial, sans-serif" font-weight="400" font-size="26" fill="#94a3b8">Founder, Hoops Creating Hope · Senior Product Manager, GameRun.ai</text>
 </svg>
