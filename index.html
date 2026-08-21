@@ -51,7 +51,70 @@
       <div class="hero-actions reveal">
         <a class="btn btn-primary" href="/book.html">Book Me to Speak</a>
         <a class="btn btn-ghost" href="#speaking-topics">View Speaking Topics</a>
+       </div>
+    </div>
+  </section>
+
+  <section class="section-booking">
+    <div class="wrap">
+      <div data-fs-success style="display:none; padding:12px; background:#f0f9f7; border:1px solid #639922; border-radius:6px; color:#3b6d11; font-size:13px; font-weight:500; text-align:center; margin-bottom:24px;">
+        ✓ Thanks! I'll check my calendar and follow up within 48 hours.
       </div>
+      <div data-fs-error style="display:none; padding:12px; background:#fcebeb; border:1px solid #e24b4a; border-radius:6px; color:#a32d2d; font-size:13px; margin-bottom:24px;"></div>
+
+      <form id="booking-form">
+        <h2 style="font-size:20px; font-weight:500; margin-bottom:24px; color:#1a1815;">Check availability</h2>
+
+        <div style="margin-bottom:16px;">
+          <label for="dateRange" style="display:block; font-size:14px; font-weight:500; margin-bottom:8px; color:#1a1815;">When are you looking?</label>
+          <select id="dateRange" name="dateRange" data-fs-field required style="width:100%; padding:10px 12px; font-size:14px; border:1px solid #d0ccc0; border-radius:6px; font-family:inherit; background-color:#ffffff; color:#1a1815; box-sizing:border-box;">
+            <option value="">Select a timeframe</option>
+            <option value="Q4 2026">Q4 2026</option>
+            <option value="Q1 2027">Q1 2027</option>
+            <option value="Q2 2027">Q2 2027</option>
+            <option value="Q3 2027">Q3 2027</option>
+            <option value="Open / Flexible">Open / Flexible</option>
+          </select>
+          <span data-fs-error="dateRange" style="color:#a32d2d; font-size:12px; margin-top:4px;"></span>
+        </div>
+
+        <div style="margin-bottom:16px;">
+          <label for="audience" style="display:block; font-size:14px; font-weight:500; margin-bottom:8px; color:#1a1815;">Who's in the room?</label>
+          <select id="audience" name="audience" data-fs-field required style="width:100%; padding:10px 12px; font-size:14px; border:1px solid #d0ccc0; border-radius:6px; font-family:inherit; background-color:#ffffff; color:#1a1815; box-sizing:border-box;">
+            <option value="">Select an audience</option>
+            <option value="Schools & Parent Groups">Schools & Parent Groups</option>
+            <option value="Youth Development Leaders">Youth Development Leaders</option>
+            <option value="Corporate / Product Teams">Corporate / Product Teams</option>
+            <option value="Nonprofits & Mission-Driven">Nonprofits & Mission-Driven</option>
+            <option value="Mixed / Not sure">Mixed / Not sure</option>
+          </select>
+          <span data-fs-error="audience" style="color:#a32d2d; font-size:12px; margin-top:4px;"></span>
+        </div>
+
+        <div style="margin-bottom:16px;">
+          <label for="budget" style="display:block; font-size:14px; font-weight:500; margin-bottom:8px; color:#1a1815;">Budget ballpark?</label>
+          <select id="budget" name="budget" data-fs-field required style="width:100%; padding:10px 12px; font-size:14px; border:1px solid #d0ccc0; border-radius:6px; font-family:inherit; background-color:#ffffff; color:#1a1815; box-sizing:border-box;">
+            <option value="">Select a range</option>
+            <option value="Under $1,500">Under $1,500</option>
+            <option value="$1,500–$2,500">$1,500–$2,500</option>
+            <option value="$2,500–$3,500">$2,500–$3,500</option>
+            <option value="$3,500–$5,000">$3,500–$5,000</option>
+            <option value="$5,000+">$5,000+</option>
+            <option value="Let's talk">Let's talk</option>
+          </select>
+          <span data-fs-error="budget" style="color:#a32d2d; font-size:12px; margin-top:4px;"></span>
+        </div>
+
+        <div style="margin-bottom:16px;">
+          <label for="email" style="display:block; font-size:14px; font-weight:500; margin-bottom:8px; color:#1a1815;">Best email to reach you</label>
+          <input id="email" type="email" name="email" placeholder="your@email.com" data-fs-field required style="width:100%; padding:10px 12px; font-size:14px; border:1px solid #d0ccc0; border-radius:6px; font-family:inherit; background-color:#ffffff; color:#1a1815; box-sizing:border-box;" />
+          <span data-fs-error="email" style="color:#a32d2d; font-size:12px; margin-top:4px;"></span>
+        </div>
+
+        <button type="submit" data-fs-submit-btn style="width:100%; padding:12px; font-size:14px; font-weight:500; background-color:#a8481f; color:#ffffff; border:none; border-radius:6px; cursor:pointer; margin-bottom:12px; transition:background-color 0.2s;">Check availability</button>
+
+        <p style="font-size:12px; color:#8b8680; text-align:center; margin:12px 0 0;">Your email is used only to confirm availability.</p>
+      </form>
     </div>
   </section>
 
@@ -280,5 +343,12 @@
 </footer>
 
 <script src="/js/main.js"></script>
+
+<script>
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#booking-form', formId: 'mgawqabl' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
 </body>
 </html>
