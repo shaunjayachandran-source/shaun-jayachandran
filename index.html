@@ -15,8 +15,85 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+  <style>
+    /* ===== Mobile-first overrides for this redesign pass ===== */
+    * { box-sizing: border-box; }
+    img { max-width: 100%; }
+
+    .dark-zone { background:#1a1815; padding: 28px 16px 24px; }
+    .dark-zone .wrap { max-width: 960px; margin: 0 auto; }
+
+    .avail-badge { display:inline-flex; align-items:center; gap:6px; background:rgba(168,72,31,0.15); border:1px solid #a8481f; color:#e8956b; font-size:11px; font-weight:600; padding:5px 11px; border-radius:20px; margin-bottom:10px; }
+    .avail-dot { width:6px; height:6px; border-radius:50%; background:#4ade80; display:inline-block; flex-shrink:0; }
+    .hero-location { font-size:11px; color:#8b8680; letter-spacing:0.05em; margin-bottom:14px; font-weight:500; }
+
+    .why-book-zone { background:#1a1815; padding: 8px 16px 28px; }
+    .why-book-zone .wrap { max-width: 960px; margin: 0 auto; }
+    .section-title-dark { color:#fff; font-size:20px; font-weight:700; margin:0 0 4px; font-family: Georgia, serif; }
+    .section-title-beige { color:#1a1815; font-size:20px; font-weight:700; margin:0 0 4px; font-family: Georgia, serif; }
+    .section-rule { width:36px; height:2px; background:#a8481f; margin:0 0 18px; }
+
+    .img-pair-dark { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:24px; }
+    .img-pair-dark img { width:100%; height:220px; object-fit:cover; border-radius:8px; display:block; }
+    @media (max-width: 480px) {
+      .img-pair-dark { grid-template-columns:1fr; }
+      .img-pair-dark img { height:200px; }
+    }
+
+    .check-grid-dark { display:grid; grid-template-columns:1fr 1fr; gap:16px 14px; margin-bottom:24px; }
+    @media (max-width: 480px) {
+      .check-grid-dark { grid-template-columns:1fr; }
+    }
+    .check-item-dark h4 { color:#fff; font-size:13px; margin:0 0 4px; display:flex; align-items:flex-start; gap:6px; }
+    .check-item-dark h4 .tick { color:#4ade80; flex-shrink:0; }
+    .check-item-dark p { color:#8b8680; font-size:12px; line-height:1.5; margin:0; }
+
+    .stats-divider-dark { border:none; border-top:1px solid rgba(255,255,255,0.1); margin: 20px 0 22px; }
+    .stats-grid-new { display:grid; grid-template-columns: 1fr 1fr; gap:20px 14px; }
+    .stat-card-new { text-align:center; }
+    .stat-num-new { color:#fff; font-size:30px; font-weight:700; font-family: Georgia, serif; display:block; line-height:1; }
+    .stat-label-new { color:#e8956b; font-size:10.5px; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; margin-top:7px; display:block; }
+    .stat-caption-new { color:#8b8680; font-size:11px; line-height:1.4; margin-top:5px; }
+
+    .beige-zone { background:#f2efe8; padding: 28px 16px 32px; }
+    .beige-zone .wrap { max-width: 960px; margin: 0 auto; }
+
+    .tier-grid-new { display:grid; grid-template-columns:1fr; gap:14px; margin-bottom: 32px; }
+    @media (min-width: 700px) {
+      .tier-grid-new { grid-template-columns: repeat(3, 1fr); }
+    }
+    .tier-card-new { background:#fff; border:1px solid #e5e0d5; border-radius:10px; padding:20px 18px; }
+    .tier-card-new.is-featured { border:2px solid #a8481f; }
+    .tier-card-new h3 { font-size:16px; color:#1a1815; margin:0 0 8px; font-family: Georgia, serif; }
+    .tier-card-new p { font-size:13px; color:#5a5550; line-height:1.5; margin:0 0 12px; }
+    .tier-price-new { display:block; font-size:13px; font-weight:700; color:#a8481f; margin-bottom:14px; }
+    .tier-link { display:inline-block; font-size:12px; font-weight:600; padding:8px 14px; border-radius:6px; text-decoration:none; }
+    .tier-link.primary { background:#a8481f; color:#fff; }
+    .tier-link.ghost { border:1px solid #a8481f; color:#a8481f; }
+
+    .track-block { margin-bottom: 32px; }
+    .track-block:last-child { margin-bottom: 0; }
+    .track-title-new { font-size:15px; font-weight:700; color:#1a1815; margin:0 0 14px; padding-bottom:8px; border-bottom:2px solid #d0ccc0; }
+
+    .topic-card-new { background:#fff; border:1px solid #e5e0d5; border-radius:8px; padding:16px; margin-bottom:12px; }
+    .topic-card-new:last-child { margin-bottom:0; }
+    .badge-new { display:inline-block; font-size:9.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; padding:3px 8px; border-radius:4px; margin-bottom:8px; }
+    .badge-new.orange { background:#fdf3ec; color:#a8481f; }
+    .badge-new.navy { background:#e8edf5; color:#1e3a5f; }
+    .topic-card-new h4 { font-size:14px; color:#1a1815; margin:0 0 6px; line-height:1.4; }
+    .topic-meta-new { display:block; font-size:11px; color:#8b8680; margin-bottom:8px; }
+    .topic-card-new p { font-size:12.5px; color:#5a5550; line-height:1.55; margin:0; }
+
+    .photo-row-new { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:18px; }
+    .photo-row-new img { width:100%; height:180px; object-fit:cover; border-radius:8px; display:block; }
+    @media (max-width: 480px) {
+      .photo-row-new { grid-template-columns:1fr; }
+      .photo-row-new img { height:200px; }
+    }
+  </style>
 </head>
 <body>
+
   <header class="header">
     <div class="wrap">
       <div class="header-logo">
@@ -31,33 +108,34 @@
     </div>
   </header>
 
-  <section class="hero reveal">
+  <!-- HERO -->
+  <section class="dark-zone">
     <div class="wrap">
-      <h1>Your kids are growing up alongside AI. Don't hide them from it. Here's how you help them responsibly learn and lead instead.</h1>
-      <img src="/images/hero.jpg" alt="Shaun coaching HCH students in Bangalore" style="width:100%; max-width:600px; height:auto; margin:24px auto; border-radius:8px; display:block;">
-      <p>Keynotes and workshops on raising technologically literate, critically thinking kids — for schools, parent groups, and youth development leaders who care about judgment, not just grades.</p>
-      <div style="font-size:12px; color:#8b8680; margin-top:16px; padding-top:16px; border-top:1px solid rgba(26,24,21,0.18);">
+      <div class="avail-badge"><span class="avail-dot"></span> Booking Q1–Q2 2027</div>
+      <div class="hero-location">BALTIMORE, MD · AVAILABLE NATIONWIDE</div>
+      <h1 style="color:#fff; font-size:24px; line-height:1.32; font-family:Georgia,serif; margin:0 0 14px;">Your kids are growing up alongside AI. Don't hide them from it. Here's how you help them responsibly learn and lead instead.</h1>
+      <img src="/images/hero.jpg" alt="Shaun coaching HCH students in Bangalore" style="width:100%; max-width:600px; height:auto; margin:16px auto; border-radius:8px; display:block;">
+      <p style="color:#c9c3b8; font-size:13.5px; line-height:1.55; margin:0 0 14px;">Keynotes and workshops on raising technologically literate, critically thinking kids — for schools, parent groups, and youth development leaders who care about judgment, not just grades.</p>
+      <div style="font-size:11.5px; color:#8b8680; margin-top:14px; padding-top:14px; border-top:1px solid rgba(255,255,255,0.12);">
         2× TEDx Speaker · 20+ Years Coaching · 2,500+ Youth Served · Founded Hoops Creating Hope
       </div>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#booking-form">Book Me to Speak</a>
-        <a class="btn btn-secondary" href="#speaking-topics">View Speaking Topics</a>
-      </div>
-      <div style="font-size:12px; color:#a8481f; margin-top:16px; text-align:center;">
-        AI & Sports Tech Product Leadership • Youth Development • Scaling Impact • Speaker
+      <div class="hero-actions" style="display:flex; gap:10px; margin-top:18px; flex-wrap:wrap;">
+        <a class="btn btn-primary" href="#booking-form" style="background:#a8481f; color:#fff; font-size:13px; font-weight:600; padding:11px 18px; border-radius:6px; text-decoration:none;">Book Me to Speak</a>
+        <a class="btn btn-secondary" href="#speaking-topics" style="border:1px solid rgba(255,255,255,0.3); color:#fff; font-size:13px; font-weight:600; padding:11px 18px; border-radius:6px; text-decoration:none;">View Speaking Topics</a>
       </div>
     </div>
   </section>
 
-  <section class="section-booking" id="booking-form">
-    <div class="wrap">
+  <!-- BOOKING FORM -->
+  <section class="section-booking" id="booking-form" style="padding: 28px 16px;">
+    <div class="wrap" style="max-width:600px; margin:0 auto;">
       <div data-fs-success style="display:none; padding:12px; background:#f0f9f7; border:1px solid #639922; border-radius:6px; color:#3b6d11; font-size:13px; font-weight:500; text-align:center; margin-bottom:24px;">
         ✓ Thanks! I'll check my calendar and follow up within 48 hours.
       </div>
       <div data-fs-error style="display:none; padding:12px; background:#fcebeb; border:1px solid #e24b4a; border-radius:6px; color:#a32d2d; font-size:13px; margin-bottom:24px;"></div>
 
       <form id="booking-form">
-        <h2 style="font-size:20px; font-weight:500; margin-bottom:24px; color:#1a1815;">Check availability</h2>
+        <h2 style="font-size:19px; font-weight:600; margin:0 0 20px; color:#1a1815;">Check availability</h2>
 
         <div style="margin-bottom:16px;">
           <label for="dateRange" style="display:block; font-size:14px; font-weight:500; margin-bottom:8px; color:#1a1815;">When are you looking?</label>
@@ -112,133 +190,189 @@
     </div>
   </section>
 
-  <section class="section-why-book">
+  <!-- WHY BOOK SHAUN + STATS (continuous dark zone) -->
+  <section class="why-book-zone">
     <div class="wrap">
-      <h2 class="section-title reveal">Why Book Shaun</h2>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin:32px 0;">
-        <img src="/images/coaching1.jpg" alt="Shaun teaching HCH students basketball" style="width:100%; height:300px; object-fit:cover; border-radius:8px;">
-        <img src="/images/mentoring.jpg" alt="Shaun mentoring young athlete one-on-one" style="width:100%; height:300px; object-fit:cover; border-radius:8px;">
+      <div class="section-title-dark">Why Book Shaun</div>
+      <div class="section-rule"></div>
+
+      <div class="img-pair-dark">
+        <img src="/images/coaching1.jpg" alt="Shaun teaching HCH students basketball">
+        <img src="/images/mentoring.jpg" alt="Shaun mentoring young athlete one-on-one">
       </div>
-      <div class="check-grid">
-        <div class="check-item reveal">
-          <span class="check-icon">✓</span>
-          <h4>20+ Years Coaching Young People</h4>
+
+      <div class="check-grid-dark">
+        <div class="check-item-dark">
+          <h4><span class="tick">✓</span> 20+ Years Coaching Young People</h4>
           <p>Developed 80+ college athletes. Coached at elite institutions. Built winning culture on and off the court.</p>
         </div>
-        <div class="check-item reveal">
-          <span class="check-icon">✓</span>
-          <h4>8+ Years Building Tech Products</h4>
+        <div class="check-item-dark">
+          <h4><span class="tick">✓</span> 8+ Years Building Tech Products</h4>
           <p>Senior PM at GameRun.ai. Scaled Buildium 0→$5M ARR. Deep expertise in product, AI, and scaling.</p>
         </div>
-        <div class="check-item reveal">
-          <span class="check-icon">✓</span>
-          <h4>12+ Years Social Impact Leadership</h4>
+        <div class="check-item-dark">
+          <h4><span class="tick">✓</span> 12+ Years Social Impact Leadership</h4>
           <p>Founded Hoops Creating Hope. 2,500+ students served. 85% school advancement rate. NBA + FIBA funded.</p>
         </div>
-        <div class="check-item reveal">
-          <span class="check-icon">✓</span>
-          <h4>Authentic Storyteller</h4>
+        <div class="check-item-dark">
+          <h4><span class="tick">✓</span> Authentic Storyteller</h4>
           <p>2× TEDx Speaker. SLAM Magazine featured. Philadelphia 76ers honoree. Speaks from lived experience.</p>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section id="speaking-topics" class="section-topics">
-    <div class="wrap">
-      <h2 class="section-title reveal">Speaking Topics</h2>
+      <hr class="stats-divider-dark">
 
-      <div class="track" id="schools-track">
-        <h3 class="track-title reveal">Schools & Parents Series: "Raising Kids in an AI World"</h3>
-        <div class="topic-grid">
-          <div class="topic-card reveal">
-            <span class="badge badge-orange">Keynote</span>
-            <h4>"Raising Kids in an AI World: A Coach's Perspective on Digital Life"</h4>
-            <span class="topic-meta">45–60 minutes · For Parents & Educators</span>
-            <p>Your kids are growing up in the first generation that's never known life without AI. This talk moves past alarmism to give parents practical strategies for raising kids who can lead—not just survive—in an AI-saturated world. From screen time to critical thinking, learn what actually works.</p>
-          </div>
-          <div class="topic-card reveal">
-            <span class="badge badge-orange">Workshop</span>
-            <h4>"Social Media & Brain Development: What Neuroscience Actually Says"</h4>
-            <span class="topic-meta">60 minutes · Q&A Included</span>
-            <p>For parent nights, PTA meetings, school events. Cut through the headlines: what does neuroscience really tell us about social media and adolescent brains? And what can you actually do about it? Evidence-based strategies parents can use today.</p>
-          </div>
-          <div class="topic-card reveal">
-            <span class="badge badge-orange">Athletic Program</span>
-            <h4>"From My Phone to the Field: Digital Wellness for Young Athletes"</h4>
-            <span class="topic-meta">45–60 minutes · For Coaches & Sports Programs</span>
-            <p>Young athletes face unique tech pressures: constant video analysis, social media comparison, performance anxiety. Learn how to harness technology as a tool for development while protecting the resilience and joy that make athletics meaningful.</p>
-          </div>
-          <div class="topic-card reveal">
-            <span class="badge badge-orange">Professional Development</span>
-            <h4>"Technology as Tool, Not Substitute: Practical Strategies for Teachers"</h4>
-            <span class="topic-meta">60–90 minutes · Full Day Workshop Available</span>
-            <p>For teacher training and school staff development. Evidence-based, practical approaches to technology integration and youth digital wellness. Designed for educators tired of guilt and ready for real solutions.</p>
-          </div>
+      <div class="stats-grid-new">
+        <div class="stat-card-new">
+          <span class="stat-num-new">20+</span>
+          <span class="stat-label-new">Years Coaching</span>
+          <div class="stat-caption-new">80+ college athletes developed across elite programs.</div>
         </div>
-      </div>
-
-      <div class="track" id="corporate-track">
-        <h3 class="track-title reveal">Corporate & Product Leadership</h3>
-        <div class="topic-grid">
-          <div class="topic-card reveal">
-            <span class="badge badge-navy">Keynote</span>
-            <h4>"AI Doesn't Coach: Why Human Insight Still Matters"</h4>
-            <span class="topic-meta">45–60 minutes · Q&A Included</span>
-            <p>Raw data isn't enough. In an AI-saturated world, domain expertise—real understanding of your customers, your sport, your mission—is your competitive advantage. Why the best products combine AI with human judgment. Real examples from scaling AI tools that actually work.</p>
-          </div>
-          <div class="topic-card reveal">
-            <span class="badge badge-navy">Keynote</span>
-            <h4>"Building Products That Solve Real Problems"</h4>
-            <span class="topic-meta">45–60 minutes · Interactive</span>
-            <p>For product leaders and entrepreneurs. The gap between technical capability and solving actual problems is where most products fail. Learn how deep domain knowledge combined with AI creates products people actually need—not just technically impressive ones.</p>
-          </div>
-          <div class="topic-card reveal">
-            <span class="badge badge-navy">Keynote</span>
-            <h4>"Scaling Revenue While Staying True to Purpose"</h4>
-            <span class="topic-meta">60 minutes · Workshop Option</span>
-            <p>Mission-driven leaders and scaling startups: how do you grow without losing your soul? Real lessons from scaling Buildium 0→$5M ARR while building Hoops Creating Hope to serve 2,500+ youth. Building products AND impact at the same time.</p>
-          </div>
+        <div class="stat-card-new">
+          <span class="stat-num-new">2,500+</span>
+          <span class="stat-label-new">Youth Served</span>
+          <div class="stat-caption-new">Across Chennai, Bangalore & Hyderabad via Hoops Creating Hope.</div>
         </div>
-        <div class="photo-row" style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
-          <img src="/images/coaching1.jpg" alt="Shaun speaking on a corporate technology panel" style="width:100%; height:400px; object-fit:cover; border-radius:8px;">
-          <img src="/images/tech speaker.jpg" alt="Shaun speaking at tech conference" style="width:100%; height:400px; object-fit:cover; border-radius:8px;">
+        <div class="stat-card-new">
+          <span class="stat-num-new">2×</span>
+          <span class="stat-label-new">TEDx Speaker</span>
+          <div class="stat-caption-new">Speaking on AI, coaching, and youth development.</div>
         </div>
-      </div>
-
-      <div class="track" id="nonprofit-track">
-        <h3 class="track-title reveal">Education & Youth Nonprofits</h3>
-        <div class="topic-grid">
-          <div class="topic-card reveal">
-            <span class="badge badge-orange">Keynote</span>
-            <h4>"Scaling Youth Impact Without Losing the Mission"</h4>
-            <span class="topic-meta">45–60 minutes · For Nonprofit & Education Leaders</span>
-            <p>Growing from impact to sustainable revenue is hard. This talk shares real lessons from scaling Hoops Creating Hope to 2,500+ students across India while maintaining mission integrity. How to fundraise, build partnerships, and grow without extracting from the communities you serve.</p>
-          </div>
-          <div class="topic-card reveal">
-            <span class="badge badge-orange">Workshop</span>
-            <h4>"Technology for Youth Programs: Tool or Trap?"</h4>
-            <span class="topic-meta">60 minutes · Interactive</span>
-            <p>Should your youth nonprofit adopt new tech? A practical framework for integrating technology in ways that strengthen (not replace) human connection and community impact. Real examples from education tech, sports tech, and social impact organizations.</p>
-          </div>
-          <div class="topic-card reveal">
-            <span class="badge badge-navy">Keynote</span>
-            <h4>"Building Products That Actually Serve Communities"</h4>
-            <span class="topic-meta">45–60 minutes · Q&A Included</span>
-            <p>For education leaders and mission-driven innovators. How to build tech solutions that serve young people instead of extracting from them. Lessons from AI product development and 12+ years building sustainable youth programs across three continents.</p>
-          </div>
+        <div class="stat-card-new">
+          <span class="stat-num-new">$5M+</span>
+          <span class="stat-label-new">ARR Scaled</span>
+          <div class="stat-caption-new">Product leadership at Buildium and GameRun.ai.</div>
         </div>
       </div>
     </div>
   </section>
 
-  <footer class="footer">
+  <!-- SPEAKING TOPICS (beige zone) -->
+  <section id="speaking-topics" class="beige-zone">
     <div class="wrap">
-      <p>&copy; 2026 Shaun Jayachandran. All rights reserved.</p>
-      <nav class="footer-nav">
-        <a href="/about.html">About</a>
-        <a href="https://hoopscreatinghope.org">Hoops Creating Hope</a>
-        <a href="mailto:hello@shaun-jayachandran.com">Contact</a>
+      <div class="section-title-beige">Speaking Topics</div>
+      <div class="section-rule"></div>
+
+      <div class="tier-grid-new">
+        <div class="tier-card-new">
+          <h3>Corporate & Product Leadership</h3>
+          <p>For tech leaders, product teams, and innovation-focused organizations looking to understand AI's real impact and domain expertise's competitive advantage.</p>
+          <span class="tier-price-new">$5,000 – $15,000</span>
+          <a class="tier-link ghost" href="#corporate-track">View Topics</a>
+        </div>
+        <div class="tier-card-new is-featured">
+          <h3>Schools & Parents Series</h3>
+          <p>For schools, parent groups, and youth organizations learning to navigate AI and social media responsibly with authentic, experienced guidance.</p>
+          <span class="tier-price-new">$1,000 – $3,000</span>
+          <a class="tier-link primary" href="#schools-track">View Topics</a>
+        </div>
+        <div class="tier-card-new">
+          <h3>Education & Youth Nonprofits</h3>
+          <p>For educational institutions, nonprofits, and mission-driven organizations building products and scaling impact responsibly.</p>
+          <span class="tier-price-new">$2,000 – $5,000</span>
+          <a class="tier-link ghost" href="#nonprofit-track">View Topics</a>
+        </div>
+      </div>
+
+      <!-- SCHOOLS & PARENTS TRACK -->
+      <div class="track-block" id="schools-track">
+        <h3 class="track-title-new">Schools & Parents Series: "Raising Kids in an AI World"</h3>
+
+        <div class="topic-card-new">
+          <span class="badge-new orange">Keynote</span>
+          <h4>"Raising Kids in an AI World: A Coach's Perspective on Digital Life"</h4>
+          <span class="topic-meta-new">45–60 minutes · For Parents & Educators</span>
+          <p>Your kids are growing up in the first generation that's never known life without AI. This talk moves past alarmism to give parents practical strategies for raising kids who can lead—not just survive—in an AI-saturated world. From screen time to critical thinking, learn what actually works.</p>
+        </div>
+
+        <div class="topic-card-new">
+          <span class="badge-new orange">Workshop</span>
+          <h4>"Social Media & Brain Development: What Neuroscience Actually Says"</h4>
+          <span class="topic-meta-new">60 minutes · Q&A Included</span>
+          <p>For parent nights, PTA meetings, school events. Cut through the headlines: what does neuroscience really tell us about social media and adolescent brains? And what can you actually do about it? Evidence-based strategies parents can use today.</p>
+        </div>
+
+        <div class="topic-card-new">
+          <span class="badge-new orange">Athletic Program</span>
+          <h4>"From My Phone to the Field: Digital Wellness for Young Athletes"</h4>
+          <span class="topic-meta-new">45–60 minutes · For Coaches & Sports Programs</span>
+          <p>Young athletes face unique tech pressures: constant video analysis, social media comparison, performance anxiety. Learn how to harness technology as a tool for development while protecting the resilience and joy that make athletics meaningful.</p>
+        </div>
+
+        <div class="topic-card-new">
+          <span class="badge-new orange">Professional Development</span>
+          <h4>"Technology as Tool, Not Substitute: Practical Strategies for Teachers"</h4>
+          <span class="topic-meta-new">60–90 minutes · Full Day Workshop Available</span>
+          <p>For teacher training and school staff development. Evidence-based, practical approaches to technology integration and youth digital wellness. Designed for educators tired of guilt and ready for real solutions.</p>
+        </div>
+      </div>
+
+      <!-- CORPORATE TRACK -->
+      <div class="track-block" id="corporate-track">
+        <h3 class="track-title-new">Corporate & Product Leadership</h3>
+
+        <div class="topic-card-new">
+          <span class="badge-new navy">Keynote</span>
+          <h4>"AI Doesn't Coach: Why Human Insight Still Matters"</h4>
+          <span class="topic-meta-new">45–60 minutes · Q&A Included</span>
+          <p>Raw data isn't enough. In an AI-saturated world, domain expertise—real understanding of your customers, your sport, your mission—is your competitive advantage. Why the best products combine AI with human judgment. Real examples from scaling AI tools that actually work.</p>
+        </div>
+
+        <div class="topic-card-new">
+          <span class="badge-new navy">Keynote</span>
+          <h4>"Building Products That Solve Real Problems"</h4>
+          <span class="topic-meta-new">45–60 minutes · Interactive</span>
+          <p>For product leaders and entrepreneurs. The gap between technical capability and solving actual problems is where most products fail. Learn how deep domain knowledge combined with AI creates products people actually need—not just technically impressive ones.</p>
+        </div>
+
+        <div class="topic-card-new">
+          <span class="badge-new navy">Keynote</span>
+          <h4>"Scaling Revenue While Staying True to Purpose"</h4>
+          <span class="topic-meta-new">60 minutes · Workshop Option</span>
+          <p>Mission-driven leaders and scaling startups: how do you grow without losing your soul? Real lessons from scaling Buildium 0→$5M ARR while building Hoops Creating Hope to serve 2,500+ youth. Building products AND impact at the same time.</p>
+        </div>
+
+        <div class="photo-row-new">
+          <img src="/images/coaching1.jpg" alt="Shaun speaking on a corporate technology panel">
+          <img src="/images/tech speaker.jpg" alt="Shaun speaking at tech conference">
+        </div>
+      </div>
+
+      <!-- NONPROFIT TRACK -->
+      <div class="track-block" id="nonprofit-track">
+        <h3 class="track-title-new">Education & Youth Nonprofits</h3>
+
+        <div class="topic-card-new">
+          <span class="badge-new orange">Keynote</span>
+          <h4>"Scaling Youth Impact Without Losing the Mission"</h4>
+          <span class="topic-meta-new">45–60 minutes · For Nonprofit & Education Leaders</span>
+          <p>Growing from impact to sustainable revenue is hard. This talk shares real lessons from scaling Hoops Creating Hope to 2,500+ students across India while maintaining mission integrity. How to fundraise, build partnerships, and grow without extracting from the communities you serve.</p>
+        </div>
+
+        <div class="topic-card-new">
+          <span class="badge-new orange">Workshop</span>
+          <h4>"Technology for Youth Programs: Tool or Trap?"</h4>
+          <span class="topic-meta-new">60 minutes · Interactive</span>
+          <p>Should your youth nonprofit adopt new tech? A practical framework for integrating technology in ways that strengthen (not replace) human connection and community impact. Real examples from education tech, sports tech, and social impact organizations.</p>
+        </div>
+
+        <div class="topic-card-new">
+          <span class="badge-new navy">Keynote</span>
+          <h4>"Building Products That Actually Serve Communities"</h4>
+          <span class="topic-meta-new">45–60 minutes · Q&A Included</span>
+          <p>For education leaders and mission-driven innovators. How to build tech solutions that serve young people instead of extracting from them. Lessons from AI product development and 12+ years building sustainable youth programs across three continents.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" style="padding: 20px 16px; background:#fff;">
+    <div class="wrap" style="max-width:960px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+      <p style="margin:0; font-size:12px; color:#8b8680;">&copy; 2026 Shaun Jayachandran. All rights reserved.</p>
+      <nav style="display:flex; gap:16px;">
+        <a href="/about.html" style="font-size:12px; color:#1a1815; text-decoration:none;">About</a>
+        <a href="https://hoopscreatinghope.org" style="font-size:12px; color:#1a1815; text-decoration:none;">Hoops Creating Hope</a>
+        <a href="mailto:hello@shaun-jayachandran.com" style="font-size:12px; color:#1a1815; text-decoration:none;">Contact</a>
       </nav>
     </div>
   </footer>
