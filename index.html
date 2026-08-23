@@ -100,11 +100,14 @@
   /* SIGNATURE TALKS */
   .talks-grid { display:grid; grid-template-columns:1fr; gap:16px; }
   @media (min-width:760px) { .talks-grid { grid-template-columns: repeat(3,1fr); } }
-  .talk-card { background:#fff; border:1px solid #e2ddd0; border-radius:10px; padding:24px 20px; }
-  .talk-num { font-size:11px; color:#c1440e; font-weight:700; letter-spacing:0.06em; margin-bottom:10px; }
-  .talk-card h3 { font-size:19px; margin-bottom:6px; }
+  .talk-card { background:#fff; border:1px solid #e2ddd0; border-radius:10px; padding:24px 20px; display:flex; flex-direction:column; }
+  .talk-num { font-family:Georgia,serif; font-size:30px; font-weight:700; color:#e2ddd0; line-height:1; margin-bottom:8px; }
+  .talk-category { font-size:10.5px; font-weight:700; letter-spacing:0.07em; text-transform:uppercase; color:#c1440e; margin-bottom:10px; display:block; }
+  .talk-card h3 { font-size:19px; margin-bottom:6px; line-height:1.32; }
   .talk-audience { font-size:12px; color:#8f897c; margin-bottom:12px; display:block; }
+  .talk-hook { display:block; font-style:italic; font-size:13.5px; color:#5a5550; margin-bottom:10px; line-height:1.5; }
   .talk-card p { font-size:13.5px; color:#5a5550; line-height:1.55; }
+  .talks-intro { font-size:14.5px; color:#5a5550; max-width:600px; margin: 6px 0 30px; }
   .view-all { display:inline-block; margin-top:24px; font-size:12.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; color:#c1440e; border-bottom:1px solid #c1440e; padding-bottom:2px; }
 
   /* VIDEO REEL SECTION */
@@ -293,28 +296,35 @@
   <section class="section section-light" id="talks">
     <div class="wrap">
       <div class="eyebrow">Signature Talks</div>
-      <h2>Three ideas. One point of view.</h2>
+      <h2>The Human Game.</h2>
+      <p class="talks-intro">Three conversations about what technology can do — and what we should never ask it to do for us.</p>
       <div class="talks-grid">
         <div class="talk-card">
-          <div class="talk-num">TALK 01</div>
-          <h3>Raising Kids in an AI World</h3>
+          <div class="talk-num" aria-hidden="true">01</div>
+          <span class="talk-category">Keynote · Parents / Educators</span>
+          <h3>Raising Humans in the Age of AI</h3>
           <span class="talk-audience">For parents, educators & schools</span>
-          <p>Practical ways parents and educators can help kids thrive in an AI-saturated world — without losing their humanity.</p>
+          <span class="talk-hook">When AI can do the work, what should we still teach kids to do?</span>
+          <p>How do we raise young people who can use AI without outsourcing their judgment, effort, relationships or responsibility? Shaun brings 20+ years of coaching and youth development together with his experience building technology to give parents and educators a practical framework for raising thoughtful humans in an AI-saturated world.</p>
         </div>
         <div class="talk-card">
-          <div class="talk-num">TALK 02</div>
-          <h3>AI Doesn't Coach</h3>
-          <span class="talk-audience">For leaders & teams</span>
-          <p>Why human judgment, experience and empathy still matter in an AI-driven world of work.</p>
+          <div class="talk-num" aria-hidden="true">02</div>
+          <span class="talk-category">Keynote · Leaders / Technology</span>
+          <h3>AI Can See the Pattern. Can It See the Person?</h3>
+          <span class="talk-audience">For leaders, teams & technology organizations</span>
+          <span class="talk-hook">When machines can recognize the pattern, humans still have to understand what it means.</span>
+          <p>AI is changing how organizations build, decide and compete. Shaun explores why domain expertise, context, empathy and judgment don't become less important as AI gets better — they become the differentiator. The goal isn't choosing humans or AI. It's knowing what each should do.</p>
         </div>
         <div class="talk-card">
-          <div class="talk-num">TALK 03</div>
-          <h3>Technology for Youth Programs</h3>
+          <div class="talk-num" aria-hidden="true">03</div>
+          <span class="talk-category">Keynote · Nonprofit / Youth Development</span>
+          <h3>Tech or Trap?</h3>
           <span class="talk-audience">For nonprofits & youth organizations</span>
-          <p>Using technology to expand impact — without losing the human connection that changes lives.</p>
+          <span class="talk-hook">Technology should expand human capacity — not replace human connection.</span>
+          <p>Youth organizations are under constant pressure to adopt new technology. Shaun provides a practical framework for deciding what genuinely increases impact, what simply adds complexity, and how organizations can use technology while keeping young people, relationships and community at the center.</p>
         </div>
       </div>
-      <a href="#" class="view-all">View All Talks & Workshops →</a>
+      <a href="/talks.html" class="view-all">Explore All Talks & Workshops →</a>
     </div>
   </section>
 
