@@ -43,7 +43,15 @@
   @media (min-width:860px) {
     .hero-photo img { height:420px; }
   }
-  .reel-card { display:flex; align-items:center; gap:14px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:14px 16px; max-width:420px; }
+  .reel-card { display:flex; align-items:center; gap:14px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:14px 16px; max-width:420px; cursor:pointer; transition: background 0.2s ease; }
+  .reel-card:hover { background:rgba(255,255,255,0.09); }
+
+  /* VIDEO MODAL */
+  .video-modal-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.82); z-index:200; align-items:center; justify-content:center; padding:20px; }
+  .video-modal-overlay.is-open { display:flex; }
+  .video-modal-box { position:relative; background:#000; border-radius:12px; width:100%; max-width:340px; max-height:90vh; overflow:auto; }
+  .video-modal-close { position:absolute; top:-14px; right:-14px; width:36px; height:36px; border-radius:50%; background:#fff; color:#161412; border:none; font-size:18px; font-weight:700; cursor:pointer; display:flex; align-items:center; justify-content:center; z-index:5; box-shadow:0 2px 8px rgba(0,0,0,0.3); }
+  .video-modal-close:hover { background:#f0ece2; }
   .play-btn { width:40px; height:40px; border-radius:50%; background:#c1440e; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
   .play-btn::after { content:''; border-style:solid; border-width:7px 0 7px 11px; border-color:transparent transparent transparent #fff; margin-left:3px; }
   .reel-text .title { font-size:13px; font-weight:700; color:#fff; }
@@ -179,7 +187,7 @@
           <div class="hero-photo">
             <img src="/images/hero.jpg" alt="Shaun with Hoops Creating Hope students">
           </div>
-          <div class="reel-card">
+          <div class="reel-card" onclick="openReelModal()" role="button" tabindex="0" onkeydown="if(event.key==='Enter')openReelModal()">
             <div class="play-btn"></div>
             <div class="reel-text">
               <div class="title">Watch Shaun Speak</div>
@@ -354,7 +362,7 @@
         </div>
         <div class="proof-logo-item">
           <span class="proof-logo-name">SLAM</span>
-          <div class="logo-img-wrap"><img src="/images/SLAM.png" alt="SLAM logo" style="max-height:70px; max-width:170px;"></div>
+          <div class="logo-img-wrap"><img src="/images/slam.png" alt="SLAM logo" style="max-height:70px; max-width:170px;"></div>
         </div>
         <div class="proof-logo-item">
           <span class="proof-logo-name">Philadelphia 76ers</span>
@@ -418,6 +426,28 @@
   </section>
 
   <footer>&copy; 2026 Shaun Jayachandran. All rights reserved.</footer>
+  <!-- WATCH SHAUN SPEAK MODAL -->
+  <div class="video-modal-overlay" id="reelModal" onclick="if(event.target===this)closeReelModal()">
+    <div class="video-modal-box">
+      <button class="video-modal-close" onclick="closeReelModal()" aria-label="Close video">&times;</button>
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@empowhered_/video/7353620959611407658" data-video-id="7353620959611407658" style="max-width: 340px; min-width: 280px; margin:0;">
+        <section></section>
+      </blockquote>
+    </div>
+  </div>
+  <script async src="https://www.tiktok.com/embed.js"></script>
+
+  <script>
+    function openReelModal() {
+      document.getElementById('reelModal').classList.add('is-open');
+    }
+    function closeReelModal() {
+      document.getElementById('reelModal').classList.remove('is-open');
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeReelModal();
+    });
+  </script>
 
 </body>
 </html>
