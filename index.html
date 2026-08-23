@@ -150,6 +150,18 @@
   .final-cta h2 { color:#fff; font-size:26px; max-width:480px; margin:0 auto 14px; }
   .final-cta p { color:#b8b3a8; font-size:14px; max-width:440px; margin:0 auto 26px; }
 
+  .book-form-wrap { max-width:440px; margin:32px auto 0; text-align:left; }
+  .book-form-wrap label { display:block; font-size:12.5px; font-weight:600; color:#d8d3c8; margin-bottom:6px; letter-spacing:0.02em; }
+  .book-form-wrap .field { margin-bottom:14px; }
+  .book-form-wrap select, .book-form-wrap input { width:100%; padding:11px 12px; font-size:13.5px; border:1px solid rgba(255,255,255,0.18); border-radius:6px; background:rgba(255,255,255,0.05); color:#fff; box-sizing:border-box; font-family:inherit; }
+  .book-form-wrap select option { background:#161412; color:#fff; }
+  .book-form-wrap .fs-error-msg { color:#e88; font-size:11.5px; margin-top:4px; display:block; }
+  .book-form-wrap button[type="submit"] { width:100%; padding:13px; font-size:13px; font-weight:700; letter-spacing:0.04em; text-transform:uppercase; background:#c1440e; color:#fff; border:none; border-radius:6px; cursor:pointer; }
+  .book-form-wrap .form-note { font-size:11.5px; color:#8f897c; text-align:center; margin-top:12px; }
+  .fs-success-msg, .fs-error-box { display:none; padding:12px; border-radius:6px; font-size:12.5px; margin-bottom:16px; text-align:center; }
+  .fs-success-msg { background:rgba(74,222,128,0.12); border:1px solid #4ade80; color:#8ee9b0; }
+  .fs-error-box { background:rgba(226,75,74,0.12); border:1px solid #e24b4a; color:#f3a8a7; }
+
   footer { padding: 24px 20px; text-align:center; font-size:11.5px; color:#5a5550; }
 </style>
 </head>
@@ -362,7 +374,7 @@
         </div>
         <div class="proof-logo-item">
           <span class="proof-logo-name">SLAM</span>
-          <div class="logo-img-wrap"><img src="/images/slam.png" alt="SLAM logo" style="max-height:70px; max-width:170px;"></div>
+          <div class="logo-img-wrap"><img src="/images/SLAM.png" alt="SLAM logo" style="max-height:70px; max-width:170px;"></div>
         </div>
         <div class="proof-logo-item">
           <span class="proof-logo-name">Philadelphia 76ers</span>
@@ -419,9 +431,61 @@
   <section class="final-cta" id="book">
     <h2>Let's create an impactful experience for your audience.</h2>
     <p>Shaun brings energy, insight and actionable ideas that inspire audiences of all ages.</p>
-    <div class="hero-ctas" style="justify-content:center;">
-      <a href="#" class="btn btn-primary">Book Shaun</a>
-      <a href="#talks" class="btn btn-outline">Explore the Talks →</a>
+
+    <div class="book-form-wrap">
+      <div class="fs-success-msg" data-fs-success>✓ Thanks! I'll check my calendar and follow up within 48 hours.</div>
+      <div class="fs-error-box" data-fs-error></div>
+
+      <form id="book-form">
+        <div class="field">
+          <label for="dateRange">When are you looking?</label>
+          <select id="dateRange" name="dateRange" data-fs-field required>
+            <option value="">Select a timeframe</option>
+            <option value="Q4 2026">Q4 2026</option>
+            <option value="Q1 2027">Q1 2027</option>
+            <option value="Q2 2027">Q2 2027</option>
+            <option value="Q3 2027">Q3 2027</option>
+            <option value="Open / Flexible">Open / Flexible</option>
+          </select>
+          <span class="fs-error-msg" data-fs-error="dateRange"></span>
+        </div>
+
+        <div class="field">
+          <label for="audience">Who's in the room?</label>
+          <select id="audience" name="audience" data-fs-field required>
+            <option value="">Select an audience</option>
+            <option value="Schools & Parent Groups">Schools & Parent Groups</option>
+            <option value="Youth Development Leaders">Youth Development Leaders</option>
+            <option value="Corporate / Product Teams">Corporate / Product Teams</option>
+            <option value="Nonprofits & Mission-Driven">Nonprofits & Mission-Driven</option>
+            <option value="Mixed / Not sure">Mixed / Not sure</option>
+          </select>
+          <span class="fs-error-msg" data-fs-error="audience"></span>
+        </div>
+
+        <div class="field">
+          <label for="budget">Budget ballpark?</label>
+          <select id="budget" name="budget" data-fs-field required>
+            <option value="">Select a range</option>
+            <option value="Under $1,500">Under $1,500</option>
+            <option value="$1,500–$2,500">$1,500–$2,500</option>
+            <option value="$2,500–$3,500">$2,500–$3,500</option>
+            <option value="$3,500–$5,000">$3,500–$5,000</option>
+            <option value="$5,000+">$5,000+</option>
+            <option value="Let's talk">Let's talk</option>
+          </select>
+          <span class="fs-error-msg" data-fs-error="budget"></span>
+        </div>
+
+        <div class="field">
+          <label for="email">Best email to reach you</label>
+          <input id="email" type="email" name="email" placeholder="your@email.com" data-fs-field required>
+          <span class="fs-error-msg" data-fs-error="email"></span>
+        </div>
+
+        <button type="submit" data-fs-submit-btn>Check Availability</button>
+        <p class="form-note">Your email is used only to confirm availability.</p>
+      </form>
     </div>
   </section>
 
@@ -448,6 +512,12 @@
       if (e.key === 'Escape') closeReelModal();
     });
   </script>
+
+  <script>
+    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+    formspree('initForm', { formElement: '#book-form', formId: 'mgawqabl' });
+  </script>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
 </body>
 </html>
