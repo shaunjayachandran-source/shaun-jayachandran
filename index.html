@@ -22,17 +22,27 @@
   @media (min-width:820px) { .nav-links { display:flex; } }
 
   /* HERO */
-  .hero { position:relative; padding: 56px 20px 40px; }
+  .hero { position:relative; padding: 40px 20px 40px; }
+  .hero-grid { display:grid; grid-template-columns:1fr; gap:28px; align-items:center; }
+  @media (min-width:860px) {
+    .hero-grid { grid-template-columns: 1.1fr 0.9fr; gap:40px; }
+  }
   .hero-eyebrow { font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase; color:#c1440e; font-weight:700; margin-bottom:14px; }
-  .hero h1 { font-size:34px; line-height:1.18; color:#fff; margin-bottom:16px; max-width:640px; }
-  .hero-sub { font-size:17px; color:#e8e4da; font-weight:600; margin-bottom:14px; max-width:520px; }
-  .hero-desc { font-size:14.5px; color:#b8b3a8; max-width:520px; margin-bottom:26px; }
-  .hero-ctas { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:32px; }
+  .hero h1 { font-size:30px; line-height:1.24; color:#fff; margin-bottom:18px; text-wrap: balance; }
+  .hero-desc { font-size:14.5px; color:#b8b3a8; margin-bottom:26px; }
+  @media (min-width:700px) {
+    .hero h1 { font-size:34px; }
+  }
+  .hero-ctas { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:0; }
   .btn { display:inline-block; padding:13px 22px; font-size:13px; font-weight:700; letter-spacing:0.04em; text-transform:uppercase; border-radius:4px; }
   .btn-primary { background:#c1440e; color:#fff; }
   .btn-outline { border:1px solid rgba(255,255,255,0.35); color:#fff; }
-  .hero-photo { border-radius:10px; overflow:hidden; margin-bottom:20px; position:relative; }
+  .hero-media { position:relative; }
+  .hero-photo { border-radius:10px; overflow:hidden; margin-bottom:14px; }
   .hero-photo img { width:100%; height:340px; object-fit:cover; object-position:center 20%; }
+  @media (min-width:860px) {
+    .hero-photo img { height:420px; }
+  }
   .reel-card { display:flex; align-items:center; gap:14px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:14px 16px; max-width:420px; }
   .play-btn { width:40px; height:40px; border-radius:50%; background:#c1440e; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
   .play-btn::after { content:''; border-style:solid; border-width:7px 0 7px 11px; border-color:transparent transparent transparent #fff; margin-left:3px; }
@@ -90,10 +100,8 @@
 
   /* VIDEO REEL SECTION */
   .video-section { text-align:center; }
-  .video-frame { position:relative; border-radius:10px; overflow:hidden; max-width:700px; margin:0 auto 20px; }
-  .video-frame img { width:100%; height:320px; object-fit:cover; object-position:center 15%; filter:brightness(0.6); }
-  .video-frame .play-btn { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:64px; height:64px; }
-  .video-frame .play-btn::after { border-width:11px 0 11px 17px; }
+  .video-frame { position:relative; border-radius:10px; overflow:hidden; max-width:700px; margin:0 auto 20px; aspect-ratio:16/9; }
+  .video-frame iframe { width:100%; height:100%; display:block; border:0; }
   .video-links { display:flex; gap:20px; justify-content:center; flex-wrap:wrap; font-size:12.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; }
   .video-links a { color:#c1440e; border-bottom:1px solid #c1440e; padding-bottom:2px; }
 
@@ -150,22 +158,27 @@
   <!-- HERO -->
   <section class="hero">
     <div class="wrap">
-      <div class="hero-eyebrow">Coach · Builder · Community Leader</div>
-      <h1>Your kids are growing up alongside AI.</h1>
-      <div class="hero-sub">Help them learn it. Lead it. Don't just live in it.</div>
-      <p class="hero-desc">Shaun Jayachandran helps parents, educators and leaders prepare the next generation to use technology without losing who they are.</p>
-      <div class="hero-ctas">
-        <a href="#book" class="btn btn-primary">Book Shaun</a>
-        <a href="#talks" class="btn btn-outline">Explore the Talks →</a>
-      </div>
-      <div class="hero-photo">
-        <img src="/images/hero.jpg" alt="Shaun in the middle of the chaos of students actively learning">
-      </div>
-      <div class="reel-card">
-        <div class="play-btn"></div>
-        <div class="reel-text">
-          <div class="title">Watch Shaun Speak</div>
-          <div class="sub">1:05 Speaker Reel</div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="hero-eyebrow">Coach · Builder · Community Leader</div>
+          <h1>Your kids are growing up alongside AI. Don't hide them from it. Help them learn it. Lead it. Don't just have them follow it.</h1>
+          <p class="hero-desc">Shaun Jayachandran helps parents, educators and leaders prepare the next generation to use technology without losing who they are.</p>
+          <div class="hero-ctas">
+            <a href="#book" class="btn btn-primary">Book Shaun</a>
+            <a href="#talks" class="btn btn-outline">Explore the Talks →</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <div class="hero-photo">
+            <img src="/images/tech speaker.jpg" alt="Shaun speaking on stage">
+          </div>
+          <div class="reel-card">
+            <div class="play-btn"></div>
+            <div class="reel-text">
+              <div class="title">Watch Shaun Speak</div>
+              <div class="sub">1:05 Speaker Reel</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -176,7 +189,7 @@
     <div class="wrap">
       <div class="stats-grid">
         <div class="stat"><span class="num">20+</span><span class="label">Years Coaching</span></div>
-        <div class="stat"><span class="num">80+</span><span class="label">Athletes Developed</span></div>
+        <div class="stat"><span class="num">80+</span><span class="label">NCAA Athletes Developed</span></div>
         <div class="stat"><span class="num">2,500+</span><span class="label">Youth Served</span></div>
         <div class="stat"><span class="num">8+</span><span class="label">Yrs Building Tech</span></div>
         <div class="stat"><span class="num">$5M+</span><span class="label">ARR Generated</span></div>
@@ -201,7 +214,7 @@
           <h4>Human connection over automation</h4>
         </div>
         <div class="challenge-card">
-          <img src="/images/panel speaker.jpeg" alt="Shaun with Hoops Creating Hope students">
+          <img src="/images/hero.jpg" alt="Shaun with Hoops Creating Hope students">
           <h4>Purpose over popularity</h4>
         </div>
       </div>
@@ -228,7 +241,7 @@
             <h4>Builder</h4>
             <p>As a product leader, I build technology that solves real problems — and know what AI can and can't do.</p>
           </div>
-          <div class="pillar-img"><img src="/images/panel speaker.JPEG" alt="Shaun on a technology panel"></div>
+          <div class="pillar-img"><img src="/images/panel speaker.jpg" alt="Shaun on a technology panel"></div>
         </div>
         <div class="pillar">
           <div class="pillar-num">03 — COMMUNITY<span class="years">12+ Yrs</span></div>
@@ -283,12 +296,11 @@
       <div class="eyebrow">Media</div>
       <h2 style="margin-left:auto;margin-right:auto;">See Shaun in action.</h2>
       <div class="video-frame">
-        <img src="/images/panel_speaker.JPEG" alt="Shaun speaking on a panel">
-        <div class="play-btn"></div>
+        <iframe src="https://www.youtube.com/embed/MmM4R6qcWvY?si=UNABJldFLKBCapPo" title="Shaun Jayachandran TEDx Talk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
       <div class="video-links">
         <a href="#">Watch Speaker Reel →</a>
-        <a href="#">Watch TEDx Talks →</a>
+        <a href="https://www.youtube.com/watch?v=MmM4R6qcWvY" target="_blank" rel="noopener">Watch on YouTube →</a>
       </div>
     </div>
   </section>
