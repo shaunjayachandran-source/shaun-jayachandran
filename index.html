@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shaun Jayachandran – Speaker</title>
   <meta name="description" content="Keynotes and workshops on raising kids in an AI world, building products with human judgment, and scaling impact. For schools, parents, product teams, and nonprofits.">
-  <meta name="theme-color" content="#1a1815">
+  <meta name="theme-color" content="#0f172a">
   <meta property="og:type" content="website">
   <meta property="og:image" content="/images/og-card.svg">
   <meta property="og:title" content="Shaun Jayachandran | Speaker">
@@ -20,21 +20,33 @@
     * { box-sizing: border-box; }
     img { max-width: 100%; }
 
-    .dark-zone { background:#1a1815; padding: 28px 16px 24px; }
+    /* Brand navy restored (matches original site's #0f172a), replacing the brown/black misstep */
+    :root { --navy: #0f172a; --navy-soft: #1e293b; --accent: #a8481f; }
+
+    .header { background: var(--navy); }
+    .header .wrap { max-width: 960px; margin: 0 auto; display:flex; align-items:center; justify-content:space-between; padding: 14px 16px; flex-wrap:wrap; gap:10px; }
+    .header-logo a { color:#fff; font-weight:700; font-size:15px; text-decoration:none; }
+    .header-nav { display:flex; gap:18px; flex-wrap:wrap; }
+    .header-nav .nav-link { color: rgba(255,255,255,0.82); font-size:13px; font-weight:500; text-decoration:none; border-bottom:none; }
+    .header-nav .nav-link:hover { color:#fff; }
+    .header-nav .nav-cta { color:#fff; background: var(--accent); padding:7px 14px; border-radius:6px; }
+    .header-nav .nav-cta:hover { color:#fff; opacity:0.9; }
+
+    .dark-zone { background: var(--navy); padding: 28px 16px 24px; }
     .dark-zone .wrap { max-width: 960px; margin: 0 auto; }
 
-    .avail-badge { display:inline-flex; align-items:center; gap:6px; background:rgba(168,72,31,0.15); border:1px solid #a8481f; color:#e8956b; font-size:11px; font-weight:600; padding:5px 11px; border-radius:20px; margin-bottom:10px; }
+    .avail-badge { display:inline-flex; align-items:center; gap:6px; background:rgba(168,72,31,0.18); border:1px solid var(--accent); color:#e8956b; font-size:11px; font-weight:600; padding:5px 11px; border-radius:20px; margin-bottom:10px; }
     .avail-dot { width:6px; height:6px; border-radius:50%; background:#4ade80; display:inline-block; flex-shrink:0; }
-    .hero-location { font-size:11px; color:#8b8680; letter-spacing:0.05em; margin-bottom:14px; font-weight:500; }
+    .hero-location { font-size:11px; color:#8b95a8; letter-spacing:0.05em; margin-bottom:14px; font-weight:500; }
 
-    .why-book-zone { background:#1a1815; padding: 8px 16px 28px; }
+    .why-book-zone { background: var(--navy); padding: 8px 16px 28px; }
     .why-book-zone .wrap { max-width: 960px; margin: 0 auto; }
     .section-title-dark { color:#fff; font-size:20px; font-weight:700; margin:0 0 4px; font-family: Georgia, serif; }
     .section-title-beige { color:#1a1815; font-size:20px; font-weight:700; margin:0 0 4px; font-family: Georgia, serif; }
-    .section-rule { width:36px; height:2px; background:#a8481f; margin:0 0 18px; }
+    .section-rule { width:36px; height:2px; background: var(--accent); margin:0 0 18px; }
 
     .img-pair-dark { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:24px; }
-    .img-pair-dark img { width:100%; height:220px; object-fit:cover; border-radius:8px; display:block; }
+    .img-pair-dark img { width:100%; height:220px; object-fit:cover; object-position: center 20%; border-radius:8px; display:block; }
     @media (max-width: 480px) {
       .img-pair-dark { grid-template-columns:1fr; }
       .img-pair-dark img { height:200px; }
@@ -85,7 +97,7 @@
     .topic-card-new p { font-size:12.5px; color:#5a5550; line-height:1.55; margin:0; }
 
     .photo-row-new { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:18px; }
-    .photo-row-new img { width:100%; height:180px; object-fit:cover; border-radius:8px; display:block; }
+    .photo-row-new img { width:100%; height:180px; object-fit:cover; object-position: center 15%; border-radius:8px; display:block; }
     @media (max-width: 480px) {
       .photo-row-new { grid-template-columns:1fr; }
       .photo-row-new img { height:200px; }
