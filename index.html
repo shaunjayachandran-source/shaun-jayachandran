@@ -1,400 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shaun Jayachandran – Speaker</title>
-  <meta name="description" content="Keynotes and workshops on raising kids in an AI world, building products with human judgment, and scaling impact. For schools, parents, product teams, and nonprofits.">
-  <meta name="theme-color" content="#0f172a">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="/images/og-card.svg">
-  <meta property="og:title" content="Shaun Jayachandran | Speaker">
-  <meta property="og:description" content="Keynotes and workshops on AI, coaching, and human judgment.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-  <style>
-    /* ===== Mobile-first overrides for this redesign pass ===== */
-    * { box-sizing: border-box; }
-    img { max-width: 100%; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shaun Jayachandran — Coach. Builder. Community Leader.</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif; background:#0d0d0d; color:#f5f3ee; line-height:1.5; }
+  img { max-width:100%; display:block; }
+  .wrap { max-width: 1080px; margin:0 auto; padding: 0 20px; }
+  a { color:inherit; text-decoration:none; }
+  h1,h2,h3,h4 { font-family: Georgia, 'Times New Roman', serif; font-weight:600; letter-spacing:-0.01em; }
 
-    /* Brand navy restored (matches original site's #0f172a), replacing the brown/black misstep */
-    :root { --navy: #0f172a; --navy-soft: #1e293b; --accent: #a8481f; }
+  /* NAV */
+  .nav { position:sticky; top:0; z-index:50; background:rgba(13,13,13,0.92); backdrop-filter: blur(8px); border-bottom:1px solid rgba(255,255,255,0.08); }
+  .nav .wrap { display:flex; align-items:center; justify-content:space-between; padding:14px 20px; }
+  .nav-logo { font-weight:700; font-size:14px; letter-spacing:0.02em; }
+  .nav-links { display:none; gap:26px; font-size:12.5px; letter-spacing:0.04em; text-transform:uppercase; color:#b8b3a8; }
+  .nav-links a:hover { color:#fff; }
+  .nav-cta { background:#c1440e; color:#fff; font-size:12px; font-weight:700; letter-spacing:0.04em; padding:9px 16px; border-radius:4px; text-transform:uppercase; }
+  @media (min-width:820px) { .nav-links { display:flex; } }
 
-    .header { background: var(--navy); }
-    .header .wrap { max-width: 960px; margin: 0 auto; display:flex; align-items:center; justify-content:space-between; padding: 14px 16px; flex-wrap:wrap; gap:10px; }
-    .header-logo a { color:#fff; font-weight:700; font-size:15px; text-decoration:none; }
-    .header-nav { display:flex; gap:18px; flex-wrap:wrap; }
-    .header-nav .nav-link { color: rgba(255,255,255,0.82); font-size:13px; font-weight:500; text-decoration:none; border-bottom:none; }
-    .header-nav .nav-link:hover { color:#fff; }
-    .header-nav .nav-cta { color:#fff; background: var(--accent); padding:7px 14px; border-radius:6px; }
-    .header-nav .nav-cta:hover { color:#fff; opacity:0.9; }
+  /* HERO */
+  .hero { position:relative; padding: 56px 20px 40px; }
+  .hero-eyebrow { font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase; color:#c1440e; font-weight:700; margin-bottom:14px; }
+  .hero h1 { font-size:34px; line-height:1.18; color:#fff; margin-bottom:16px; max-width:640px; }
+  .hero-sub { font-size:17px; color:#e8e4da; font-weight:600; margin-bottom:14px; max-width:520px; }
+  .hero-desc { font-size:14.5px; color:#b8b3a8; max-width:520px; margin-bottom:26px; }
+  .hero-ctas { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:32px; }
+  .btn { display:inline-block; padding:13px 22px; font-size:13px; font-weight:700; letter-spacing:0.04em; text-transform:uppercase; border-radius:4px; }
+  .btn-primary { background:#c1440e; color:#fff; }
+  .btn-outline { border:1px solid rgba(255,255,255,0.35); color:#fff; }
+  .hero-photo { border-radius:10px; overflow:hidden; margin-bottom:20px; position:relative; }
+  .hero-photo img { width:100%; height:340px; object-fit:cover; object-position:center 20%; }
+  .reel-card { display:flex; align-items:center; gap:14px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:14px 16px; max-width:420px; }
+  .play-btn { width:40px; height:40px; border-radius:50%; background:#c1440e; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+  .play-btn::after { content:''; border-style:solid; border-width:7px 0 7px 11px; border-color:transparent transparent transparent #fff; margin-left:3px; }
+  .reel-text .title { font-size:13px; font-weight:700; color:#fff; }
+  .reel-text .sub { font-size:11.5px; color:#8f897c; margin-top:2px; }
 
-    .dark-zone { background: var(--navy); padding: 28px 16px 24px; }
-    .dark-zone .wrap { max-width: 960px; margin: 0 auto; }
+  /* STATS STRIP */
+  .stats-strip { border-top:1px solid rgba(255,255,255,0.08); border-bottom:1px solid rgba(255,255,255,0.08); padding: 22px 20px; }
+  .stats-grid { display:grid; grid-template-columns: repeat(2,1fr); gap:18px; }
+  @media (min-width:700px) { .stats-grid { grid-template-columns: repeat(6,1fr); } }
+  .stat { text-align:center; }
+  .stat .num { font-family:Georgia,serif; font-size:24px; font-weight:700; color:#fff; display:block; }
+  .stat .label { font-size:10px; color:#8f897c; text-transform:uppercase; letter-spacing:0.05em; margin-top:4px; display:block; }
 
-    .avail-badge { display:inline-flex; align-items:center; gap:6px; background:rgba(168,72,31,0.18); border:1px solid var(--accent); color:#e8956b; font-size:11px; font-weight:600; padding:5px 11px; border-radius:20px; margin-bottom:10px; }
-    .avail-dot { width:6px; height:6px; border-radius:50%; background:#4ade80; display:inline-block; flex-shrink:0; }
-    .hero-location { font-size:11px; color:#8b95a8; letter-spacing:0.05em; margin-bottom:14px; font-weight:500; }
+  /* SECTION SPACING */
+  .section { padding: 48px 20px; }
+  .section-light { background:#f5f3ee; color:#161412; }
+  .section-light h2, .section-light h3 { color:#161412; }
+  .eyebrow { font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#c1440e; font-weight:700; margin-bottom:10px; }
+  .section h2 { font-size:26px; line-height:1.25; margin-bottom:14px; max-width:640px; }
+  .section-desc { font-size:14.5px; color:#8f897c; max-width:560px; margin-bottom:32px; }
+  .section-light .section-desc { color:#5a5550; }
 
-    .why-book-zone { background: var(--navy); padding: 8px 16px 28px; }
-    .why-book-zone .wrap { max-width: 960px; margin: 0 auto; }
-    .section-title-dark { color:#fff; font-size:20px; font-weight:700; margin:0 0 4px; font-family: Georgia, serif; }
-    .section-title-beige { color:#1a1815; font-size:20px; font-weight:700; margin:0 0 4px; font-family: Georgia, serif; }
-    .section-rule { width:36px; height:2px; background: var(--accent); margin:0 0 18px; }
+  /* CHALLENGE CARDS */
+  .challenge-grid { display:grid; grid-template-columns:1fr; gap:16px; }
+  @media (min-width:700px) { .challenge-grid { grid-template-columns: repeat(3,1fr); } }
+  .challenge-card img { width:100%; height:160px; object-fit:cover; border-radius:8px; margin-bottom:14px; }
+  .challenge-card h4 { font-size:15px; color:#fff; margin-bottom:6px; }
 
-    .img-pair-dark { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:24px; }
-    .img-pair-dark img { width:100%; height:220px; object-fit:cover; object-position: center 20%; border-radius:8px; display:block; }
-    @media (max-width: 480px) {
-      .img-pair-dark { grid-template-columns:1fr; }
-      .img-pair-dark img { height:200px; }
-    }
+  /* WHY SHAUN — Coach/Builder/Community Leader */
+  .pillar-row { display:flex; flex-direction:column; gap:0; }
+  .pillar { display:grid; grid-template-columns:1fr; gap:18px; padding: 28px 0; border-top:1px solid rgba(0,0,0,0.1); align-items:center; }
+  @media (min-width:760px) { .pillar { grid-template-columns: 140px 1fr 1fr; } }
+  .pillar-num { font-family:Georgia,serif; font-size:13px; color:#c1440e; font-weight:700; letter-spacing:0.05em; }
+  .pillar-num .years { display:block; font-size:26px; color:#161412; margin-top:4px; }
+  .pillar-copy h4 { font-size:16px; margin-bottom:6px; }
+  .pillar-copy p { font-size:13.5px; color:#5a5550; line-height:1.6; }
+  .pillar-img img { width:100%; height:150px; object-fit:cover; border-radius:8px; }
 
-    .check-grid-dark { display:grid; grid-template-columns:1fr 1fr; gap:16px 14px; margin-bottom:24px; }
-    @media (max-width: 480px) {
-      .check-grid-dark { grid-template-columns:1fr; }
-    }
-    .check-item-dark h4 { color:#fff; font-size:13px; margin:0 0 4px; display:flex; align-items:flex-start; gap:6px; }
-    .check-item-dark h4 .tick { color:#4ade80; flex-shrink:0; }
-    .check-item-dark p { color:#8b8680; font-size:12px; line-height:1.5; margin:0; }
+  /* AI DOESN'T COACH callout */
+  .callout { background:#161412; padding: 44px 20px; text-align:center; }
+  .callout .lines { font-family:Georgia,serif; font-size:22px; line-height:1.5; color:#fff; max-width:520px; margin:0 auto 18px; }
+  .callout .lines strong { color:#c1440e; }
+  .callout .tag { font-size:13px; color:#8f897c; }
 
-    .stats-divider-dark { border:none; border-top:1px solid rgba(255,255,255,0.1); margin: 20px 0 22px; }
-    .stats-grid-new { display:grid; grid-template-columns: 1fr 1fr; gap:20px 14px; }
-    .stat-card-new { text-align:center; }
-    .stat-num-new { color:#fff; font-size:30px; font-weight:700; font-family: Georgia, serif; display:block; line-height:1; }
-    .stat-label-new { color:#e8956b; font-size:10.5px; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; margin-top:7px; display:block; }
-    .stat-caption-new { color:#8b8680; font-size:11px; line-height:1.4; margin-top:5px; }
+  /* SIGNATURE TALKS */
+  .talks-grid { display:grid; grid-template-columns:1fr; gap:16px; }
+  @media (min-width:760px) { .talks-grid { grid-template-columns: repeat(3,1fr); } }
+  .talk-card { background:#fff; border:1px solid #e2ddd0; border-radius:10px; padding:24px 20px; }
+  .talk-num { font-size:11px; color:#c1440e; font-weight:700; letter-spacing:0.06em; margin-bottom:10px; }
+  .talk-card h3 { font-size:19px; margin-bottom:6px; }
+  .talk-audience { font-size:12px; color:#8f897c; margin-bottom:12px; display:block; }
+  .talk-card p { font-size:13.5px; color:#5a5550; line-height:1.55; }
+  .view-all { display:inline-block; margin-top:24px; font-size:12.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; color:#c1440e; border-bottom:1px solid #c1440e; padding-bottom:2px; }
 
-    .beige-zone { background:#f2efe8; padding: 28px 16px 32px; }
-    .beige-zone .wrap { max-width: 960px; margin: 0 auto; }
+  /* VIDEO REEL SECTION */
+  .video-section { text-align:center; }
+  .video-frame { position:relative; border-radius:10px; overflow:hidden; max-width:700px; margin:0 auto 20px; }
+  .video-frame img { width:100%; height:320px; object-fit:cover; object-position:center 15%; filter:brightness(0.6); }
+  .video-frame .play-btn { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:64px; height:64px; }
+  .video-frame .play-btn::after { border-width:11px 0 11px 17px; }
+  .video-links { display:flex; gap:20px; justify-content:center; flex-wrap:wrap; font-size:12.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; }
+  .video-links a { color:#c1440e; border-bottom:1px solid #c1440e; padding-bottom:2px; }
 
-    .tier-grid-new { display:grid; grid-template-columns:1fr; gap:14px; margin-bottom: 32px; }
-    @media (min-width: 700px) {
-      .tier-grid-new { grid-template-columns: repeat(3, 1fr); }
-    }
-    .tier-card-new { background:#fff; border:1px solid #e5e0d5; border-radius:10px; padding:20px 18px; }
-    .tier-card-new.is-featured { border:2px solid #a8481f; }
-    .tier-card-new h3 { font-size:16px; color:#1a1815; margin:0 0 8px; font-family: Georgia, serif; }
-    .tier-card-new p { font-size:13px; color:#5a5550; line-height:1.5; margin:0 0 12px; }
-    .tier-price-new { display:block; font-size:13px; font-weight:700; color:#a8481f; margin-bottom:14px; }
-    .tier-link { display:inline-block; font-size:12px; font-weight:600; padding:8px 14px; border-radius:6px; text-decoration:none; }
-    .tier-link.primary { background:#a8481f; color:#fff; }
-    .tier-link.ghost { border:1px solid #a8481f; color:#a8481f; }
+  /* TESTIMONIALS */
+  .testi-grid { display:grid; grid-template-columns:1fr; gap:16px; }
+  @media (min-width:760px) { .testi-grid { grid-template-columns: repeat(3,1fr); } }
+  .testi-card { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:22px 20px; }
+  .testi-quote { font-size:13.5px; font-style:italic; color:#d8d3c8; line-height:1.6; margin-bottom:14px; }
+  .testi-meta { font-size:11.5px; color:#8f897c; text-transform:uppercase; letter-spacing:0.04em; }
 
-    .track-block { margin-bottom: 32px; }
-    .track-block:last-child { margin-bottom: 0; }
-    .track-title-new { font-size:15px; font-weight:700; color:#1a1815; margin:0 0 14px; padding-bottom:8px; border-bottom:2px solid #d0ccc0; }
+  /* PROOF / LOGO STRIP */
+  .proof-strip { text-align:center; }
+  .proof-caption { font-size:11.5px; color:#8f897c; margin-bottom:22px; max-width:480px; margin-left:auto; margin-right:auto; }
+  .proof-logos { display:flex; flex-wrap:wrap; justify-content:center; gap:28px; font-family:Georgia,serif; font-weight:700; font-size:15px; color:#5a5550; letter-spacing:0.02em; }
 
-    .topic-card-new { background:#fff; border:1px solid #e5e0d5; border-radius:8px; padding:16px; margin-bottom:12px; }
-    .topic-card-new:last-child { margin-bottom:0; }
-    .badge-new { display:inline-block; font-size:9.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; padding:3px 8px; border-radius:4px; margin-bottom:8px; }
-    .badge-new.orange { background:#fdf3ec; color:#a8481f; }
-    .badge-new.navy { background:#e8edf5; color:#1e3a5f; }
-    .topic-card-new h4 { font-size:14px; color:#1a1815; margin:0 0 6px; line-height:1.4; }
-    .topic-meta-new { display:block; font-size:11px; color:#8b8680; margin-bottom:8px; }
-    .topic-card-new p { font-size:12.5px; color:#5a5550; line-height:1.55; margin:0; }
+  /* WHO BOOKS SHAUN */
+  .audience-grid { display:grid; grid-template-columns:1fr; gap:14px; }
+  @media (min-width:700px) { .audience-grid { grid-template-columns: repeat(2,1fr); } }
+  .audience-card { background:#fff; border:1px solid #e2ddd0; border-radius:8px; padding:18px 20px; }
+  .audience-card h4 { font-size:14.5px; margin-bottom:6px; }
+  .audience-card p { font-size:12.5px; color:#5a5550; line-height:1.5; }
 
-    .photo-row-new { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:18px; }
-    .photo-row-new img { width:100%; height:180px; object-fit:cover; object-position: center 15%; border-radius:8px; display:block; }
-    @media (max-width: 480px) {
-      .photo-row-new { grid-template-columns:1fr; }
-      .photo-row-new img { height:200px; }
-    }
-  </style>
+  /* WHY THIS MATTERS */
+  .matters-section { position:relative; padding:0; }
+  .matters-img { width:100%; height:280px; object-fit:cover; object-position:center 20%; }
+  .matters-copy { padding: 32px 20px; max-width:560px; }
+  .matters-copy p { font-size:16px; line-height:1.7; color:#e8e4da; font-family:Georgia,serif; margin-bottom:14px; }
+
+  /* FINAL CTA */
+  .final-cta { background:#161412; text-align:center; padding: 52px 20px; }
+  .final-cta h2 { color:#fff; font-size:26px; max-width:480px; margin:0 auto 14px; }
+  .final-cta p { color:#b8b3a8; font-size:14px; max-width:440px; margin:0 auto 26px; }
+
+  footer { padding: 24px 20px; text-align:center; font-size:11.5px; color:#5a5550; }
+</style>
 </head>
 <body>
 
-  <header class="header">
+  <!-- NAV -->
+  <nav class="nav">
     <div class="wrap">
-      <div class="header-logo">
-        <a href="/">Shaun Jayachandran</a>
+      <div class="nav-logo">SHAUN JAYACHANDRAN</div>
+      <div class="nav-links">
+        <a href="#talks">Talks</a>
+        <a href="#why">About</a>
+        <a href="#impact">Impact</a>
+        <a href="#media">Media</a>
+        <a href="#testimonials">Testimonials</a>
       </div>
-      <nav class="header-nav">
-        <a href="#speaking-topics" class="nav-link">Speaking Topics</a>
-        <a href="/about.html" class="nav-link">About Shaun</a>
-        <a href="/hoops-creating-hope.html" class="nav-link">Hoops Creating Hope</a>
-        <a href="#booking-form" class="nav-link nav-cta">Book Now</a>
-      </nav>
+      <a href="#book" class="nav-cta">Book Shaun</a>
     </div>
-  </header>
+  </nav>
 
   <!-- HERO -->
-  <section class="dark-zone">
+  <section class="hero">
     <div class="wrap">
-      <div class="avail-badge"><span class="avail-dot"></span> Booking Q1–Q2 2027</div>
-      <div class="hero-location">BALTIMORE, MD · AVAILABLE NATIONWIDE</div>
-      <h1 style="color:#fff; font-size:24px; line-height:1.32; font-family:Georgia,serif; margin:0 0 14px;">Your kids are growing up alongside AI. Don't hide them from it. Here's how you help them responsibly learn and lead instead.</h1>
-      <img src="/images/hero.jpg" alt="Shaun coaching HCH students in Bangalore" style="width:100%; max-width:600px; height:auto; margin:16px auto; border-radius:8px; display:block;">
-      <p style="color:#c9c3b8; font-size:13.5px; line-height:1.55; margin:0 0 14px;">Keynotes and workshops on raising technologically literate, critically thinking kids — for schools, parent groups, and youth development leaders who care about judgment, not just grades.</p>
-      <div style="font-size:11.5px; color:#8b8680; margin-top:14px; padding-top:14px; border-top:1px solid rgba(255,255,255,0.12);">
-        2× TEDx Speaker · 20+ Years Coaching · 2,500+ Youth Served · Founded Hoops Creating Hope
+      <div class="hero-eyebrow">Coach · Builder · Community Leader</div>
+      <h1>Your kids are growing up alongside AI.</h1>
+      <div class="hero-sub">Help them learn it. Lead it. Don't just live in it.</div>
+      <p class="hero-desc">Shaun Jayachandran helps parents, educators and leaders prepare the next generation to use technology without losing who they are.</p>
+      <div class="hero-ctas">
+        <a href="#book" class="btn btn-primary">Book Shaun</a>
+        <a href="#talks" class="btn btn-outline">Explore the Talks →</a>
       </div>
-      <div class="hero-actions" style="display:flex; gap:10px; margin-top:18px; flex-wrap:wrap;">
-        <a class="btn btn-primary" href="#booking-form" style="background:#a8481f; color:#fff; font-size:13px; font-weight:600; padding:11px 18px; border-radius:6px; text-decoration:none;">Book Me to Speak</a>
-        <a class="btn btn-secondary" href="#speaking-topics" style="border:1px solid rgba(255,255,255,0.3); color:#fff; font-size:13px; font-weight:600; padding:11px 18px; border-radius:6px; text-decoration:none;">View Speaking Topics</a>
+      <div class="hero-photo">
+        <img src="/images/tech speaker.jpg" alt="Shaun speaking on stage">
+      </div>
+      <div class="reel-card">
+        <div class="play-btn"></div>
+        <div class="reel-text">
+          <div class="title">Watch Shaun Speak</div>
+          <div class="sub">1:05 Speaker Reel</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- BOOKING FORM -->
-  <section class="section-booking" id="booking-form" style="padding: 28px 16px;">
-    <div class="wrap" style="max-width:600px; margin:0 auto;">
-      <div data-fs-success style="display:none; padding:12px; background:#f0f9f7; border:1px solid #639922; border-radius:6px; color:#3b6d11; font-size:13px; font-weight:500; text-align:center; margin-bottom:24px;">
-        ✓ Thanks! I'll check my calendar and follow up within 48 hours.
-      </div>
-      <div data-fs-error style="display:none; padding:12px; background:#fcebeb; border:1px solid #e24b4a; border-radius:6px; color:#a32d2d; font-size:13px; margin-bottom:24px;"></div>
-
-      <form id="booking-form">
-        <h2 style="font-size:19px; font-weight:600; margin:0 0 20px; color:#1a1815;">Check availability</h2>
-
-        <div style="margin-bottom:16px;">
-          <label for="dateRange" style="display:block; font-size:14px; font-weight:500; margin-bottom:8px; color:#1a1815;">When are you looking?</label>
-          <select id="dateRange" name="dateRange" data-fs-field required style="width:100%; padding:10px 12px; font-size:14px; border:1px solid #d0ccc0; border-radius:6px; font-family:inherit; background-color:#ffffff; color:#1a1815; box-sizing:border-box;">
-            <option value="">Select a timeframe</option>
-            <option value="Q4 2026">Q4 2026</option>
-            <option value="Q1 2027">Q1 2027</option>
-            <option value="Q2 2027">Q2 2027</option>
-            <option value="Q3 2027">Q3 2027</option>
-            <option value="Open / Flexible">Open / Flexible</option>
-          </select>
-          <span data-fs-error="dateRange" style="color:#a32d2d; font-size:12px; margin-top:4px;"></span>
-        </div>
-
-        <div style="margin-bottom:16px;">
-          <label for="audience" style="display:block; font-size:14px; font-weight:500; margin-bottom:8px; color:#1a1815;">Who's in the room?</label>
-          <select id="audience" name="audience" data-fs-field required style="width:100%; padding:10px 12px; font-size:14px; border:1px solid #d0ccc0; border-radius:6px; font-family:inherit; background-color:#ffffff; color:#1a1815; box-sizing:border-box;">
-            <option value="">Select an audience</option>
-            <option value="Schools & Parent Groups">Schools & Parent Groups</option>
-            <option value="Youth Development Leaders">Youth Development Leaders</option>
-            <option value="Corporate / Product Teams">Corporate / Product Teams</option>
-            <option value="Nonprofits & Mission-Driven">Nonprofits & Mission-Driven</option>
-            <option value="Mixed / Not sure">Mixed / Not sure</option>
-          </select>
-          <span data-fs-error="audience" style="color:#a32d2d; font-size:12px; margin-top:4px;"></span>
-        </div>
-
-        <div style="margin-bottom:16px;">
-          <label for="budget" style="display:block; font-size:14px; font-weight:500; margin-bottom:8px; color:#1a1815;">Budget ballpark?</label>
-          <select id="budget" name="budget" data-fs-field required style="width:100%; padding:10px 12px; font-size:14px; border:1px solid #d0ccc0; border-radius:6px; font-family:inherit; background-color:#ffffff; color:#1a1815; box-sizing:border-box;">
-            <option value="">Select a range</option>
-            <option value="Under $1,500">Under $1,500</option>
-            <option value="$1,500–$2,500">$1,500–$2,500</option>
-            <option value="$2,500–$3,500">$2,500–$3,500</option>
-            <option value="$3,500–$5,000">$3,500–$5,000</option>
-            <option value="$5,000+">$5,000+</option>
-            <option value="Let's talk">Let's talk</option>
-          </select>
-          <span data-fs-error="budget" style="color:#a32d2d; font-size:12px; margin-top:4px;"></span>
-        </div>
-
-        <div style="margin-bottom:16px;">
-          <label for="email" style="display:block; font-size:14px; font-weight:500; margin-bottom:8px; color:#1a1815;">Best email to reach you</label>
-          <input id="email" type="email" name="email" placeholder="your@email.com" data-fs-field required style="width:100%; padding:10px 12px; font-size:14px; border:1px solid #d0ccc0; border-radius:6px; font-family:inherit; background-color:#ffffff; color:#1a1815; box-sizing:border-box;" />
-          <span data-fs-error="email" style="color:#a32d2d; font-size:12px; margin-top:4px;"></span>
-        </div>
-
-        <button type="submit" data-fs-submit-btn style="width:100%; padding:12px; font-size:14px; font-weight:500; background-color:#a8481f; color:#ffffff; border:none; border-radius:6px; cursor:pointer; margin-bottom:12px; transition:background-color 0.2s;">Check availability</button>
-
-        <p style="font-size:12px; color:#8b8680; text-align:center; margin:12px 0 0;">Your email is used only to confirm availability.</p>
-      </form>
-    </div>
-  </section>
-
-  <!-- WHY BOOK SHAUN + STATS (continuous dark zone) -->
-  <section class="why-book-zone">
+  <!-- CREDIBILITY STRIP -->
+  <section class="stats-strip">
     <div class="wrap">
-      <div class="section-title-dark">Why Book Shaun</div>
-      <div class="section-rule"></div>
-
-      <div class="img-pair-dark">
-        <img src="/images/coaching1.jpg" alt="Shaun teaching HCH students basketball">
-        <img src="/images/mentoring.jpg" alt="Shaun mentoring young athlete one-on-one">
-      </div>
-
-      <div class="check-grid-dark">
-        <div class="check-item-dark">
-          <h4><span class="tick">✓</span> 20+ Years Coaching Young People</h4>
-          <p>Developed 80+ college athletes. Coached at elite institutions. Built winning culture on and off the court.</p>
-        </div>
-        <div class="check-item-dark">
-          <h4><span class="tick">✓</span> 8+ Years Building Tech Products</h4>
-          <p>Senior PM at GameRun.ai. Scaled Buildium 0→$5M ARR. Deep expertise in product, AI, and scaling.</p>
-        </div>
-        <div class="check-item-dark">
-          <h4><span class="tick">✓</span> 12+ Years Social Impact Leadership</h4>
-          <p>Founded Hoops Creating Hope. 2,500+ students served. 85% school advancement rate. NBA + FIBA funded.</p>
-        </div>
-        <div class="check-item-dark">
-          <h4><span class="tick">✓</span> Authentic Storyteller</h4>
-          <p>2× TEDx Speaker. SLAM Magazine featured. Philadelphia 76ers honoree. Speaks from lived experience.</p>
-        </div>
-      </div>
-
-      <hr class="stats-divider-dark">
-
-      <div class="stats-grid-new">
-        <div class="stat-card-new">
-          <span class="stat-num-new">20+</span>
-          <span class="stat-label-new">Years Coaching</span>
-          <div class="stat-caption-new">80+ college athletes developed across elite programs.</div>
-        </div>
-        <div class="stat-card-new">
-          <span class="stat-num-new">2,500+</span>
-          <span class="stat-label-new">Youth Served</span>
-          <div class="stat-caption-new">Across Chennai, Bangalore & Hyderabad via Hoops Creating Hope.</div>
-        </div>
-        <div class="stat-card-new">
-          <span class="stat-num-new">2×</span>
-          <span class="stat-label-new">TEDx Speaker</span>
-          <div class="stat-caption-new">Speaking on AI, coaching, and youth development.</div>
-        </div>
-        <div class="stat-card-new">
-          <span class="stat-num-new">$5M+</span>
-          <span class="stat-label-new">ARR Scaled</span>
-          <div class="stat-caption-new">Product leadership at Buildium and GameRun.ai.</div>
-        </div>
+      <div class="stats-grid">
+        <div class="stat"><span class="num">20+</span><span class="label">Years Coaching</span></div>
+        <div class="stat"><span class="num">80+</span><span class="label">Athletes Developed</span></div>
+        <div class="stat"><span class="num">2,500+</span><span class="label">Youth Served</span></div>
+        <div class="stat"><span class="num">8+</span><span class="label">Yrs Building Tech</span></div>
+        <div class="stat"><span class="num">$5M+</span><span class="label">ARR Generated</span></div>
+        <div class="stat"><span class="num">2×</span><span class="label">TEDx Speaker</span></div>
       </div>
     </div>
   </section>
 
-  <!-- SPEAKING TOPICS (beige zone) -->
-  <section id="speaking-topics" class="beige-zone">
+  <!-- THE CHALLENGE -->
+  <section class="section" id="impact">
     <div class="wrap">
-      <div class="section-title-beige">Speaking Topics</div>
-      <div class="section-rule"></div>
-
-      <div class="tier-grid-new">
-        <div class="tier-card-new">
-          <h3>Corporate & Product Leadership</h3>
-          <p>For tech leaders, product teams, and innovation-focused organizations looking to understand AI's real impact and domain expertise's competitive advantage.</p>
-          <span class="tier-price-new">$5,000 – $15,000</span>
-          <a class="tier-link ghost" href="#corporate-track">View Topics</a>
+      <div class="eyebrow">The Challenge</div>
+      <h2>AI isn't just changing what kids know. It's changing how they learn, think and grow.</h2>
+      <p class="section-desc">Kids don't need to be protected from AI. They need guidance, perspective and real-world skills to use it responsibly — and lead with wisdom.</p>
+      <div class="challenge-grid">
+        <div class="challenge-card">
+          <img src="/images/mentoring.jpg" alt="Shaun mentoring a young athlete">
+          <h4>Critical thinking over shortcuts</h4>
         </div>
-        <div class="tier-card-new is-featured">
-          <h3>Schools & Parents Series</h3>
-          <p>For schools, parent groups, and youth organizations learning to navigate AI and social media responsibly with authentic, experienced guidance.</p>
-          <span class="tier-price-new">$1,000 – $3,000</span>
-          <a class="tier-link primary" href="#schools-track">View Topics</a>
+        <div class="challenge-card">
+          <img src="/images/coaching1.jpg" alt="Shaun coaching HCH students">
+          <h4>Human connection over automation</h4>
         </div>
-        <div class="tier-card-new">
-          <h3>Education & Youth Nonprofits</h3>
-          <p>For educational institutions, nonprofits, and mission-driven organizations building products and scaling impact responsibly.</p>
-          <span class="tier-price-new">$2,000 – $5,000</span>
-          <a class="tier-link ghost" href="#nonprofit-track">View Topics</a>
-        </div>
-      </div>
-
-      <!-- SCHOOLS & PARENTS TRACK -->
-      <div class="track-block" id="schools-track">
-        <h3 class="track-title-new">Schools & Parents Series: "Raising Kids in an AI World"</h3>
-
-        <div class="topic-card-new">
-          <span class="badge-new orange">Keynote</span>
-          <h4>"Raising Kids in an AI World: A Coach's Perspective on Digital Life"</h4>
-          <span class="topic-meta-new">45–60 minutes · For Parents & Educators</span>
-          <p>Your kids are growing up in the first generation that's never known life without AI. This talk moves past alarmism to give parents practical strategies for raising kids who can lead—not just survive—in an AI-saturated world. From screen time to critical thinking, learn what actually works.</p>
-        </div>
-
-        <div class="topic-card-new">
-          <span class="badge-new orange">Workshop</span>
-          <h4>"Social Media & Brain Development: What Neuroscience Actually Says"</h4>
-          <span class="topic-meta-new">60 minutes · Q&A Included</span>
-          <p>For parent nights, PTA meetings, school events. Cut through the headlines: what does neuroscience really tell us about social media and adolescent brains? And what can you actually do about it? Evidence-based strategies parents can use today.</p>
-        </div>
-
-        <div class="topic-card-new">
-          <span class="badge-new orange">Athletic Program</span>
-          <h4>"From My Phone to the Field: Digital Wellness for Young Athletes"</h4>
-          <span class="topic-meta-new">45–60 minutes · For Coaches & Sports Programs</span>
-          <p>Young athletes face unique tech pressures: constant video analysis, social media comparison, performance anxiety. Learn how to harness technology as a tool for development while protecting the resilience and joy that make athletics meaningful.</p>
-        </div>
-
-        <div class="topic-card-new">
-          <span class="badge-new orange">Professional Development</span>
-          <h4>"Technology as Tool, Not Substitute: Practical Strategies for Teachers"</h4>
-          <span class="topic-meta-new">60–90 minutes · Full Day Workshop Available</span>
-          <p>For teacher training and school staff development. Evidence-based, practical approaches to technology integration and youth digital wellness. Designed for educators tired of guilt and ready for real solutions.</p>
-        </div>
-      </div>
-
-      <!-- CORPORATE TRACK -->
-      <div class="track-block" id="corporate-track">
-        <h3 class="track-title-new">Corporate & Product Leadership</h3>
-
-        <div class="topic-card-new">
-          <span class="badge-new navy">Keynote</span>
-          <h4>"AI Doesn't Coach: Why Human Insight Still Matters"</h4>
-          <span class="topic-meta-new">45–60 minutes · Q&A Included</span>
-          <p>Raw data isn't enough. In an AI-saturated world, domain expertise—real understanding of your customers, your sport, your mission—is your competitive advantage. Why the best products combine AI with human judgment. Real examples from scaling AI tools that actually work.</p>
-        </div>
-
-        <div class="topic-card-new">
-          <span class="badge-new navy">Keynote</span>
-          <h4>"Building Products That Solve Real Problems"</h4>
-          <span class="topic-meta-new">45–60 minutes · Interactive</span>
-          <p>For product leaders and entrepreneurs. The gap between technical capability and solving actual problems is where most products fail. Learn how deep domain knowledge combined with AI creates products people actually need—not just technically impressive ones.</p>
-        </div>
-
-        <div class="topic-card-new">
-          <span class="badge-new navy">Keynote</span>
-          <h4>"Scaling Revenue While Staying True to Purpose"</h4>
-          <span class="topic-meta-new">60 minutes · Workshop Option</span>
-          <p>Mission-driven leaders and scaling startups: how do you grow without losing your soul? Real lessons from scaling Buildium 0→$5M ARR while building Hoops Creating Hope to serve 2,500+ youth. Building products AND impact at the same time.</p>
-        </div>
-
-        <div class="photo-row-new">
-          <img src="/images/coaching1.jpg" alt="Shaun speaking on a corporate technology panel">
-          <img src="/images/tech speaker.jpg" alt="Shaun speaking at tech conference">
-        </div>
-      </div>
-
-      <!-- NONPROFIT TRACK -->
-      <div class="track-block" id="nonprofit-track">
-        <h3 class="track-title-new">Education & Youth Nonprofits</h3>
-
-        <div class="topic-card-new">
-          <span class="badge-new orange">Keynote</span>
-          <h4>"Scaling Youth Impact Without Losing the Mission"</h4>
-          <span class="topic-meta-new">45–60 minutes · For Nonprofit & Education Leaders</span>
-          <p>Growing from impact to sustainable revenue is hard. This talk shares real lessons from scaling Hoops Creating Hope to 2,500+ students across India while maintaining mission integrity. How to fundraise, build partnerships, and grow without extracting from the communities you serve.</p>
-        </div>
-
-        <div class="topic-card-new">
-          <span class="badge-new orange">Workshop</span>
-          <h4>"Technology for Youth Programs: Tool or Trap?"</h4>
-          <span class="topic-meta-new">60 minutes · Interactive</span>
-          <p>Should your youth nonprofit adopt new tech? A practical framework for integrating technology in ways that strengthen (not replace) human connection and community impact. Real examples from education tech, sports tech, and social impact organizations.</p>
-        </div>
-
-        <div class="topic-card-new">
-          <span class="badge-new navy">Keynote</span>
-          <h4>"Building Products That Actually Serve Communities"</h4>
-          <span class="topic-meta-new">45–60 minutes · Q&A Included</span>
-          <p>For education leaders and mission-driven innovators. How to build tech solutions that serve young people instead of extracting from them. Lessons from AI product development and 12+ years building sustainable youth programs across three continents.</p>
+        <div class="challenge-card">
+          <img src="/images/hero.jpg" alt="Shaun with Hoops Creating Hope students">
+          <h4>Purpose over popularity</h4>
         </div>
       </div>
     </div>
   </section>
 
-  <footer class="footer" style="padding: 20px 16px; background:#fff;">
-    <div class="wrap" style="max-width:960px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
-      <p style="margin:0; font-size:12px; color:#8b8680;">&copy; 2026 Shaun Jayachandran. All rights reserved.</p>
-      <nav style="display:flex; gap:16px;">
-        <a href="/about.html" style="font-size:12px; color:#1a1815; text-decoration:none;">About</a>
-        <a href="https://hoopscreatinghope.org" style="font-size:12px; color:#1a1815; text-decoration:none;">Hoops Creating Hope</a>
-        <a href="mailto:hello@shaun-jayachandran.com" style="font-size:12px; color:#1a1815; text-decoration:none;">Contact</a>
-      </nav>
+  <!-- WHY SHAUN -->
+  <section class="section section-light" id="why">
+    <div class="wrap">
+      <div class="eyebrow">Why Shaun</div>
+      <h2>A lifetime of experience at the intersection of people, purpose and technology.</h2>
+      <div class="pillar-row">
+        <div class="pillar">
+          <div class="pillar-num">01 — COACH<span class="years">20+ Yrs</span></div>
+          <div class="pillar-copy">
+            <h4>Coach</h4>
+            <p>I've spent two decades coaching young people and watching the world around them change.</p>
+          </div>
+          <div class="pillar-img"><img src="/images/mentoring.jpg" alt="Shaun coaching"></div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">02 — BUILDER<span class="years">8+ Yrs</span></div>
+          <div class="pillar-copy">
+            <h4>Builder</h4>
+            <p>As a product leader, I build technology that solves real problems — and know what AI can and can't do.</p>
+          </div>
+          <div class="pillar-img"><img src="/images/panel_speaker.JPEG" alt="Shaun on a technology panel"></div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">03 — COMMUNITY<span class="years">12+ Yrs</span></div>
+          <div class="pillar-copy">
+            <h4>Community Leader</h4>
+            <p>Through Hoops Creating Hope, I turn ideas into impact and help kids reach their full potential.</p>
+          </div>
+          <div class="pillar-img"><img src="/images/coaching1.jpg" alt="Shaun with Hoops Creating Hope"></div>
+        </div>
+      </div>
     </div>
-  </footer>
+  </section>
 
-  <script src="/js/main.js"></script>
+  <!-- AI DOESN'T COACH CALLOUT -->
+  <div class="callout">
+    <div class="lines">AI can calculate.<br>AI can predict.<br>AI can automate.<br><strong>But AI doesn't coach.</strong></div>
+    <div class="tag">Human judgment still matters.</div>
+  </div>
 
-  <script>
-    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
-    formspree('initForm', { formElement: '#booking-form', formId: 'mgawqabl' });
-  </script>
-  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+  <!-- SIGNATURE TALKS -->
+  <section class="section section-light" id="talks">
+    <div class="wrap">
+      <div class="eyebrow">Signature Talks</div>
+      <h2>Three ideas. One point of view.</h2>
+      <div class="talks-grid">
+        <div class="talk-card">
+          <div class="talk-num">TALK 01</div>
+          <h3>Raising Kids in an AI World</h3>
+          <span class="talk-audience">For parents, educators & schools</span>
+          <p>Practical ways parents and educators can help kids thrive in an AI-saturated world — without losing their humanity.</p>
+        </div>
+        <div class="talk-card">
+          <div class="talk-num">TALK 02</div>
+          <h3>AI Doesn't Coach</h3>
+          <span class="talk-audience">For leaders & teams</span>
+          <p>Why human judgment, experience and empathy still matter in an AI-driven world of work.</p>
+        </div>
+        <div class="talk-card">
+          <div class="talk-num">TALK 03</div>
+          <h3>Technology for Youth Programs</h3>
+          <span class="talk-audience">For nonprofits & youth organizations</span>
+          <p>Using technology to expand impact — without losing the human connection that changes lives.</p>
+        </div>
+      </div>
+      <a href="#" class="view-all">View All Talks & Workshops →</a>
+    </div>
+  </section>
+
+  <!-- VIDEO / SPEAKER REEL -->
+  <section class="section video-section" id="media">
+    <div class="wrap">
+      <div class="eyebrow">Media</div>
+      <h2 style="margin-left:auto;margin-right:auto;">See Shaun in action.</h2>
+      <div class="video-frame">
+        <img src="/images/panel_speaker.JPEG" alt="Shaun speaking on a panel">
+        <div class="play-btn"></div>
+      </div>
+      <div class="video-links">
+        <a href="#">Watch Speaker Reel →</a>
+        <a href="#">Watch TEDx Talks →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section" id="testimonials">
+    <div class="wrap">
+      <div class="eyebrow">What Audiences Say</div>
+      <h2>What audiences say</h2>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="testi-quote">"[Real audience testimonial goes here]"</div>
+          <div class="testi-meta">School / Education</div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-quote">"[Real audience testimonial goes here]"</div>
+          <div class="testi-meta">Corporate / Product</div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-quote">"[Real audience testimonial goes here]"</div>
+          <div class="testi-meta">Youth / Nonprofit</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROOF / LOGO STRIP -->
+  <section class="section section-light proof-strip">
+    <div class="wrap">
+      <p class="proof-caption">Selected organizations, platforms and communities Shaun has worked with, spoken for, or been recognized by.</p>
+      <div class="proof-logos">
+        <span>TEDx</span>
+        <span>SLAM</span>
+        <span>Philadelphia 76ers</span>
+        <span>NBA Foundation</span>
+        <span>FIBA</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO BOOKS SHAUN -->
+  <section class="section section-light">
+    <div class="wrap">
+      <div class="eyebrow">Who Books Shaun</div>
+      <h2>Built for audiences who are asking what's next.</h2>
+      <div class="audience-grid">
+        <div class="audience-card">
+          <h4>Schools & Districts</h4>
+          <p>Helping educators and families navigate AI and childhood.</p>
+        </div>
+        <div class="audience-card">
+          <h4>Parent Organizations</h4>
+          <p>Practical conversations about raising thoughtful humans in a technological world.</p>
+        </div>
+        <div class="audience-card">
+          <h4>Youth Organizations</h4>
+          <p>Using technology without losing the human connection.</p>
+        </div>
+        <div class="audience-card">
+          <h4>Companies & Leadership Teams</h4>
+          <p>What coaching and human judgment can teach us about working alongside AI.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY THIS MATTERS -->
+  <section class="matters-section">
+    <img class="matters-img" src="/images/hero.jpg" alt="Shaun with Hoops Creating Hope students in Bangalore">
+    <div class="matters-copy">
+      <p>Technology is changing faster than most of us can process.</p>
+      <p style="font-size:14px; color:#b8b3a8; font-family:-apple-system,sans-serif;">But raising the next generation has never been about keeping up with every new tool. It's about helping young people know who they are, how to think, how to connect, and when technology should — and shouldn't — be trusted.</p>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta" id="book">
+    <h2>Let's create an impactful experience for your audience.</h2>
+    <p>Shaun brings energy, insight and actionable ideas that inspire audiences of all ages.</p>
+    <div class="hero-ctas" style="justify-content:center;">
+      <a href="#" class="btn btn-primary">Book Shaun</a>
+      <a href="#talks" class="btn btn-outline">Explore the Talks →</a>
+    </div>
+  </section>
+
+  <footer>&copy; 2026 Shaun Jayachandran. All rights reserved.</footer>
+
 </body>
 </html>
