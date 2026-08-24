@@ -89,6 +89,20 @@
   .pillar-num .years { display:block; font-size:26px; color:#161412; margin-top:4px; }
   .pillar-copy h4 { font-size:16px; margin-bottom:6px; }
   .pillar-copy p { font-size:13.5px; color:#5a5550; line-height:1.6; }
+  .chalktalk-link { display:inline-block; margin-top:10px; font-size:12.5px; font-weight:700; color:#c1440e; border-bottom:1px solid #c1440e; padding-bottom:1px; }
+  .chalktalk-link:hover { opacity:0.75; }
+
+  /* CURRENTLY BUILDING: CHALKTALK */
+  .chalktalk-module { display:grid; grid-template-columns:1fr; gap:28px; }
+  @media (min-width:760px) { .chalktalk-module { grid-template-columns: 1.1fr 1fr; gap:44px; align-items:start; } }
+  .chalktalk-heading { font-size:24px; margin: 4px 0 6px; }
+  .chalktalk-sub { font-size:14px; font-weight:600; color:#161412; margin-bottom:12px; }
+  .chalktalk-desc { font-size:13.5px; color:#5a5550; line-height:1.6; margin-bottom:6px; max-width:420px; }
+  .chalktalk-proof { display:flex; flex-direction:column; gap:14px; }
+  .proof-item { border-left:2px solid #e2ddd0; padding-left:14px; }
+  .proof-label { display:block; font-size:11px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; color:#161412; margin-bottom:4px; }
+  .proof-item p { font-size:12.5px; color:#5a5550; line-height:1.5; }
+  .chalktalk-status { display:inline-block; margin-top:4px; font-size:10.5px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; color:#8f897c; background:rgba(0,0,0,0.04); padding:5px 10px; border-radius:20px; width:fit-content; }
   .pillar-img img { width:100%; height:220px; object-fit:cover; object-position: center 20%; border-radius:8px; }
 
   /* AI DOESN'T COACH callout */
@@ -192,8 +206,9 @@
       <div class="hero-grid">
         <div class="hero-copy">
           <div class="hero-eyebrow">Coach · Builder · Community Leader</div>
-          <h1>Your kids are growing up alongside AI. Don't hide them from it. Help them learn it. Lead it. Don't just have them follow it.</h1>
-          <p class="hero-desc">Shaun Jayachandran helps parents, educators and leaders prepare the next generation to use technology without losing who they are.</p>
+          <h1>AI can do more. What should humans do?</h1>
+          <p class="hero-subhead" style="font-size:16px; color:#e8e4da; font-weight:600; margin-bottom:14px;">Kids and employees are growing up and trying to constantly work alongside AI. Don't hide them from it. Teach them how to lead it.</p>
+          <p class="hero-desc">Shaun Jayachandran helps parents, educators, leaders and organizations navigate a world where technology is becoming increasingly capable — and human judgment increasingly valuable.</p>
           <div class="hero-ctas">
             <a href="#book" class="btn btn-primary">Book Shaun</a>
             <a href="#talks" class="btn btn-outline">Explore the Talks →</a>
@@ -270,7 +285,8 @@
           <div class="pillar-num">02 — BUILDER<span class="years">8+ Yrs</span></div>
           <div class="pillar-copy">
             <h4>Builder</h4>
-            <p>As a product leader, I build technology that solves real problems — and know what AI can and can't do.</p>
+            <p><strong>I build technology around problems I understand firsthand.</strong> From product leadership to building ChalkTalk, Shaun has spent 8+ years turning real-world problems into technology people can actually use.</p>
+            <a href="https://chalktalk-sand.vercel.app/" target="_blank" rel="noopener noreferrer" class="chalktalk-link">Explore ChalkTalk →</a>
           </div>
           <div class="pillar-img"><img src="/images/panel speaker.JPEG" alt="Shaun on a technology panel"></div>
         </div>
@@ -281,6 +297,36 @@
             <p>Through Hoops Creating Hope, I turn ideas into impact and help kids reach their full potential.</p>
           </div>
           <div class="pillar-img"><img src="/images/classroom-teaching.jpg" alt="Shaun teaching a classroom session"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CURRENTLY BUILDING: CHALKTALK -->
+  <section class="section-light" style="border-top:1px solid rgba(0,0,0,0.08);">
+    <div class="wrap">
+      <div class="chalktalk-module">
+        <div class="chalktalk-copy">
+          <div class="eyebrow">Currently Building</div>
+          <h3 class="chalktalk-heading">ChalkTalk</h3>
+          <p class="chalktalk-sub">Interactive playbooks for players, parents, and coaches.</p>
+          <p class="chalktalk-desc">Built from the bench up, ChalkTalk turns basketball systems into interactive, phase-by-phase playbooks that players, parents and coaches can access from the same private link.</p>
+          <a href="https://chalktalk-sand.vercel.app/" target="_blank" rel="noopener noreferrer" class="chalktalk-link">Explore ChalkTalk →</a>
+        </div>
+        <div class="chalktalk-proof">
+          <div class="proof-item">
+            <span class="proof-label">Phase-by-Phase</span>
+            <p>Players can step through each action instead of staring at a static diagram.</p>
+          </div>
+          <div class="proof-item">
+            <span class="proof-label">Built for Basketball</span>
+            <p>Real half-court geometry, role-coded players and coaching notes.</p>
+          </div>
+          <div class="proof-item">
+            <span class="proof-label">One Program · One Playbook</span>
+            <p>A shared private link for coaches, players and families.</p>
+          </div>
+          <div class="chalktalk-status">Closed Beta · Invite Only</div>
         </div>
       </div>
     </div>
