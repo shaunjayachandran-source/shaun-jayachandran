@@ -138,6 +138,25 @@
   .testi-quote { font-size:13.5px; font-style:italic; color:#d8d3c8; line-height:1.6; margin-bottom:14px; }
   .testi-meta { font-size:11.5px; color:#8f897c; text-transform:uppercase; letter-spacing:0.04em; }
 
+  /* FEATURED TESTIMONIAL */
+  .featured-testimonial { max-width:680px; }
+  .featured-pullquote { font-family:Georgia,serif; font-size:26px; line-height:1.42; color:#fff; margin: 4px 0 18px; text-wrap:balance; }
+  @media (min-width:700px) { .featured-pullquote { font-size:30px; } }
+  .featured-support { font-size:15px; color:#b8b3a8; line-height:1.6; margin-bottom:22px; max-width:520px; }
+  .featured-attribution { margin-bottom:18px; }
+  .featured-attribution .name { font-size:14px; font-weight:700; color:#fff; display:block; }
+  .featured-attribution .role { font-size:12.5px; color:#8f897c; margin-top:2px; display:block; }
+  .testimonial-details summary { list-style:none; cursor:pointer; font-size:12.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; color:#c1440e; border-bottom:1px solid #c1440e; padding-bottom:2px; display:inline-block; }
+  .testimonial-details summary::-webkit-details-marker { display:none; }
+  .testimonial-details summary:focus-visible { outline:2px solid #c1440e; outline-offset:4px; }
+  .testimonial-details[open] summary { margin-bottom:16px; }
+  .testimonial-details summary .label-closed { display:inline; }
+  .testimonial-details summary .label-open { display:none; }
+  .testimonial-details[open] summary .label-closed { display:none; }
+  .testimonial-details[open] summary .label-open { display:inline; }
+  .full-testimonial { font-size:14px; color:#c9c3b8; line-height:1.75; max-width:600px; }
+  .full-testimonial p + p { margin-top:14px; }
+
   /* PROOF / LOGO STRIP */
   .proof-strip { text-align:center; }
   .proof-caption { font-size:11.5px; color:#8f897c; margin-bottom:28px; max-width:480px; margin-left:auto; margin-right:auto; }
@@ -248,8 +267,8 @@
   <section class="section" id="impact">
     <div class="wrap">
       <div class="eyebrow">The Challenge</div>
-      <h2>AI isn't just changing what adults & kids know. It's changing how they learn, think and grow.</h2>
-      <p class="section-desc">Thinkers don't need to be protected from AI. They need guidance, perspective, and real-world skills to use it responsibly — and then to lead with wisdom.</p>
+      <h2>AI isn't just changing what kids know. It's changing how they learn, think and grow.</h2>
+      <p class="section-desc">Kids don't need to be protected from AI. They need guidance, perspective and real-world skills to use it responsibly — and lead with wisdom.</p>
       <div class="challenge-grid">
         <div class="challenge-card">
           <img src="/images/student-moment.jpg" alt="Shaun talking with a student on the court">
@@ -402,21 +421,28 @@
   <!-- TESTIMONIALS -->
   <section class="section" id="testimonials">
     <div class="wrap">
-      <div class="eyebrow">What Audiences Say</div>
-      <h2>What audiences say</h2>
-      <div class="testi-grid">
-        <div class="testi-card">
-          <div class="testi-quote">"[Real audience testimonial goes here]"</div>
-          <div class="testi-meta">School / Education</div>
+      <div class="eyebrow">What People Who Know Shaun Say</div>
+
+      <div class="featured-testimonial">
+        <p class="featured-pullquote">"The technology may be evolving, but his mission hasn't changed."</p>
+        <p class="featured-support">Helping young people grow, make good decisions, and prepare for the world ahead.</p>
+        <div class="featured-attribution">
+          <span class="name">Jorel Joseph</span>
+          <span class="role">Former player · Technology professional</span>
         </div>
-        <div class="testi-card">
-          <div class="testi-quote">"[Real audience testimonial goes here]"</div>
-          <div class="testi-meta">Corporate / Product</div>
-        </div>
-        <div class="testi-card">
-          <div class="testi-quote">"[Real audience testimonial goes here]"</div>
-          <div class="testi-meta">Youth / Nonprofit</div>
-        </div>
+
+        <details class="testimonial-details">
+          <summary>
+            <span class="label-closed">Read Jorel's full perspective →</span>
+            <span class="label-open">Hide full perspective ↑</span>
+          </summary>
+          <div class="full-testimonial">
+            <p>"I've known Coach since I was a high school basketball player, but his impact on my life has extended far beyond the court. For decades, he has dedicated himself to serving others: as a coach, teacher, advisor, nonprofit leader, mentor, and technology professional.</p>
+            <p>Having worked in technology for years, Coach brings a unique combination of technical experience and a deep understanding of young people. As he now helps kids and parents navigate AI and an increasingly technology-driven world, I can't think of someone better suited for the responsibility.</p>
+            <p>The technology may be evolving, but his mission hasn't changed: helping young people grow, make good decisions, and prepare for the world ahead. I'm grateful to have had Coach in my corner, and I know the families he works with will feel the same."</p>
+            <p>— Jorel Joseph</p>
+          </div>
+        </details>
       </div>
     </div>
   </section>
