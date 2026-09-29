@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shaun-jayachandran.vercel.app/sitemap.xml
