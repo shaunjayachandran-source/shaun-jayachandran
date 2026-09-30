@@ -3,14 +3,63 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shaun Jayachandran — Coach. Builder. Community Leader.</title>
+<title>Shaun Jayachandran | Senior Product Leader, Consumer &amp; Sports Technology</title>
+<meta name="description" content="Senior product leader in consumer and sports technology. I took Buildium Applicant Center from launch to $5M ARR and lead AI sports product at GameRun.ai.">
+<link rel="canonical" href="https://shaun-jayachandran.vercel.app/">
+<meta name="theme-color" content="#0d0d0d">
+<link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Shaun Jayachandran">
+<meta property="og:title" content="Shaun Jayachandran: Senior Product Leader">
+<meta property="og:description" content="Senior product leader in consumer and sports technology. I took Buildium Applicant Center from launch to $5M ARR and lead AI sports product at GameRun.ai.">
+<meta property="og:url" content="https://shaun-jayachandran.vercel.app/">
+<meta property="og:image" content="https://shaun-jayachandran.vercel.app/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Shaun Jayachandran, Senior Product Leader in consumer and sports technology">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shaun Jayachandran: Senior Product Leader">
+<meta name="twitter:description" content="Senior product leader in consumer and sports technology. I took Buildium Applicant Center from launch to $5M ARR and lead AI sports product at GameRun.ai.">
+<meta name="twitter:image" content="https://shaun-jayachandran.vercel.app/images/og-image.jpg">
+<meta name="twitter:image:alt" content="Shaun Jayachandran, Senior Product Leader in consumer and sports technology">
+
+<link rel="preload" as="image" href="/images/web/portrait-suit-800.webp" imagesrcset="/images/web/portrait-suit-480.webp 480w, /images/web/portrait-suit-800.webp 800w" imagesizes="(min-width:860px) 470px, 100vw" fetchpriority="high">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Shaun Jayachandran",
+  "jobTitle": "Senior Product Leader",
+  "description": "Senior product leader in consumer and sports technology.",
+  "url": "https://shaun-jayachandran.vercel.app/",
+  "image": "https://shaun-jayachandran.vercel.app/images/og-image.jpg",
+  "sameAs": [
+    "https://www.linkedin.com/in/shaunjayachandran"
+  ]
+}
+</script>
+
 <style>
   * { box-sizing: border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
   body { font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif; background:#0d0d0d; color:#f5f3ee; line-height:1.5; }
   img { max-width:100%; display:block; }
   .wrap { max-width: 1080px; margin:0 auto; padding: 0 20px; }
   a { color:inherit; text-decoration:none; }
   h1,h2,h3,h4 { font-family: Georgia, 'Times New Roman', serif; font-weight:600; letter-spacing:-0.01em; }
+  section[id] { scroll-margin-top:64px; }
+  a:focus-visible, button:focus-visible, summary:focus-visible { outline:2px solid #c1440e; outline-offset:3px; }
+  .skip-link { position:absolute; left:-999px; top:8px; z-index:100; background:#c1440e; color:#fff; padding:8px 14px; border-radius:4px; font-size:13px; font-weight:700; }
+  .skip-link:focus { left:8px; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior:auto; }
+    * { transition-duration:0.001ms !important; }
+  }
 
   /* NAV */
   .nav { position:sticky; top:0; z-index:50; background:rgba(13,13,13,0.92); backdrop-filter: blur(8px); border-bottom:1px solid rgba(255,255,255,0.08); }
@@ -20,51 +69,58 @@
   .nav-links { display:none; gap:26px; font-size:12.5px; letter-spacing:0.04em; text-transform:uppercase; color:#b8b3a8; }
   .nav-links a:hover { color:#fff; }
   .nav-cta { background:#c1440e; color:#fff; font-size:12px; font-weight:700; letter-spacing:0.04em; padding:9px 16px; border-radius:4px; text-transform:uppercase; }
-  @media (min-width:820px) { .nav-links { display:flex; } }
+  .nav-cta:hover { opacity:0.9; }
+  @media (min-width:900px) { .nav-links { display:flex; } }
 
   /* HERO */
-  .hero { position:relative; padding: 40px 20px 40px; }
+  .hero { position:relative; padding: 40px 20px 36px; }
   .hero-grid { display:grid; grid-template-columns:1fr; gap:28px; align-items:center; }
   @media (min-width:860px) {
     .hero-grid { grid-template-columns: 1.1fr 0.9fr; gap:40px; }
   }
-  .hero-eyebrow { font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase; color:#c1440e; font-weight:700; margin-bottom:14px; }
-  .hero h1 { font-size:30px; line-height:1.24; color:#fff; margin-bottom:18px; text-wrap: balance; }
-  .hero-desc { font-size:14.5px; color:#b8b3a8; margin-bottom:26px; }
+  .hero-eyebrow { font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase; color:#c1440e; font-weight:700; margin-bottom:14px; line-height:1.5; }
+  .hero h1 { font-size:34px; line-height:1.15; color:#fff; margin-bottom:18px; text-wrap: balance; }
+  .hero-desc { font-size:15px; color:#b8b3a8; margin-bottom:26px; max-width:540px; line-height:1.65; }
   @media (min-width:700px) {
-    .hero h1 { font-size:34px; }
+    .hero h1 { font-size:42px; }
   }
-  .hero-ctas { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:0; }
+  .hero-roles { font-size:12.5px; letter-spacing:0.03em; color:#8f897c; margin:-12px 0 22px; }
+  .hero-ctas { display:flex; gap:12px; flex-wrap:wrap; }
   .btn { display:inline-block; padding:13px 22px; font-size:13px; font-weight:700; letter-spacing:0.04em; text-transform:uppercase; border-radius:4px; }
   .btn-primary { background:#c1440e; color:#fff; }
+  .btn-primary:hover { opacity:0.9; }
   .btn-outline { border:1px solid rgba(255,255,255,0.35); color:#fff; }
-  .hero-media { position:relative; }
-  .hero-photo { border-radius:10px; overflow:hidden; margin-bottom:14px; }
-  .hero-photo img { width:100%; height:340px; object-fit:cover; object-position:center 20%; }
+  .btn-outline:hover { border-color:#fff; }
+  .hero-links { display:flex; flex-wrap:wrap; gap:8px 22px; margin-top:20px; font-size:13px; }
+  .hero-links a { color:#b8b3a8; border-bottom:1px solid rgba(255,255,255,0.25); padding-bottom:1px; word-break:break-word; }
+  .hero-links a:hover { color:#fff; border-color:#c1440e; }
+  .hero-photo { border-radius:10px; overflow:hidden; }
+  .hero-photo img { width:100%; height:340px; object-fit:cover; object-position:center 0%; }
   @media (min-width:860px) {
-    .hero-photo img { height:420px; }
+    .hero-photo img { height:500px; }
   }
-  .reel-card { display:flex; align-items:center; gap:14px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:14px 16px; max-width:420px; cursor:pointer; transition: background 0.2s ease; }
-  .reel-card:hover { background:rgba(255,255,255,0.09); }
 
-  /* VIDEO MODAL */
-  .video-modal-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.82); z-index:200; align-items:center; justify-content:center; padding:20px; }
-  .video-modal-overlay.is-open { display:flex; }
-  .video-modal-box { position:relative; background:#000; border-radius:12px; width:100%; max-width:340px; max-height:90vh; overflow:auto; }
-  .video-modal-close { position:absolute; top:-14px; right:-14px; width:36px; height:36px; border-radius:50%; background:#fff; color:#161412; border:none; font-size:18px; font-weight:700; cursor:pointer; display:flex; align-items:center; justify-content:center; z-index:5; box-shadow:0 2px 8px rgba(0,0,0,0.3); }
-  .video-modal-close:hover { background:#f0ece2; }
-  .play-btn { width:40px; height:40px; border-radius:50%; background:#c1440e; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
-  .play-btn::after { content:''; border-style:solid; border-width:7px 0 7px 11px; border-color:transparent transparent transparent #fff; margin-left:3px; }
-  .reel-text .title { font-size:13px; font-weight:700; color:#fff; }
-  .reel-text .sub { font-size:11.5px; color:#8f897c; margin-top:2px; }
+  /* AUDIENCE DOORS */
+  .doors { padding: 4px 20px 44px; }
+  .doors-grid { display:grid; grid-template-columns:1fr; gap:16px; }
+  @media (min-width:700px) { .doors-grid { grid-template-columns: 1fr 1fr; } }
+  .door { display:flex; flex-direction:column; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.12); border-radius:10px; overflow:hidden; transition: border-color 0.2s ease, background 0.2s ease; }
+  .door:hover, .door:focus-visible { border-color:#c1440e; background:rgba(255,255,255,0.07); }
+  .door-img img { width:100%; height:170px; object-fit:cover; }
+  .door-body { padding:20px 20px 22px; display:flex; flex-direction:column; flex:1; }
+  .door .eyebrow { margin-bottom:8px; }
+  .door h2 { font-size:22px; color:#fff; margin-bottom:8px; }
+  .door p { font-size:14px; color:#b8b3a8; line-height:1.6; margin-bottom:16px; }
+  .door-link { margin-top:auto; font-size:12.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; color:#c1440e; }
 
   /* STATS STRIP */
   .stats-strip { border-top:1px solid rgba(255,255,255,0.08); border-bottom:1px solid rgba(255,255,255,0.08); padding: 22px 20px; }
-  .stats-grid { display:grid; grid-template-columns: repeat(2,1fr); gap:18px; }
-  @media (min-width:700px) { .stats-grid { grid-template-columns: repeat(6,1fr); } }
-  .stat { text-align:center; }
+  .stats-grid { display:flex; flex-wrap:wrap; justify-content:center; gap:20px 8px; }
+  .stat { text-align:center; flex:0 0 calc(50% - 8px); }
+  @media (min-width:560px) { .stat { flex-basis:calc(25% - 8px); } }
+  @media (min-width:960px) { .stat { flex-basis:calc(100% / 7 - 8px); } }
   .stat .num { font-family:Georgia,serif; font-size:24px; font-weight:700; color:#fff; display:block; }
-  .stat .label { font-size:10px; color:#8f897c; text-transform:uppercase; letter-spacing:0.05em; margin-top:4px; display:block; }
+  .stat .label { font-size:10px; color:#8f897c; text-transform:uppercase; letter-spacing:0.05em; margin-top:4px; display:block; padding:0 4px; }
 
   /* SECTION SPACING */
   .section { padding: 48px 20px; }
@@ -72,73 +128,93 @@
   .section-light h2, .section-light h3 { color:#161412; }
   .eyebrow { font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#c1440e; font-weight:700; margin-bottom:10px; }
   .section h2 { font-size:26px; line-height:1.3; margin-bottom:14px; max-width:640px; text-wrap: balance; }
-  .section-desc { font-size:14.5px; color:#8f897c; max-width:560px; margin-bottom:32px; }
+  .section-desc { font-size:14.5px; color:#8f897c; max-width:600px; margin-bottom:32px; line-height:1.6; }
   .section-light .section-desc { color:#5a5550; }
-
-  /* CHALLENGE CARDS */
-  .challenge-grid { display:grid; grid-template-columns:1fr; gap:16px; }
-  @media (min-width:700px) { .challenge-grid { grid-template-columns: repeat(3,1fr); } }
-  .challenge-card img { width:100%; height:160px; object-fit:cover; object-position: center 20%; border-radius:8px; margin-bottom:14px; }
-  .challenge-card h4 { font-size:15px; color:#fff; margin-bottom:6px; }
-
-  /* WHY SHAUN — Coach/Builder/Community Leader */
-  .pillar-row { display:flex; flex-direction:column; gap:0; }
-  .pillar { display:grid; grid-template-columns:1fr; gap:18px; padding: 28px 0; border-top:1px solid rgba(0,0,0,0.1); align-items:center; }
-  @media (min-width:760px) { .pillar { grid-template-columns: 140px 1fr 1fr; } }
-  .pillar-num { font-family:Georgia,serif; font-size:13px; color:#c1440e; font-weight:700; letter-spacing:0.05em; }
-  .pillar-num .years { display:block; font-size:26px; color:#161412; margin-top:4px; }
-  .pillar-copy h4 { font-size:16px; margin-bottom:6px; }
-  .pillar-copy p { font-size:13.5px; color:#5a5550; line-height:1.6; }
   .pillar-link { display:inline-block; margin-top:10px; font-size:12.5px; font-weight:700; color:#c1440e; border-bottom:1px solid #c1440e; padding-bottom:1px; }
   .pillar-link:hover { opacity:0.75; }
 
-  /* CURRENTLY BUILDING: CHALKTALK */
-  .chalktalk-module { display:grid; grid-template-columns:1fr; gap:28px; }
-  @media (min-width:760px) { .chalktalk-module { grid-template-columns: 1.1fr 1fr; gap:44px; align-items:start; } }
-  .chalktalk-heading { font-size:24px; margin: 4px 0 6px; }
-  .chalktalk-sub { font-size:14px; font-weight:600; color:#161412; margin-bottom:12px; }
-  .chalktalk-desc { font-size:13.5px; color:#5a5550; line-height:1.6; margin-bottom:6px; max-width:420px; }
-  .chalktalk-proof { display:flex; flex-direction:column; gap:14px; }
-  .proof-item { border-left:2px solid #e2ddd0; padding-left:14px; }
-  .proof-label { display:block; font-size:11px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; color:#161412; margin-bottom:4px; }
-  .proof-item p { font-size:12.5px; color:#5a5550; line-height:1.5; }
-  .chalktalk-status { display:inline-block; margin-top:4px; font-size:10.5px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; color:#8f897c; background:rgba(0,0,0,0.04); padding:5px 10px; border-radius:20px; width:fit-content; }
+  /* SELECTED PRODUCT WORK */
+  .case { display:grid; grid-template-columns:1fr; gap:22px; background:#fff; border:1px solid #e2ddd0; border-radius:12px; padding:26px 22px; }
+  .case + .case { margin-top:18px; }
+  @media (min-width:820px) { .case { grid-template-columns: 1.15fr 0.85fr; gap:40px; padding:32px; } }
+  .case-meta { display:block; font-size:10.5px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#c1440e; margin-bottom:8px; }
+  .case h3 { font-size:24px; line-height:1.25; margin-bottom:14px; }
+  .case-block + .case-block { margin-top:14px; }
+  .case-label { display:block; font-size:11px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; color:#8f897c; margin-bottom:4px; }
+  .case-block p { font-size:14px; color:#454138; line-height:1.6; }
+  .case-outcomes { border-top:1px solid #ece7db; padding-top:18px; }
+  @media (min-width:820px) { .case-outcomes { border-top:0; border-left:1px solid #ece7db; padding:0 0 0 32px; } }
+  .metric-list { list-style:none; display:grid; grid-template-columns:repeat(2,1fr); gap:18px 14px; margin-top:12px; }
+  .metric-num { font-family:Georgia,serif; font-size:28px; font-weight:700; color:#161412; display:block; line-height:1.1; }
+  .metric-label { font-size:11.5px; color:#5a5550; display:block; margin-top:3px; line-height:1.35; }
+  .beta-list { list-style:none; display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+  .beta-list li { font-size:12.5px; font-weight:600; color:#161412; background:#f5f3ee; border:1px solid #d9d3c4; border-radius:20px; padding:6px 12px; }
+
+  /* EXPERIENCE & LEADERSHIP */
+  .pillar-row { display:flex; flex-direction:column; gap:0; }
+  .pillar { display:grid; grid-template-columns:1fr; gap:18px; padding: 28px 0; border-top:1px solid rgba(255,255,255,0.1); align-items:center; }
+  @media (min-width:760px) { .pillar { grid-template-columns: 140px 1fr 1fr; } }
+  .pillar-num { font-family:Georgia,serif; font-size:13px; color:#c1440e; font-weight:700; letter-spacing:0.05em; }
+  .pillar-num .years { display:block; font-size:26px; color:#fff; margin-top:4px; }
+  .pillar-copy h3 { font-size:16px; color:#fff; margin-bottom:6px; }
+  .pillar-copy p { font-size:13.5px; color:#b8b3a8; line-height:1.6; }
   .pillar-img img { width:100%; height:220px; object-fit:cover; object-position: center 20%; border-radius:8px; }
 
-  /* AI DOESN'T COACH callout */
-  .callout { background:#161412; padding: 44px 20px; text-align:center; }
-  .callout .lines { font-family:Georgia,serif; font-size:22px; line-height:1.5; color:#fff; max-width:520px; margin:0 auto 18px; }
-  .callout .lines strong { color:#c1440e; }
-  .callout .tag { font-size:13px; color:#8f897c; }
+  /* COACHING & HOOPS CREATING HOPE */
+  .impact-grid { display:grid; grid-template-columns:1fr; gap:18px; }
+  @media (min-width:700px) { .impact-grid { grid-template-columns: repeat(3,1fr); } }
+  .impact-card img { width:100%; height:190px; object-fit:cover; object-position: center 20%; border-radius:8px; margin-bottom:14px; }
+  .impact-card h3 { font-size:16px; margin-bottom:6px; color:#161412; }
+  .impact-card p { font-size:13.5px; color:#5a5550; line-height:1.6; }
+  .team-banner { margin-top:34px; }
+  .team-banner img { width:100%; height:320px; object-fit:cover; object-position:center 80%; border-radius:10px; }
+  .team-banner .cap { display:flex; flex-wrap:wrap; justify-content:space-between; gap:6px 20px; margin-top:12px; font-size:13px; color:#5a5550; }
+  .team-banner .cap a { font-size:12.5px; font-weight:700; color:#c1440e; border-bottom:1px solid #c1440e; padding-bottom:1px; }
 
-  /* SIGNATURE TALKS */
-  .talks-grid { display:grid; grid-template-columns:1fr; gap:16px; }
-  @media (min-width:760px) { .talks-grid { grid-template-columns: repeat(3,1fr); } }
-  .talk-card { background:#fff; border:1px solid #e2ddd0; border-radius:10px; padding:24px 20px; display:flex; flex-direction:column; }
-  .talk-num { font-family:Georgia,serif; font-size:30px; font-weight:700; color:#e2ddd0; line-height:1; margin-bottom:8px; }
-  .talk-category { font-size:10.5px; font-weight:700; letter-spacing:0.07em; text-transform:uppercase; color:#c1440e; margin-bottom:10px; display:block; }
-  .talk-card h3 { font-size:19px; margin-bottom:6px; line-height:1.32; }
-  .talk-audience { font-size:12px; color:#8f897c; margin-bottom:12px; display:block; }
-  .talk-hook { display:block; font-style:italic; font-size:13.5px; color:#5a5550; margin-bottom:10px; line-height:1.5; }
-  .talk-card p { font-size:13.5px; color:#5a5550; line-height:1.55; }
-  .talks-intro { font-size:14.5px; color:#5a5550; max-width:600px; margin: 6px 0 30px; }
-  .view-all { display:inline-block; margin-top:24px; font-size:12.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; color:#c1440e; border-bottom:1px solid #c1440e; padding-bottom:2px; }
-
-  /* VIDEO REEL SECTION */
-  .video-section { text-align:center; }
-  .video-frame { position:relative; border-radius:10px; overflow:hidden; max-width:700px; margin:0 auto 20px; aspect-ratio:16/9; }
+  /* MEDIA */
+  .media-grid { display:grid; grid-template-columns:1fr; gap:34px 26px; }
+  @media (min-width:820px) { .media-grid { grid-template-columns: 1fr 1fr; } .media-item.wide { grid-column:1 / -1; max-width:700px; width:100%; margin:0 auto; } }
+  .video-frame { position:relative; border-radius:10px; overflow:hidden; aspect-ratio:16/9; background:#000; }
   .video-frame iframe { width:100%; height:100%; display:block; border:0; }
-  .video-links { display:flex; gap:20px; justify-content:center; flex-wrap:wrap; font-size:12.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; }
+  .video-poster { position:absolute; inset:0; width:100%; height:100%; border:0; padding:0; cursor:pointer; background:#000; display:block; }
+  .video-poster img { width:100%; height:100%; object-fit:cover; opacity:0.82; transition:opacity 0.2s ease; }
+  .video-poster:hover img, .video-poster:focus-visible img { opacity:1; }
+  .reel-poster { background:linear-gradient(135deg,#16110e 0%,#2b170c 62%,#5a250c 100%); }
+  .reel-poster .reel-label { position:absolute; left:16px; right:16px; bottom:14px; text-align:left; font-size:12px; color:#d8d3c8; letter-spacing:0.02em; }
+  .play-btn { width:40px; height:40px; border-radius:50%; background:#c1440e; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+  .play-btn::after { content:''; border-style:solid; border-width:7px 0 7px 11px; border-color:transparent transparent transparent #fff; margin-left:3px; }
+  .video-poster .play-btn { position:absolute; left:50%; top:50%; width:64px; height:64px; transform:translate(-50%,-50%); box-shadow:0 2px 14px rgba(0,0,0,0.45); }
+  .video-poster .play-btn::after { border-width:11px 0 11px 17px; margin-left:5px; }
+  .media-cap { margin-top:12px; }
+  .media-title { font-size:14px; font-weight:700; color:#fff; }
+  .media-sub { font-size:12px; color:#8f897c; margin-top:2px; }
+  .video-links { display:flex; gap:8px 20px; flex-wrap:wrap; margin-top:8px; font-size:12.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; }
   .video-links a { color:#c1440e; border-bottom:1px solid #c1440e; padding-bottom:2px; }
 
-  /* TESTIMONIALS */
-  .testi-grid { display:grid; grid-template-columns:1fr; gap:16px; }
-  @media (min-width:760px) { .testi-grid { grid-template-columns: repeat(3,1fr); } }
-  .testi-card { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:22px 20px; }
-  .testi-quote { font-size:13.5px; font-style:italic; color:#d8d3c8; line-height:1.6; margin-bottom:14px; }
-  .testi-meta { font-size:11.5px; color:#8f897c; text-transform:uppercase; letter-spacing:0.04em; }
+  /* VIDEO MODAL (speaker reel) */
+  .video-modal-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.82); z-index:200; align-items:center; justify-content:center; padding:20px; }
+  .video-modal-overlay.is-open { display:flex; }
+  .video-modal-box { position:relative; background:#000; border-radius:12px; width:100%; max-width:340px; max-height:90vh; overflow:auto; }
+  .video-modal-box iframe { display:block; width:100%; height:min(700px, 82vh); border:0; }
+  .video-modal-close { position:absolute; top:8px; right:8px; width:36px; height:36px; border-radius:50%; background:#fff; color:#161412; border:none; font-size:18px; font-weight:700; cursor:pointer; display:flex; align-items:center; justify-content:center; z-index:5; box-shadow:0 2px 8px rgba(0,0,0,0.3); }
+  .video-modal-close:hover { background:#f0ece2; }
 
-  /* FEATURED TESTIMONIAL */
+  /* LOGO STRIP */
+  .proof-strip { text-align:center; }
+  .proof-caption { font-size:12px; color:#5a5550; margin:0 auto 28px; max-width:520px; line-height:1.6; }
+  .proof-logos { display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:28px 16px; }
+  .proof-logo-item { display:flex; flex-direction:column; align-items:center; justify-content:flex-start; gap:8px; width:calc(50% - 8px); max-width:170px; }
+  .proof-logo-item img, .proof-logo-item video { max-width:100% !important; }
+  @media (min-width:700px) { .proof-logos { gap:32px 44px; } .proof-logo-item { width:150px; } }
+  .proof-logo-rel { font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#c1440e; }
+  .proof-logo-name { font-family:Georgia,serif; font-weight:700; font-size:13px; color:#161412; letter-spacing:0.02em; }
+  .proof-logo-item .logo-img-wrap { display:flex; align-items:center; justify-content:center; height:70px; margin-top:2px; }
+  .proof-logo-item img { max-height:44px; max-width:140px; width:auto; height:auto; object-fit:contain; filter: grayscale(100%) opacity(0.65); transition: filter 0.2s ease; }
+  .proof-logo-item img:hover { filter: grayscale(0%) opacity(1); }
+  .proof-logo-item video { filter: grayscale(100%) opacity(0.75); transition: filter 0.2s ease; }
+  .proof-logo-item video:hover { filter: grayscale(0%) opacity(1); }
+
+  /* TESTIMONIALS */
   .featured-testimonial { max-width:680px; }
   .featured-pullquote { font-family:Georgia,serif; font-size:26px; line-height:1.42; color:#fff; margin: 4px 0 18px; text-wrap:balance; }
   @media (min-width:700px) { .featured-pullquote { font-size:30px; } }
@@ -148,7 +224,6 @@
   .featured-attribution .role { font-size:12.5px; color:#8f897c; margin-top:2px; display:block; }
   .testimonial-details summary { list-style:none; cursor:pointer; font-size:12.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; color:#c1440e; border-bottom:1px solid #c1440e; padding-bottom:2px; display:inline-block; }
   .testimonial-details summary::-webkit-details-marker { display:none; }
-  .testimonial-details summary:focus-visible { outline:2px solid #c1440e; outline-offset:4px; }
   .testimonial-details[open] summary { margin-bottom:16px; }
   .testimonial-details summary .label-closed { display:inline; }
   .testimonial-details summary .label-open { display:none; }
@@ -157,108 +232,338 @@
   .full-testimonial { font-size:14px; color:#c9c3b8; line-height:1.75; max-width:600px; }
   .full-testimonial p + p { margin-top:14px; }
 
-  /* PROOF / LOGO STRIP */
-  .proof-strip { text-align:center; }
-  .proof-caption { font-size:11.5px; color:#8f897c; margin-bottom:28px; max-width:480px; margin-left:auto; margin-right:auto; }
-  .proof-logos { display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:32px 44px; }
-  .proof-logo-item { display:flex; flex-direction:column; align-items:center; justify-content:flex-start; gap:10px; width:140px; }
-  .proof-logo-name { font-family:Georgia,serif; font-weight:700; font-size:13px; color:#161412; letter-spacing:0.02em; }
-  .proof-logo-item .logo-img-wrap { display:flex; align-items:center; justify-content:center; height:70px; }
-  .proof-logo-item img { max-height:44px; max-width:140px; width:auto; height:auto; object-fit:contain; filter: grayscale(100%) opacity(0.65); transition: filter 0.2s ease; }
-  .proof-logo-item img:hover { filter: grayscale(0%) opacity(1); }
-  .proof-logo-item video { filter: grayscale(100%) opacity(0.75); transition: filter 0.2s ease; }
-  .proof-logo-item video:hover { filter: grayscale(0%) opacity(1); }
+  /* CONTACT */
+  .contact { background:#161412; text-align:center; padding: 52px 20px; }
+  .contact h2 { color:#fff; font-size:28px; max-width:480px; margin:0 auto 14px; }
+  .contact p { color:#b8b3a8; font-size:14.5px; max-width:480px; margin:0 auto 26px; line-height:1.65; }
+  .contact-actions { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-bottom:22px; }
+  .contact .contact-note { font-size:13px; color:#8f897c; margin:0 auto; }
+  .contact .contact-note a { color:#c1440e; border-bottom:1px solid #c1440e; padding-bottom:1px; font-weight:700; }
 
-  /* WHO BOOKS SHAUN */
-  .audience-grid { display:grid; grid-template-columns:1fr; gap:14px; }
-  @media (min-width:700px) { .audience-grid { grid-template-columns: repeat(2,1fr); } }
-  .audience-card { background:#fff; border:1px solid #e2ddd0; border-radius:8px; padding:18px 20px; }
-  .audience-card h4 { font-size:14.5px; margin-bottom:6px; }
-  .audience-card p { font-size:12.5px; color:#5a5550; line-height:1.5; }
-
-  /* WHY THIS MATTERS */
-  .matters-section { position:relative; padding:0; }
-  .matters-img { width:100%; height:350px; object-fit:cover; object-position:center 20%; }
-  .matters-copy { padding: 32px 20px; max-width:560px; }
-  .matters-copy p { font-size:16px; line-height:1.7; color:#e8e4da; font-family:Georgia,serif; margin-bottom:14px; }
-
-  /* FINAL CTA */
-  .final-cta { background:#161412; text-align:center; padding: 52px 20px; }
-  .final-cta h2 { color:#fff; font-size:26px; max-width:480px; margin:0 auto 14px; }
-  .final-cta p { color:#b8b3a8; font-size:14px; max-width:440px; margin:0 auto 26px; }
-
-  .book-form-wrap { max-width:440px; margin:32px auto 0; text-align:left; }
-  .book-form-wrap label { display:block; font-size:12.5px; font-weight:600; color:#d8d3c8; margin-bottom:6px; letter-spacing:0.02em; }
-  .book-form-wrap .field { margin-bottom:14px; }
-  .book-form-wrap select, .book-form-wrap input { width:100%; padding:11px 12px; font-size:13.5px; border:1px solid rgba(255,255,255,0.18); border-radius:6px; background:rgba(255,255,255,0.05); color:#fff; box-sizing:border-box; font-family:inherit; }
-  .book-form-wrap select option { background:#161412; color:#fff; }
-  .book-form-wrap .fs-error-msg { color:#e88; font-size:11.5px; margin-top:4px; display:block; }
-  .book-form-wrap button[type="submit"] { width:100%; padding:13px; font-size:13px; font-weight:700; letter-spacing:0.04em; text-transform:uppercase; background:#c1440e; color:#fff; border:none; border-radius:6px; cursor:pointer; }
-  .book-form-wrap .form-note { font-size:11.5px; color:#8f897c; text-align:center; margin-top:12px; }
-  .fs-success-msg, .fs-error-box { display:none; padding:12px; border-radius:6px; font-size:12.5px; margin-bottom:16px; text-align:center; }
-  .fs-success-msg { background:rgba(74,222,128,0.12); border:1px solid #4ade80; color:#8ee9b0; }
-  .fs-error-box { background:rgba(226,75,74,0.12); border:1px solid #e24b4a; color:#f3a8a7; }
-
-  footer { padding: 24px 20px; text-align:center; font-size:11.5px; color:#5a5550; }
+  footer { padding: 24px 20px; text-align:center; font-size:11.5px; color:#6f6a5f; }
 </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- NAV -->
-  <nav class="nav">
+  <header class="nav">
     <div class="wrap">
-      <a href="/" class="nav-logo" style="text-decoration:none; color:#fff;">SHAUN JAYACHANDRAN</a>
-      <div class="nav-links">
-        <a href="#talks">Talks</a>
-        <a href="#why">About</a>
+      <a href="/" class="nav-logo" style="color:#fff;">SHAUN JAYACHANDRAN</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="/talks.html">Speaking</a>
         <a href="#impact">Impact</a>
         <a href="#media">Media</a>
         <a href="#testimonials">Testimonials</a>
-      </div>
-      <a href="#book" class="nav-cta">Book Shaun</a>
+      </nav>
+      <a href="#contact" class="nav-cta">Contact</a>
     </div>
-  </nav>
+  </header>
+
+  <main id="main">
 
   <!-- HERO -->
   <section class="hero">
     <div class="wrap">
       <div class="hero-grid">
         <div class="hero-copy">
-          <div class="hero-eyebrow">Coach · Builder · Community Leader</div>
-          <h1>AI can do more. What should humans do?</h1>
-          <p class="hero-subhead" style="font-size:16px; color:#e8e4da; font-weight:600; margin-bottom:14px;">Kids and employees are growing up and trying to constantly work alongside AI. Don't hide them from it. Teach them how to lead it.</p>
-          <p class="hero-desc">Shaun Jayachandran helps parents, educators, leaders and organizations navigate a world where technology is becoming increasingly capable — and human judgment increasingly valuable.</p>
+          <div class="hero-eyebrow">Senior Product Leader | Consumer &amp; Sports Technology</div>
+          <h1>I take products from first launch to scale.</h1>
+          <p class="hero-desc">At Buildium, I owned Applicant Center from launch to $5M ARR and 3M+ accounts on a platform serving 31,000+ clients. I now lead AI sports-product strategy at GameRun.ai and build ChalkTalk, a play-diagramming tool for basketball coaches.</p>
+          <p class="hero-roles">Senior Product Manager, Head of Product, Strategy, and Advisor.</p>
           <div class="hero-ctas">
-            <a href="#book" class="btn btn-primary">Book Shaun</a>
-            <a href="#talks" class="btn btn-outline">Explore the Talks →</a>
+            <a href="#work" class="btn btn-primary">See my work</a>
+            <a href="/resume.pdf" class="btn btn-outline">Download resume</a>
+          </div>
+          <div class="hero-links">
+            <a href="https://www.linkedin.com/in/shaunjayachandran" target="_blank" rel="noopener noreferrer">linkedin.com/in/shaunjayachandran</a>
+            <a href="mailto:shaun.jayachandran@gmail.com">shaun.jayachandran@gmail.com</a>
           </div>
         </div>
-        <div class="hero-media">
-          <div class="hero-photo">
-            <img src="/images/hero.jpg" alt="Shaun with Hoops Creating Hope students">
-          </div>
-          <div class="reel-card" onclick="openReelModal()" role="button" tabindex="0" onkeydown="if(event.key==='Enter')openReelModal()">
-            <div class="play-btn"></div>
-            <div class="reel-text">
-              <div class="title">Watch Shaun Speak</div>
-              <div class="sub">1:05 Speaker Reel</div>
-            </div>
-          </div>
+        <div class="hero-photo">
+          <img src="/images/web/portrait-suit-800.webp" srcset="/images/web/portrait-suit-480.webp 480w, /images/web/portrait-suit-800.webp 800w" sizes="(min-width:860px) 470px, 100vw" alt="Shaun Jayachandran in a blue suit, dribbling a basketball" width="800" height="947" fetchpriority="high" decoding="async">
         </div>
       </div>
     </div>
   </section>
 
+  <!-- AUDIENCE DOORS -->
+  <section class="doors" aria-label="More ways to work with me">
+    <div class="wrap">
+      <div class="doors-grid">
+        <a class="door" href="/talks.html">
+          <div class="door-img"><img src="/images/web/tech-speaker-800.webp" srcset="/images/web/tech-speaker-480.webp 480w, /images/web/tech-speaker-800.webp 800w" sizes="(min-width:700px) 520px, 100vw" alt="Shaun speaking on stage" width="800" height="1132" loading="lazy" decoding="async" style="object-position:center 8%;"></div>
+          <div class="door-body">
+            <div class="eyebrow">Speaking</div>
+            <h2>Book Shaun to speak</h2>
+            <p>I give keynotes on AI and human judgment, and on parenting high-achieving young athletes.</p>
+            <span class="door-link">See talks &amp; book →</span>
+          </div>
+        </a>
+        <a class="door" href="#impact">
+          <div class="door-img"><img src="/images/web/hero-800.webp" srcset="/images/web/hero-480.webp 480w, /images/web/hero-800.webp 800w, /images/web/hero-1200.webp 1200w" sizes="(min-width:700px) 520px, 100vw" alt="Shaun with Hoops Creating Hope students on a basketball court in India" width="1200" height="960" loading="lazy" decoding="async" style="object-position:center 40%;"></div>
+          <div class="door-body">
+            <div class="eyebrow">Nonprofit</div>
+            <h2>Hoops Creating Hope</h2>
+            <p>The nonprofit I founded. It uses basketball to educate youth in India.</p>
+            <span class="door-link">See the impact →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- CREDIBILITY STRIP -->
-  <section class="stats-strip">
+  <section class="stats-strip" aria-label="By the numbers">
     <div class="wrap">
       <div class="stats-grid">
-        <div class="stat"><span class="num">20+</span><span class="label">Years Coaching</span></div>
-        <div class="stat"><span class="num">80+</span><span class="label">NCAA Athletes Developed</span></div>
-        <div class="stat"><span class="num">2,500+</span><span class="label">Youth Served</span></div>
-        <div class="stat"><span class="num">8+</span><span class="label">Yrs Building Tech</span></div>
         <div class="stat"><span class="num">$5M+</span><span class="label">ARR Generated</span></div>
+        <div class="stat"><span class="num">8+</span><span class="label">Yrs Building Tech</span></div>
+        <div class="stat"><span class="num">20+</span><span class="label">Years Coaching</span></div>
+        <div class="stat"><span class="num">80+</span><span class="label">Athletes to College Programs</span></div>
+        <div class="stat"><span class="num">2,500+</span><span class="label">Youth Served in India</span></div>
+        <div class="stat"><span class="num">60%</span><span class="label">Girls' Participation</span></div>
         <div class="stat"><span class="num">2×</span><span class="label">TEDx Speaker</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SELECTED PRODUCT WORK -->
+  <section class="section section-light" id="work">
+    <div class="wrap">
+      <div class="eyebrow">Selected product work</div>
+      <h2>Three products, from first launch to real usage.</h2>
+      <p class="section-desc">What each product was for, what I owned, and what changed.</p>
+
+      <article class="case">
+        <div class="case-main">
+          <span class="case-meta">Buildium · Property management SaaS · 0-to-1 launch</span>
+          <h3>Applicant Center</h3>
+          <div class="case-block">
+            <span class="case-label">The problem</span>
+            <p>Property managers needed a faster, simpler way to take rental applications and collect applicant payments, including from applicants on their phones.</p>
+          </div>
+          <div class="case-block">
+            <span class="case-label">My role</span>
+            <p>I owned Applicant Center from its first launch to $5M ARR, on a platform serving 31,000+ clients.</p>
+          </div>
+        </div>
+        <div class="case-outcomes">
+          <span class="case-label">Outcomes</span>
+          <ul class="metric-list">
+            <li><span class="metric-num">$5M</span><span class="metric-label">ARR from a 0-to-1 launch</span></li>
+            <li><span class="metric-num">3M+</span><span class="metric-label">accounts</span></li>
+            <li><span class="metric-num">209%</span><span class="metric-label">year-over-year growth</span></li>
+            <li><span class="metric-num">83%</span><span class="metric-label">mobile payment adoption</span></li>
+            <li><span class="metric-num">+22</span><span class="metric-label">NPS</span></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case-main">
+          <span class="case-meta">GameRun.ai · AI sports performance platform</span>
+          <h3>GameRun.ai</h3>
+          <div class="case-block">
+            <span class="case-label">The problem</span>
+            <p>Athletes and coaches want clear, sport-specific feedback on how they perform, without hours of manual film review.</p>
+          </div>
+          <div class="case-block">
+            <span class="case-label">My role</span>
+            <p>I'm the senior product lead for the platform and set its AI sports-product strategy.</p>
+          </div>
+        </div>
+        <div class="case-outcomes">
+          <span class="case-label">Outcomes</span>
+          <ul class="metric-list">
+            <li><span class="metric-num">300+</span><span class="metric-label">beta users</span></li>
+            <li><span class="metric-num">2.5×</span><span class="metric-label">year-over-year revenue growth</span></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case-main">
+          <span class="case-meta">ChalkTalk · Creator · Coach-facing tool</span>
+          <h3>ChalkTalk</h3>
+          <div class="case-block">
+            <span class="case-label">The problem</span>
+            <p>Coaches diagram plays on whiteboards and static drawings, so players and parents rarely see how a play actually unfolds.</p>
+          </div>
+          <div class="case-block">
+            <span class="case-label">My role</span>
+            <p>I created ChalkTalk, a play-diagramming and video analysis tool for basketball coaches, and I run it in a closed beta.</p>
+          </div>
+          <a href="https://chalktalk-sand.vercel.app/" target="_blank" rel="noopener noreferrer" class="pillar-link">Explore ChalkTalk →</a>
+        </div>
+        <div class="case-outcomes">
+          <span class="case-label">Outcomes</span>
+          <p style="font-size:13px; color:#454138; margin-top:10px;">In beta with:</p>
+          <ul class="beta-list">
+            <li>LSU</li>
+            <li>Dartmouth</li>
+            <li>CCBC</li>
+            <li>Nike EYBL Team Melo</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE & LEADERSHIP -->
+  <section class="section" id="about">
+    <div class="wrap">
+      <div class="eyebrow">Experience &amp; leadership</div>
+      <h2>I build products around problems I know firsthand.</h2>
+      <div class="pillar-row">
+        <div class="pillar">
+          <div class="pillar-num">01 — PRODUCT<span class="years">8+ Yrs</span></div>
+          <div class="pillar-copy">
+            <h3>Product leader</h3>
+            <p>I've spent 8+ years turning real-world problems into technology people use, from scaling Applicant Center at Buildium to leading AI sports-product strategy at GameRun.ai.</p>
+          </div>
+          <div class="pillar-img"><img src="/images/web/panel-speaker-800.webp" srcset="/images/web/panel-speaker-480.webp 480w, /images/web/panel-speaker-800.webp 800w" sizes="(min-width:760px) 420px, 100vw" alt="Shaun speaking on a technology panel" width="800" height="533" loading="lazy" decoding="async"></div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">02 — COACH<span class="years">20+ Yrs</span></div>
+          <div class="pillar-copy">
+            <h3>Coach</h3>
+            <p>I've coached young people for two decades and watched the world around them change. It's where I learned to lead a team and to give feedback people can act on.</p>
+          </div>
+          <div class="pillar-img"><img src="/images/web/coaching-800.webp" srcset="/images/web/coaching-480.webp 480w, /images/web/coaching-800.webp 800w" sizes="(min-width:760px) 420px, 100vw" alt="Shaun with a girls&#x27; basketball team and their trophy" width="800" height="1067" loading="lazy" decoding="async" style="object-position: center 30%;"></div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">03 — NONPROFIT<span class="years">16+ Yrs</span></div>
+          <div class="pillar-copy">
+            <h3>Nonprofit founder</h3>
+            <p>Through Hoops Creating Hope, I turn ideas into programs that help kids in India reach their potential.</p>
+            <a href="https://hoopscreatinghope.org" target="_blank" rel="noopener noreferrer" class="pillar-link">Explore Hoops Creating Hope →</a>
+          </div>
+          <div class="pillar-img"><img src="/images/web/classroom-teaching-800.webp" srcset="/images/web/classroom-teaching-480.webp 480w, /images/web/classroom-teaching-800.webp 800w" sizes="(min-width:760px) 420px, 100vw" alt="Shaun teaching a Hoops Creating Hope classroom session" width="800" height="533" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COACHING & HOOPS CREATING HOPE -->
+  <section class="section section-light" id="impact">
+    <div class="wrap">
+      <div class="eyebrow">Coaching &amp; Hoops Creating Hope</div>
+      <h2>What coaching and a nonprofit taught me about building products.</h2>
+      <p class="section-desc">I've coached for 20+ years and founded Hoops Creating Hope to use basketball to educate youth in India. Both shape how I work: start with the people closest to the problem, then measure what changes for them.</p>
+      <div class="impact-grid">
+        <div class="impact-card">
+          <img src="/images/web/student-moment-800.webp" srcset="/images/web/student-moment-480.webp 480w, /images/web/student-moment-800.webp 800w" sizes="(min-width:700px) 340px, 100vw" alt="Shaun talking with a student on the court" width="800" height="533" loading="lazy" decoding="async">
+          <h3>Start with the person</h3>
+          <p>Coaching starts with listening. I bring the same habit to user research.</p>
+        </div>
+        <div class="impact-card">
+          <img src="/images/web/crossover-moment-800.webp" srcset="/images/web/crossover-moment-480.webp 480w, /images/web/crossover-moment-800.webp 800w" sizes="(min-width:700px) 340px, 100vw" alt="Shaun with Hoops Creating Hope students" width="800" height="1000" loading="lazy" decoding="async" style="object-position: center 55%;">
+          <h3>Build with, not for</h3>
+          <p>I design programs with the kids and families they serve, not for them.</p>
+        </div>
+        <div class="impact-card">
+          <img src="/images/web/coaching-drill-800.webp" srcset="/images/web/coaching-drill-480.webp 480w, /images/web/coaching-drill-800.webp 800w" sizes="(min-width:700px) 340px, 100vw" alt="Shaun coaching a basketball drill with youth players" width="800" height="1000" loading="lazy" decoding="async" style="object-position: center 30%;">
+          <h3>Measure what changes</h3>
+          <p>80+ of the athletes I've coached have gone on to college programs, and 60% of the youth in Hoops Creating Hope are girls.</p>
+        </div>
+      </div>
+      <div class="team-banner">
+        <img src="/images/web/team-overhead-800.webp" srcset="/images/web/team-overhead-800.webp 800w, /images/web/team-overhead-1200.webp 1200w, /images/web/team-overhead-1600.webp 1600w" sizes="(min-width:1080px) 1040px, 100vw" alt="The full Hoops Creating Hope team photographed from above" width="1600" height="1067" loading="lazy" decoding="async">
+        <div class="cap">
+          <span>The Hoops Creating Hope team. 2,500+ youth served in India.</span>
+          <a href="https://hoopscreatinghope.org" target="_blank" rel="noopener noreferrer">Visit hoopscreatinghope.org →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEDIA -->
+  <section class="section" id="media">
+    <div class="wrap">
+      <div class="eyebrow">Media</div>
+      <h2>Watch and listen.</h2>
+      <div class="media-grid">
+
+        <div class="media-item wide">
+          <div class="video-frame">
+            <button type="button" class="video-poster" data-yt="MmM4R6qcWvY" data-title="Basketball lessons to education: Shaun Jayachandran at TEDxSomerville" aria-label="Play video: Basketball lessons to education, TEDxSomerville">
+              <img src="/images/web/yt-MmM4R6qcWvY.webp" alt="" width="640" height="360" loading="lazy" decoding="async">
+              <span class="play-btn" aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="media-cap">
+            <div class="media-title">Basketball lessons to education</div>
+            <div class="media-sub">My TEDxSomerville talk</div>
+            <div class="video-links"><a href="https://www.youtube.com/watch?v=MmM4R6qcWvY" target="_blank" rel="noopener noreferrer">Watch on YouTube →</a></div>
+          </div>
+        </div>
+
+        <div class="media-item">
+          <div class="video-frame">
+            <button type="button" class="video-poster" data-yt="cVp7uw0lx3E" data-title="Unpack Your Game, GameRun: interview with Duke signee Autumn Fleury" aria-label="Play video: Unpack Your Game, GameRun">
+              <img src="/images/web/yt-cVp7uw0lx3E.webp" alt="" width="640" height="360" loading="lazy" decoding="async">
+              <span class="play-btn" aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="media-cap">
+            <div class="media-title">Unpack Your Game</div>
+            <div class="media-sub">GameRun · Interview with Duke signee Autumn Fleury</div>
+            <div class="video-links"><a href="https://youtu.be/cVp7uw0lx3E" target="_blank" rel="noopener noreferrer">Watch on YouTube →</a></div>
+          </div>
+        </div>
+
+        <div class="media-item">
+          <div class="video-frame">
+            <button type="button" class="video-poster reel-poster" data-reel aria-haspopup="dialog" aria-label="Play the speaker reel">
+              <span class="play-btn" aria-hidden="true"></span>
+              <span class="reel-label">Opens the TikTok player</span>
+            </button>
+          </div>
+          <div class="media-cap">
+            <div class="media-title">Speaker reel</div>
+            <div class="media-sub">1:05 · Shaun Jayachandran on the beauty in sports</div>
+            <div class="video-links"><a href="https://www.tiktok.com/@empowhered_/video/7353620959611407658" data-reel target="_blank" rel="noopener noreferrer">Watch Speaker Reel →</a></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGO STRIP -->
+  <section class="section section-light proof-strip" aria-labelledby="proof-heading">
+    <div class="wrap">
+      <div id="proof-heading" class="eyebrow" style="margin-bottom:14px;">Where I've spoken, been featured, and partnered</div>
+      <p class="proof-caption">Each logo is labeled with my relationship to the organization. None implies an endorsement.</p>
+      <div class="proof-logos">
+        <div class="proof-logo-item">
+          <span class="proof-logo-rel">Spoken at</span>
+          <span class="proof-logo-name">TEDx</span>
+          <div class="logo-img-wrap"><img src="/images/tedx.png" alt="TEDx logo" loading="lazy" decoding="async"></div>
+        </div>
+        <div class="proof-logo-item">
+          <span class="proof-logo-rel">Featured in</span>
+          <span class="proof-logo-name">SLAM</span>
+          <div class="logo-img-wrap"><img src="/images/SLAM.png" alt="SLAM logo" style="max-height:70px; max-width:170px;" loading="lazy" decoding="async"></div>
+        </div>
+        <div class="proof-logo-item">
+          <span class="proof-logo-rel">Worked with</span>
+          <span class="proof-logo-name">Philadelphia 76ers</span>
+          <div class="logo-img-wrap"><img src="/images/76ers.png" alt="Philadelphia 76ers logo" style="max-height:80px; max-width:170px;" loading="lazy" decoding="async"></div>
+        </div>
+        <div class="proof-logo-item">
+          <span class="proof-logo-rel">Featured in</span>
+          <span class="proof-logo-name">Nike Made to Play</span>
+          <div class="logo-img-wrap"><video src="/images/nike-made-to-play.mp4" poster="/images/web/nike-made-to-play-poster.webp" autoplay muted loop playsinline preload="metadata" aria-label="Nike Made to Play" style="max-height:80px; max-width:170px; width:auto; height:auto; object-fit:contain; border-radius:3px;"></video></div>
+        </div>
+        <div class="proof-logo-item">
+          <span class="proof-logo-rel">Partner</span>
+          <span class="proof-logo-name">FIBA Foundation</span>
+          <div class="logo-img-wrap"><img src="/images/web/fiba-foundation.webp" alt="FIBA Foundation logo" width="340" height="482" style="max-height:80px; max-width:170px;" loading="lazy" decoding="async"></div>
+        </div>
       </div>
     </div>
   </section>
@@ -266,7 +571,7 @@
   <!-- TESTIMONIALS -->
   <section class="section" id="testimonials">
     <div class="wrap">
-      <div class="eyebrow">What People Who Know Shaun Say</div>
+      <div class="eyebrow">What people who know me say</div>
 
       <div class="featured-testimonial">
         <p class="featured-pullquote">"The technology may be evolving, but his mission hasn't changed."</p>
@@ -292,316 +597,74 @@
     </div>
   </section>
 
-  <!-- THE CHALLENGE -->
-  <section class="section" id="impact">
-    <div class="wrap">
-      <div class="eyebrow">The Challenge</div>
-      <h2>AI isn't just changing what people know. It's changing how kids and adults learn, think and grow.</h2>
-      <p class="section-desc">We don't need to be protected from AI. People need guidance, perspective and real-world skills to use it responsibly — and lead with wisdom.</p>
-      <div class="challenge-grid">
-        <div class="challenge-card">
-          <img src="/images/student-moment.jpg" alt="Shaun talking with a student on the court">
-          <h4>Critical thinking over shortcuts</h4>
-        </div>
-        <div class="challenge-card">
-          <img src="/images/crossover-moment.jpg" alt="Shaun with Crossover students" style="object-position: center 55%;">
-          <h4>Human connection over automation</h4>
-        </div>
-        <div class="challenge-card">
-          <img src="/images/tech speaker.jpg" alt="Shaun speaking on stage">
-          <h4>Purpose over popularity</h4>
-        </div>
-      </div>
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <h2>Let's talk.</h2>
+    <p>If you're hiring for a Senior Product Manager, Head of Product or Chief of Staff role, or building in consumer or sports technology, I'd like to hear from you.</p>
+    <div class="contact-actions">
+      <a href="mailto:shaun.jayachandran@gmail.com" class="btn btn-primary">Email me</a>
+      <a href="https://www.linkedin.com/in/shaunjayachandran" target="_blank" rel="noopener noreferrer" class="btn btn-outline">LinkedIn</a>
     </div>
+    <p class="contact-note">For speaking inquiries, see the <a href="/talks.html#book">speaking page</a>.</p>
   </section>
 
-  <!-- WHY SHAUN -->
-  <section class="section section-light" id="why">
-    <div class="wrap">
-      <div class="eyebrow">Why Shaun</div>
-      <h2>A lifetime of experience at the intersection of people, purpose and technology.</h2>
-      <div class="pillar-row">
-        <div class="pillar">
-          <div class="pillar-num">01 — COACH<span class="years">20+ Yrs</span></div>
-          <div class="pillar-copy">
-            <h4>Coach</h4>
-            <p>I've spent two decades coaching young people and watching the world around them change.</p>
-          </div>
-          <div class="pillar-img"><img src="/images/coaching.jpg" alt="Shaun coaching" style="object-position: center 30%;"></div>
-        </div>
-        <div class="pillar">
-          <div class="pillar-num">02 — BUILDER<span class="years">8+ Yrs</span></div>
-          <div class="pillar-copy">
-            <h4>Builder</h4>
-            <p><strong>I build technology around problems I understand firsthand.</strong> From product leadership to building ChalkTalk, Shaun has spent 8+ years turning real-world problems into technology people can actually use.</p>
-            <a href="https://chalktalk-sand.vercel.app/" target="_blank" rel="noopener noreferrer" class="pillar-link">Explore ChalkTalk →</a>
-          </div>
-          <div class="pillar-img"><img src="/images/panel speaker.JPEG" alt="Shaun on a technology panel"></div>
-        </div>
-        <div class="pillar">
-          <div class="pillar-num">03 — COMMUNITY<span class="years">12+ Yrs</span></div>
-          <div class="pillar-copy">
-            <h4>Community Leader</h4>
-            <p>Through Hoops Creating Hope, I turn ideas into impact and help kids reach their full potential.</p>
-            <a href="https://hoopscreatinghope.org" target="_blank" rel="noopener noreferrer" class="pillar-link">Explore Hoops Creating Hope →</a>
-          </div>
-          <div class="pillar-img"><img src="/images/classroom-teaching.jpg" alt="Shaun teaching a classroom session"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CURRENTLY BUILDING: CHALKTALK -->
-  <section class="section-light" style="border-top:1px solid rgba(0,0,0,0.08);">
-    <div class="wrap">
-      <div class="chalktalk-module">
-        <div class="chalktalk-copy">
-          <div class="eyebrow">Currently Building</div>
-          <h3 class="chalktalk-heading">ChalkTalk</h3>
-          <p class="chalktalk-sub">Interactive playbooks for players, parents, and coaches.</p>
-          <p class="chalktalk-desc">Built from the bench up, ChalkTalk turns basketball systems into interactive, phase-by-phase playbooks that players, parents and coaches can access from the same private link.</p>
-          <a href="https://chalktalk-sand.vercel.app/" target="_blank" rel="noopener noreferrer" class="pillar-link">Explore ChalkTalk →</a>
-        </div>
-        <div class="chalktalk-proof">
-          <div class="proof-item">
-            <span class="proof-label">Phase-by-Phase</span>
-            <p>Players can step through each action instead of staring at a static diagram.</p>
-          </div>
-          <div class="proof-item">
-            <span class="proof-label">Built for Basketball</span>
-            <p>Real half-court geometry, role-coded players and coaching notes.</p>
-          </div>
-          <div class="proof-item">
-            <span class="proof-label">One Program · One Playbook</span>
-            <p>A shared private link for coaches, players and families.</p>
-          </div>
-          <div class="chalktalk-status">Closed Beta · Invite Only</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- AI DOESN'T COACH CALLOUT -->
-  <div class="callout">
-    <div class="lines">AI can calculate.<br>AI can predict.<br>AI can automate.<br><strong>But AI doesn't coach.</strong></div>
-    <div class="tag">Human judgment still matters.</div>
-  </div>
-
-  <!-- SIGNATURE TALKS -->
-  <section class="section section-light" id="talks">
-    <div class="wrap">
-      <div class="eyebrow">Signature Talks</div>
-      <h2>The Human Game.</h2>
-      <p class="talks-intro">Three conversations about what technology can do — and what we should never ask it to do for us.</p>
-      <div class="talks-grid">
-        <div class="talk-card">
-          <div class="talk-num" aria-hidden="true">01</div>
-          <span class="talk-category">Keynote · Parents / Educators</span>
-          <h3>Raising Humans in the Age of AI</h3>
-          <span class="talk-audience">For parents, educators & schools</span>
-          <span class="talk-hook">When AI can do the work, what should we still teach kids to do?</span>
-          <p>How do we raise young people who can use AI without outsourcing their judgment, effort, relationships or responsibility? Shaun brings 20+ years of coaching and youth development together with his experience building technology to give parents and educators a practical framework for raising thoughtful humans in an AI-saturated world.</p>
-        </div>
-        <div class="talk-card">
-          <div class="talk-num" aria-hidden="true">02</div>
-          <span class="talk-category">Keynote · Leaders / Technology</span>
-          <h3>AI Can See the Pattern. Can It See the Person?</h3>
-          <span class="talk-audience">For leaders, teams & technology organizations</span>
-          <span class="talk-hook">When machines can recognize the pattern, humans still have to understand what it means.</span>
-          <p>AI is changing how organizations build, decide and compete. Shaun explores why domain expertise, context, empathy and judgment don't become less important as AI gets better — they become the differentiator. The goal isn't choosing humans or AI. It's knowing what each should do.</p>
-        </div>
-        <div class="talk-card">
-          <div class="talk-num" aria-hidden="true">03</div>
-          <span class="talk-category">Keynote · Nonprofit / Youth Development</span>
-          <h3>Tech or Trap?</h3>
-          <span class="talk-audience">For nonprofits & youth organizations</span>
-          <span class="talk-hook">Technology should expand human capacity — not replace human connection.</span>
-          <p>Youth organizations are under constant pressure to adopt new technology. Shaun provides a practical framework for deciding what genuinely increases impact, what simply adds complexity, and how organizations can use technology while keeping young people, relationships and community at the center.</p>
-        </div>
-      </div>
-      <a href="/talks.html" class="view-all">Explore All Talks & Workshops →</a>
-    </div>
-  </section>
-
-  <!-- VIDEO / SPEAKER REEL -->
-  <section class="section video-section" id="media">
-    <div class="wrap">
-      <div class="eyebrow">Media</div>
-      <h2 style="margin-left:auto;margin-right:auto;">See Shaun in action.</h2>
-      <div class="video-frame">
-        <iframe src="https://www.youtube.com/embed/MmM4R6qcWvY?si=UNABJldFLKBCapPo" title="Shaun Jayachandran TEDx Talk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-      <div class="video-links">
-        <a href="#">Watch Speaker Reel →</a>
-        <a href="https://www.youtube.com/watch?v=MmM4R6qcWvY" target="_blank" rel="noopener">Watch on YouTube →</a>
-      </div>
-
-      <div style="margin-top:44px;">
-        <div class="video-frame">
-          <iframe src="https://www.youtube.com/embed/cVp7uw0lx3E?si=9OG92f3iBxs3RQUu" title="Speaking sample: interview with Duke signee Autumn Fleury" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <div class="video-links">
-          <a href="https://youtu.be/cVp7uw0lx3E" target="_blank" rel="noopener">Interview: Duke Signee Autumn Fleury →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROOF / LOGO STRIP -->
-  <section class="section section-light proof-strip">
-    <div class="wrap">
-      <p class="proof-caption">Selected organizations, platforms and communities Shaun has worked with, spoken for, or been recognized by.</p>
-      <div class="proof-logos">
-        <div class="proof-logo-item">
-          <span class="proof-logo-name">TEDx</span>
-          <div class="logo-img-wrap"><img src="/images/tedx.png" alt="TEDx logo"></div>
-        </div>
-        <div class="proof-logo-item">
-          <span class="proof-logo-name">SLAM</span>
-          <div class="logo-img-wrap"><img src="/images/SLAM.png" alt="SLAM logo" style="max-height:70px; max-width:170px;"></div>
-        </div>
-        <div class="proof-logo-item">
-          <span class="proof-logo-name">Philadelphia 76ers</span>
-          <div class="logo-img-wrap"><img src="/images/76ers.png" alt="Philadelphia 76ers logo" style="max-height:80px; max-width:170px;"></div>
-        </div>
-        <div class="proof-logo-item">
-          <span class="proof-logo-name">Nike Made to Play</span>
-          <div class="logo-img-wrap"><video src="/images/nike-made-to-play.mp4" autoplay muted loop playsinline style="max-height:80px; max-width:170px; width:auto; height:auto; object-fit:contain; border-radius:3px;"></video></div>
-        </div>
-        <div class="proof-logo-item">
-          <span class="proof-logo-name">FIBA Foundation</span>
-          <div class="logo-img-wrap"><img src="/images/fiba-foundation.png" alt="FIBA Foundation logo" style="max-height:80px; max-width:170px;"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHO BOOKS SHAUN -->
-  <section class="section section-light">
-    <div class="wrap">
-      <div class="eyebrow">Who Books Shaun</div>
-      <h2>Built for audiences who are asking what's next.</h2>
-      <div class="audience-grid">
-        <div class="audience-card">
-          <h4>Schools & Districts</h4>
-          <p>Helping educators and families navigate AI and childhood.</p>
-        </div>
-        <div class="audience-card">
-          <h4>Parent Organizations</h4>
-          <p>Practical conversations about raising thoughtful humans in a technological world.</p>
-        </div>
-        <div class="audience-card">
-          <h4>Youth Organizations</h4>
-          <p>Using technology without losing the human connection.</p>
-        </div>
-        <div class="audience-card">
-          <h4>Companies & Leadership Teams</h4>
-          <p>What coaching and human judgment can teach us about working alongside AI.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHY THIS MATTERS -->
-  <section class="matters-section">
-    <img class="matters-img" src="/images/team-overhead.JPG" alt="Full Hoops Creating Hope team photo from above" style="object-position: center 80%;">
-    <div class="matters-copy">
-      <p>Technology is changing faster than most of us can process.</p>
-      <p style="font-size:14px; color:#b8b3a8; font-family:-apple-system,sans-serif;">But raising the next generation has never been about keeping up with every new tool. It's about helping young people know who they are, how to think, how to connect, and when technology should — and shouldn't — be trusted.</p>
-    </div>
-  </section>
-
-  <!-- FINAL CTA -->
-  <section class="final-cta" id="book">
-    <h2>Let's create an impactful experience for your audience.</h2>
-    <p>Shaun brings energy, insight and actionable ideas that inspire audiences of all ages.</p>
-
-    <div class="book-form-wrap">
-      <div class="fs-success-msg" data-fs-success>✓ Thanks! I'll check my calendar and follow up within 48 hours.</div>
-      <div class="fs-error-box" data-fs-error></div>
-
-      <form id="book-form">
-        <div class="field">
-          <label for="dateRange">When are you looking?</label>
-          <select id="dateRange" name="dateRange" data-fs-field required>
-            <option value="">Select a timeframe</option>
-            <option value="Q4 2026">Q4 2026</option>
-            <option value="Q1 2027">Q1 2027</option>
-            <option value="Q2 2027">Q2 2027</option>
-            <option value="Q3 2027">Q3 2027</option>
-            <option value="Open / Flexible">Open / Flexible</option>
-          </select>
-          <span class="fs-error-msg" data-fs-error="dateRange"></span>
-        </div>
-
-        <div class="field">
-          <label for="audience">Who's in the room?</label>
-          <select id="audience" name="audience" data-fs-field required>
-            <option value="">Select an audience</option>
-            <option value="Schools & Parent Groups">Schools & Parent Groups</option>
-            <option value="Youth Development Leaders">Youth Development Leaders</option>
-            <option value="Corporate / Product Teams">Corporate / Product Teams</option>
-            <option value="Nonprofits & Mission-Driven">Nonprofits & Mission-Driven</option>
-            <option value="Mixed / Not sure">Mixed / Not sure</option>
-          </select>
-          <span class="fs-error-msg" data-fs-error="audience"></span>
-        </div>
-
-        <div class="field">
-          <label for="budget">Budget ballpark?</label>
-          <select id="budget" name="budget" data-fs-field required>
-            <option value="">Select a range</option>
-            <option value="Under $1,500">Under $1,500</option>
-            <option value="$1,500–$2,500">$1,500–$2,500</option>
-            <option value="$2,500–$3,500">$2,500–$3,500</option>
-            <option value="$3,500–$5,000">$3,500–$5,000</option>
-            <option value="$5,000+">$5,000+</option>
-            <option value="Let's talk">Let's talk</option>
-          </select>
-          <span class="fs-error-msg" data-fs-error="budget"></span>
-        </div>
-
-        <div class="field">
-          <label for="email">Best email to reach you</label>
-          <input id="email" type="email" name="email" placeholder="your@email.com" data-fs-field required>
-          <span class="fs-error-msg" data-fs-error="email"></span>
-        </div>
-
-        <button type="submit" data-fs-submit-btn>Check Availability</button>
-        <p class="form-note">Your email is used only to confirm availability.</p>
-      </form>
-    </div>
-  </section>
+  </main>
 
   <footer>&copy; 2026 Shaun Jayachandran. All rights reserved.</footer>
-  <!-- WATCH SHAUN SPEAK MODAL -->
-  <div class="video-modal-overlay" id="reelModal" onclick="if(event.target===this)closeReelModal()">
-    <div class="video-modal-box">
-      <button class="video-modal-close" onclick="closeReelModal()" aria-label="Close video">&times;</button>
-      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@empowhered_/video/7353620959611407658" data-video-id="7353620959611407658" style="max-width: 340px; min-width: 280px; margin:0;">
-        <section></section>
-      </blockquote>
+
+  <!-- SPEAKER REEL MODAL (player loads only when opened) -->
+  <div class="video-modal-overlay" id="reelModal" role="dialog" aria-modal="true" aria-label="Speaker reel">
+    <div class="video-modal-box" id="reelBox">
+      <button class="video-modal-close" type="button" id="reelClose" aria-label="Close video">&times;</button>
     </div>
   </div>
-  <script async src="https://www.tiktok.com/embed.js"></script>
 
   <script>
-    function openReelModal() {
-      document.getElementById('reelModal').classList.add('is-open');
-    }
-    function closeReelModal() {
-      document.getElementById('reelModal').classList.remove('is-open');
-    }
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') closeReelModal();
-    });
-  </script>
+    (function () {
+      // Click-to-load YouTube: nothing from YouTube loads until the poster is pressed.
+      document.querySelectorAll('[data-yt]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var f = document.createElement('iframe');
+          f.src = 'https://www.youtube-nocookie.com/embed/' + btn.getAttribute('data-yt') + '?autoplay=1&rel=0';
+          f.title = btn.getAttribute('data-title') || 'Video';
+          f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+          f.referrerPolicy = 'strict-origin-when-cross-origin';
+          f.allowFullscreen = true;
+          btn.parentNode.replaceChild(f, btn);
+          f.focus();
+        });
+      });
 
-  <script>
-    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
-    formspree('initForm', { formElement: '#book-form', formId: 'mgawqabl' });
+      // Click-to-load TikTok reel in a modal; the iframe is removed on close to stop playback.
+      var modal = document.getElementById('reelModal');
+      var box = document.getElementById('reelBox');
+      var closeBtn = document.getElementById('reelClose');
+      var lastFocus = null;
+      function openReel(e) {
+        if (e) e.preventDefault();
+        lastFocus = document.activeElement;
+        if (!box.querySelector('iframe')) {
+          var f = document.createElement('iframe');
+          f.src = 'https://www.tiktok.com/embed/v2/7353620959611407658';
+          f.title = 'Speaker reel';
+          f.allow = 'fullscreen; encrypted-media';
+          box.appendChild(f);
+        }
+        modal.classList.add('is-open');
+        closeBtn.focus();
+      }
+      function closeReel() {
+        var f = box.querySelector('iframe');
+        if (f) f.remove();
+        modal.classList.remove('is-open');
+        if (lastFocus) lastFocus.focus();
+      }
+      document.querySelectorAll('[data-reel]').forEach(function (el) { el.addEventListener('click', openReel); });
+      closeBtn.addEventListener('click', closeReel);
+      modal.addEventListener('click', function (e) { if (e.target === modal) closeReel(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && modal.classList.contains('is-open')) closeReel(); });
+    })();
   </script>
-  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
 </body>
 </html>

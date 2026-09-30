@@ -1,61 +1,45 @@
-# shaunjayachandran.com
+# Shaun Jayachandran: personal site
 
-Speaker/personal site for Shaun Jayachandran — Founder & Executive Director,
-Hoops Creating Hope, and Senior Product Manager at GameRun.ai. Static
-HTML/CSS/JS, no build step required.
+Static HTML/CSS/JS, no build step. Deployed on Vercel from this repo.
 
-## Why this content
-
-The original site (`sites.google.com/view/shaunjayachandran`) wasn't
-reachable from this environment's network. Content was rebuilt to match
-screenshots of the live site provided directly, so copy, pricing, and
-credentials should match the source closely. Photos referenced on the
-original site were broken/unavailable, so this version uses labeled
-placeholder blocks (`.photo-placeholder`) in their place —
-**swap in real photos before publishing.**
-
-## Structure
+## Pages
 
 ```
-index.html                  Home: hero, speaking topics (3 tiers + tracks), why book Shaun, stats
-about.html                  About Shaun: bio + background & credentials
-hoops-creating-hope.html    Hoops Creating Hope: org overview + impact stats
-book.html                   Book Now: stats banner + booking CTA + contact
-css/style.css               Styling (single stylesheet, CSS variables at the top)
-js/main.js                  Mobile nav toggle + scroll-reveal animation
-images/                     favicon.svg, og-card.svg (social preview card)
-vercel.json                 Basic security headers
+index.html                Homepage: product-leadership first, with doors to speaking and Hoops Creating Hope
+talks.html                Speaking: keynotes, workshops, and the booking form (Formspree)
+robots.txt, sitemap.xml   Crawler hints (update the domain here if a custom domain is attached)
+resume.pdf                Linked from the hero. Add this file; the link 404s until it exists.
 ```
+
+`index.html` and `talks.html` each carry their own inline `<style>`; there is no shared stylesheet.
+
+## Assets
+
+```
+images/web/               Optimized WebP photos with responsive widths (<name>-480/800/1200.webp),
+                          video poster frames (yt-<id>.webp), and the FIBA logo
+images/og-image.jpg       1200x630 social share image (JPEG for widest crawler support)
+images/*.png, *.mp4       Logo strip assets
+```
+
+To add or replace a photo, export WebP at 480w and 800w (plus 1200w for large hero-style
+images), name them `<name>-<width>.webp`, and reference them with `srcset`. Keep below-fold
+images `loading="lazy"`; only the hero image is eager.
+
+## Embeds
+
+YouTube videos and the speaker reel (TikTok) are click-to-load. Nothing from those hosts is
+requested until a visitor presses play. To change a video, edit the `data-yt="<id>"`
+attribute (and swap the poster in `images/web/`).
+
+## Legacy files (not linked from the site)
+
+`about.html`, `book.html`, `hoops-creating-hope.html`, `css/style.css`, `js/main.js`,
+`extras.css`, `extras.js`, and the original full-size photos in `images/` are left over from
+earlier versions. They are safe to delete once you no longer need them.
 
 ## Local preview
 
-Any static server works, e.g.:
-
 ```bash
-npx serve .
-# or
 python3 -m http.server 8000
 ```
-
-## Deploy to Vercel
-
-**Option A — Vercel CLI**
-```bash
-npm i -g vercel
-vercel        # first deploy, follow prompts (framework: Other)
-vercel --prod # promote to production
-```
-
-**Option B — Git integration**
-1. Push this repo to GitHub (already done if you're reading this from the repo).
-2. In the Vercel dashboard: New Project → Import this repo.
-3. Framework Preset: **Other**. No build command needed — it's static.
-4. Deploy. Every push to the connected branch will auto-deploy.
-
-## Customizing
-
-- Each page's copy is directly in its HTML file — no templating/build step.
-- Replace `.photo-placeholder` divs with real `<img>` tags once photos are available.
-- Colors/fonts live as CSS variables at the top of `css/style.css`.
-- The "Request Speaking Engagement" and "Book Me to Speak" buttons are `mailto:`
-  links today. Wire up a real form/service if you want submissions captured.
