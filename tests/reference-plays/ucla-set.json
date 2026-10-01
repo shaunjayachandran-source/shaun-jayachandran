@@ -1,0 +1,117 @@
+{
+ "slug": "ucla-set",
+ "playName": "UCLA Set",
+ "courtType": "half",
+ "basketOrientation": "up",
+ "level": "college",
+ "ballStart": 1,
+ "start": {
+  "1": "left slot",
+  "2": "right slot",
+  "3": "right wing",
+  "4": "left wing",
+  "5": "right block"
+ },
+ "phases": [
+  {
+   "phaseNumber": 1,
+   "phaseName": "BASIC SET",
+   "actions": [
+    {
+     "type": "cut",
+     "player": 5,
+     "to": "free throw",
+     "note": "flashes to the high post"
+    }
+   ],
+   "keyAction": "Basic Set",
+   "_sourceImages": [
+    "https://cccdn-fe9e.kxcdn.com/images/UCLAA.png"
+   ]
+  },
+  {
+   "phaseNumber": 2,
+   "phaseName": "GUARD TO GUARD",
+   "actions": [
+    {
+     "type": "pass",
+     "from": 1,
+     "to": 2
+    }
+   ],
+   "keyAction": "Guard To Guard",
+   "_sourceImages": [
+    "https://cccdn-fe9e.kxcdn.com/images/UCLAB.png"
+   ]
+  },
+  {
+   "phaseNumber": 3,
+   "phaseName": "HIGH POST ENTRY",
+   "actions": [
+    {
+     "type": "pass",
+     "from": 2,
+     "to": 5
+    },
+    {
+     "type": "cut",
+     "player": 2,
+     "to": "right wing"
+    },
+    {
+     "type": "cut",
+     "player": 3,
+     "to": "right block"
+    }
+   ],
+   "keyAction": "High Post Entry",
+   "_sourceImages": [
+    "https://cccdn-fe9e.kxcdn.com/images/UCLAC.png"
+   ]
+  },
+  {
+   "phaseNumber": 4,
+   "phaseName": "WING CATCH",
+   "actions": [
+    {
+     "type": "pass",
+     "from": 5,
+     "to": 2
+    },
+    {
+     "type": "cut",
+     "player": 5,
+     "to": {
+      "x": 120,
+      "y": 195
+     }
+    }
+   ],
+   "keyAction": "Wing Catch",
+   "_sourceImages": [
+    "https://cccdn-fe9e.kxcdn.com/images/UCLAC.png"
+   ]
+  },
+  {
+   "phaseNumber": 5,
+   "phaseName": "DOWN SCREEN",
+   "actions": [
+    {
+     "type": "screen",
+     "by": 5,
+     "for": 4
+    },
+    {
+     "type": "cut",
+     "player": 4,
+     "to": "left elbow"
+    }
+   ],
+   "keyAction": "Down Screen",
+   "_sourceImages": [
+    "https://cccdn-fe9e.kxcdn.com/images/UCLAC.png"
+   ]
+  }
+ ],
+ "_source": "https://www.coachesclipboard.net/UCLAOffense.html"
+}

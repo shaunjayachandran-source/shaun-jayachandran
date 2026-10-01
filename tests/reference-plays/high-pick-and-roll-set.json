@@ -1,0 +1,132 @@
+{
+ "slug": "high-pick-and-roll-set",
+ "playName": "High Pick and Roll",
+ "courtType": "half",
+ "basketOrientation": "up",
+ "level": "college",
+ "ballStart": 1,
+ "start": {
+  "1": "top",
+  "2": "right corner",
+  "3": "left corner",
+  "4": "right elbow",
+  "5": "left block"
+ },
+ "phases": [
+  {
+   "phaseNumber": 1,
+   "phaseName": "SET",
+   "actions": [],
+   "keyAction": "Set",
+   "_sourceImages": [
+    "https://cccdn-fe9e.kxcdn.com/images/PicknRollSeriesA.PNG"
+   ]
+  },
+  {
+   "phaseNumber": 2,
+   "phaseName": "SCREENER COMES UP",
+   "actions": [
+    {
+     "type": "cut",
+     "player": 4,
+     "to": {
+      "x": 292,
+      "y": 290
+     },
+     "note": "comes out above the arc"
+    }
+   ],
+   "keyAction": "Screener Comes Up",
+   "_sourceImages": [
+    "https://cccdn-fe9e.kxcdn.com/images/PicknRollSeriesA.PNG"
+   ]
+  },
+  {
+   "phaseNumber": 3,
+   "phaseName": "PICK",
+   "actions": [
+    {
+     "type": "screen",
+     "by": 4,
+     "for": 1
+    },
+    {
+     "type": "dribble",
+     "player": 1,
+     "via": [
+      {
+       "x": 335,
+       "y": 312
+      }
+     ],
+     "to": {
+      "x": 338,
+      "y": 245
+     },
+     "note": "turns the corner shoulder to shoulder"
+    }
+   ],
+   "keyAction": "Pick",
+   "_sourceImages": [
+    "https://cccdn-fe9e.kxcdn.com/images/PicknRollSeriesA.PNG"
+   ]
+  },
+  {
+   "phaseNumber": 4,
+   "phaseName": "ROLL",
+   "actions": [
+    {
+     "type": "cut",
+     "player": 4,
+     "to": {
+      "x": 260,
+      "y": 190
+     },
+     "note": "dives down the middle of the lane to the rim"
+    },
+    {
+     "type": "cut",
+     "player": 5,
+     "to": "left elbow",
+     "note": "cuts up to the elbow"
+    }
+   ],
+   "keyAction": "Roll",
+   "_sourceImages": [
+    "https://cccdn-fe9e.kxcdn.com/images/PicknRollSeriesB.PNG"
+   ]
+  },
+  {
+   "phaseNumber": 5,
+   "phaseName": "OPTION A -- HIT THE ROLL",
+   "actions": [
+    {
+     "type": "pass",
+     "from": 1,
+     "to": 4
+    }
+   ],
+   "keyAction": "Option A -- Hit The Roll",
+   "_sourceImages": [
+    "https://cccdn-fe9e.kxcdn.com/images/PicknRollSeriesB.PNG"
+   ]
+  },
+  {
+   "phaseNumber": 6,
+   "phaseName": "OPTION B -- ELBOW",
+   "actions": [
+    {
+     "type": "pass",
+     "from": 1,
+     "to": 5
+    }
+   ],
+   "keyAction": "Option B -- Elbow",
+   "_sourceImages": [
+    "https://cccdn-fe9e.kxcdn.com/images/PicknRollSeriesD.PNG"
+   ],
+   "branchFrom": 5
+  }
+ ],
+ "_source": "https://www.coachesclipboard.net/PickandRoll.html"
+}

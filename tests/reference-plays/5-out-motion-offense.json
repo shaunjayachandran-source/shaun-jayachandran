@@ -1,0 +1,92 @@
+{
+ "slug": "5-out-motion-offense",
+ "playName": "5-Out Motion (Open Post)",
+ "courtType": "half",
+ "basketOrientation": "up",
+ "level": "college",
+ "ballStart": 1,
+ "start": {
+  "1": "top",
+  "2": "right wing",
+  "3": "left wing",
+  "4": "right corner",
+  "5": "left corner"
+ },
+ "phases": [
+  {
+   "phaseNumber": 1,
+   "phaseName": "5-OUT SET",
+   "actions": [],
+   "keyAction": "5-Out Set",
+   "_sourceImages": [
+    "https://cccdn-fe9e.kxcdn.com/images/OpenPost1.png"
+   ]
+  },
+  {
+   "phaseNumber": 2,
+   "phaseName": "PASS",
+   "actions": [
+    {
+     "type": "pass",
+     "from": 1,
+     "to": 2
+    }
+   ],
+   "keyAction": "Pass",
+   "_sourceImages": [
+    "https://cccdn-fe9e.kxcdn.com/images/OpenPost6.gif"
+   ]
+  },
+  {
+   "phaseNumber": 3,
+   "phaseName": "PASS AND CUT",
+   "actions": [
+    {
+     "type": "cut",
+     "player": 1,
+     "to": "right block",
+     "note": "cuts to the basket"
+    },
+    {
+     "type": "cut",
+     "player": 3,
+     "to": "top",
+     "note": "fills the top"
+    },
+    {
+     "type": "cut",
+     "player": 5,
+     "to": "left wing",
+     "note": "fills the wing"
+    }
+   ],
+   "keyAction": "Pass And Cut",
+   "_sourceImages": [
+    "https://cccdn-fe9e.kxcdn.com/images/OpenPost6.gif"
+   ]
+  },
+  {
+   "phaseNumber": 4,
+   "phaseName": "REFILL",
+   "actions": [
+    {
+     "type": "cut",
+     "player": 1,
+     "via": [
+      {
+       "x": 260,
+       "y": 150
+      }
+     ],
+     "to": "left corner",
+     "note": "clears to the empty corner"
+    }
+   ],
+   "keyAction": "Refill",
+   "_sourceImages": [
+    "https://cccdn-fe9e.kxcdn.com/images/OpenPost6.gif"
+   ]
+  }
+ ],
+ "_source": "https://www.coachesclipboard.net/OpenPostOffense.html"
+}

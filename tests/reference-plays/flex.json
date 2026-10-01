@@ -1,0 +1,86 @@
+{
+ "_note": "Reference play, confirmed correct by Shaun Oct 1 2026. Coach's left/right, basket DOWN.",
+ "playName": "Flex",
+ "courtType": "half",
+ "basketOrientation": "down",
+ "level": "high-school",
+ "start": {
+  "1": "right slot",
+  "2": "left slot",
+  "3": "right wing",
+  "4": "left flex screen",
+  "5": "left corner"
+ },
+ "ballStart": 1,
+ "phases": [
+  {
+   "phaseNumber": 1,
+   "phaseName": "FLEX SET",
+   "actions": []
+  },
+  {
+   "phaseNumber": 2,
+   "phaseName": "ENTRY",
+   "actions": [
+    {
+     "type": "pass",
+     "from": 1,
+     "to": 3
+    }
+   ]
+  },
+  {
+   "phaseNumber": 3,
+   "phaseName": "FLEX CUT",
+   "actions": [
+    {
+     "type": "screen",
+     "by": 4,
+     "for": 5
+    },
+    {
+     "type": "cut",
+     "player": 5,
+     "via": [
+      {
+       "x": 345,
+       "y": 365
+      }
+     ],
+     "to": "right block"
+    }
+   ]
+  },
+  {
+   "phaseNumber": 4,
+   "phaseName": "DOWN SCREEN",
+   "actions": [
+    {
+     "type": "cut",
+     "player": 2,
+     "to": {
+      "x": 345,
+      "y": 295
+     }
+    }
+   ]
+  },
+  {
+   "phaseNumber": 5,
+   "phaseName": "SCREENER COMES UP",
+   "actions": [
+    {
+     "type": "screen",
+     "by": 2,
+     "for": 4
+    },
+    {
+     "type": "cut",
+     "player": 4,
+     "to": "left slot"
+    }
+   ]
+  }
+ ],
+ "slug": "flex"
+}
