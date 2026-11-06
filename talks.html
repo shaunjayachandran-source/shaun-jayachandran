@@ -75,6 +75,14 @@
   .spoken-meta { font-size:13px; color:#c9c3b8; display:block; margin-top:3px; line-height:1.45; }
   .spoken-also { font-size:13px; color:#c9c3b8; margin-top:22px; line-height:1.6; }
   .spoken-also strong { color:#fff; font-weight:600; }
+  .watch { padding: 40px 20px 44px; border-bottom:1px solid rgba(255,255,255,0.08); }
+  .watch-grid { display:grid; grid-template-columns:1fr; gap:22px; align-items:center; }
+  @media (min-width:820px) { .watch-grid { grid-template-columns: 1.25fr 1fr; gap:36px; } }
+  .watch-frame { border-radius:10px; overflow:hidden; aspect-ratio:16/9; background:#000; }
+  .watch-frame video { width:100%; height:100%; display:block; object-fit:cover; }
+  .watch h2 { color:#fff; font-size:24px; line-height:1.3; margin-bottom:10px; }
+  .watch .eyebrow { color:#c1440e; }
+  .watch p:not(.eyebrow) { color:#c9c3b8; font-size:14.5px; line-height:1.65; max-width:440px; }
   .page-cta .cta-email { font-size:14px; color:#d8d3c8; margin:-8px auto 22px; }
   .page-cta .cta-email a { color:#fff; border-bottom:1px solid #c1440e; padding-bottom:1px; font-weight:600; }
 
@@ -190,7 +198,7 @@
         <p class="hero-support">Keynotes and workshops for schools, sports organizations, technology teams and mission-driven leaders navigating a world where technology is becoming increasingly capable — and human judgment increasingly valuable.</p>
         <div class="hero-ctas">
           <a href="#book" class="btn btn-primary">Book Shaun</a>
-          <a href="/#media" class="btn btn-outline">Watch Speaker Reel</a>
+          <a href="#video" class="btn btn-outline">Watch Me Speak</a>
         </div>
       </div>
     </section>
@@ -214,6 +222,25 @@
           </div>
         </div>
         <p class="spoken-also"><strong>Also featured:</strong> SLAM Magazine (2017) · NBA India Games (2019) · ESPNW Summit (2023–25)</p>
+      </div>
+    </section>
+
+    <!-- WATCH -->
+    <section class="watch" id="video" aria-labelledby="watch-heading">
+      <div class="wrap">
+        <div class="watch-grid">
+          <div class="watch-frame">
+            <video controls playsinline preload="none" poster="/images/web/aggressive-mistakes-poster.webp" width="632" height="356" aria-label="Shaun Jayachandran on aggressive mistakes, 45 seconds">
+              <source src="/media/aggressive-mistakes.mp4" type="video/mp4">
+              <track kind="captions" src="/media/aggressive-mistakes.vtt" srclang="en" label="English">
+            </video>
+          </div>
+          <div>
+            <p class="eyebrow">Watch me speak</p>
+            <h2 id="watch-heading">Aggressive mistakes.</h2>
+            <p>Why young athletes need room to fail, and how coaches can use those mistakes to teach. From the coaches' clinics I run in India. 45 seconds, with captions.</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -398,7 +425,7 @@
         <p>Tell me about your audience, event and goals. I'll find the right keynote or workshop, or build something specifically for your organization.</p>
         <p class="cta-email">Prefer email? <a href="mailto:shaun.jayachandran@gmail.com?subject=Speaking%20inquiry">shaun.jayachandran@gmail.com</a></p>
         <div class="hero-ctas">
-          <a href="/#media" class="btn btn-outline">Watch Speaker Reel</a>
+          <a href="#video" class="btn btn-outline">Watch Me Speak</a>
         </div>
         <p class="cta-subline">Speaking engagements · Keynotes · Workshops · Custom programs</p>
 
