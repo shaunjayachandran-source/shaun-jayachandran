@@ -179,11 +179,10 @@
   @media (min-width:820px) { .media-grid { grid-template-columns: 1fr 1fr; } .media-item.wide { grid-column:1 / -1; max-width:700px; width:100%; margin:0 auto; } }
   .video-frame { position:relative; border-radius:10px; overflow:hidden; aspect-ratio:16/9; background:#000; }
   .video-frame iframe { width:100%; height:100%; display:block; border:0; }
+  .video-frame video { width:100%; height:100%; display:block; object-fit:cover; background:#000; }
   .video-poster { position:absolute; inset:0; width:100%; height:100%; border:0; padding:0; cursor:pointer; background:#000; display:block; }
   .video-poster img { width:100%; height:100%; object-fit:cover; opacity:0.82; transition:opacity 0.2s ease; }
   .video-poster:hover img, .video-poster:focus-visible img { opacity:1; }
-  .reel-poster { background:linear-gradient(135deg,#16110e 0%,#2b170c 62%,#5a250c 100%); }
-  .reel-poster .reel-label { position:absolute; left:16px; right:16px; bottom:14px; text-align:left; font-size:12px; color:#d8d3c8; letter-spacing:0.02em; }
   .play-btn { width:40px; height:40px; border-radius:50%; background:#c1440e; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
   .play-btn::after { content:''; border-style:solid; border-width:7px 0 7px 11px; border-color:transparent transparent transparent #fff; margin-left:3px; }
   .video-poster .play-btn { position:absolute; left:50%; top:50%; width:64px; height:64px; transform:translate(-50%,-50%); box-shadow:0 2px 14px rgba(0,0,0,0.45); }
@@ -194,13 +193,6 @@
   .video-links { display:flex; gap:8px 20px; flex-wrap:wrap; margin-top:8px; font-size:12.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; }
   .video-links a { color:#c1440e; border-bottom:1px solid #c1440e; padding-bottom:2px; }
 
-  /* VIDEO MODAL (speaker reel) */
-  .video-modal-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.82); z-index:200; align-items:center; justify-content:center; padding:20px; }
-  .video-modal-overlay.is-open { display:flex; }
-  .video-modal-box { position:relative; background:#000; border-radius:12px; width:100%; max-width:340px; max-height:90vh; overflow:auto; }
-  .video-modal-box iframe { display:block; width:100%; height:min(700px, 82vh); border:0; }
-  .video-modal-close { position:absolute; top:8px; right:8px; width:36px; height:36px; border-radius:50%; background:#fff; color:#161412; border:none; font-size:18px; font-weight:700; cursor:pointer; display:flex; align-items:center; justify-content:center; z-index:5; box-shadow:0 2px 8px rgba(0,0,0,0.3); }
-  .video-modal-close:hover { background:#f0ece2; }
 
   /* LOGO STRIP */
   .proof-strip { text-align:center; }
@@ -524,17 +516,17 @@
           </div>
         </div>
 
-        <div class="media-item">
+        <div class="media-item" id="speaker-video">
           <div class="video-frame">
-            <button type="button" class="video-poster reel-poster" data-reel aria-haspopup="dialog" aria-label="Play the speaker reel">
-              <span class="play-btn" aria-hidden="true"></span>
-              <span class="reel-label">Opens the TikTok player</span>
-            </button>
+            <video controls playsinline preload="none" poster="/images/web/aggressive-mistakes-poster.webp" width="632" height="356" aria-label="Shaun Jayachandran on aggressive mistakes, 45 seconds">
+              <source src="/media/aggressive-mistakes.mp4" type="video/mp4">
+              <track kind="captions" src="/media/aggressive-mistakes.vtt" srclang="en" label="English">
+            </video>
           </div>
           <div class="media-cap">
-            <div class="media-title">Speaker reel</div>
-            <div class="media-sub">1:05 · Shaun Jayachandran on the beauty in sports</div>
-            <div class="video-links"><a href="https://www.tiktok.com/@empowhered_/video/7353620959611407658" data-reel target="_blank" rel="noopener noreferrer">Watch Speaker Reel →</a></div>
+            <div class="media-title">Aggressive mistakes</div>
+            <div class="media-sub">0:45 · Why young athletes need room to fail, from my coaches' clinics in India</div>
+            <div class="video-links"><a href="/talks.html">Book me to speak →</a></div>
           </div>
         </div>
 
@@ -621,13 +613,6 @@
 
   <footer>&copy; 2026 Shaun Jayachandran. All rights reserved.</footer>
 
-  <!-- SPEAKER REEL MODAL (player loads only when opened) -->
-  <div class="video-modal-overlay" id="reelModal" role="dialog" aria-modal="true" aria-label="Speaker reel">
-    <div class="video-modal-box" id="reelBox">
-      <button class="video-modal-close" type="button" id="reelClose" aria-label="Close video">&times;</button>
-    </div>
-  </div>
-
   <script>
     (function () {
       // Click-to-load YouTube: nothing from YouTube loads until the poster is pressed.
@@ -644,34 +629,6 @@
         });
       });
 
-      // Click-to-load TikTok reel in a modal; the iframe is removed on close to stop playback.
-      var modal = document.getElementById('reelModal');
-      var box = document.getElementById('reelBox');
-      var closeBtn = document.getElementById('reelClose');
-      var lastFocus = null;
-      function openReel(e) {
-        if (e) e.preventDefault();
-        lastFocus = document.activeElement;
-        if (!box.querySelector('iframe')) {
-          var f = document.createElement('iframe');
-          f.src = 'https://www.tiktok.com/embed/v2/7353620959611407658';
-          f.title = 'Speaker reel';
-          f.allow = 'fullscreen; encrypted-media';
-          box.appendChild(f);
-        }
-        modal.classList.add('is-open');
-        closeBtn.focus();
-      }
-      function closeReel() {
-        var f = box.querySelector('iframe');
-        if (f) f.remove();
-        modal.classList.remove('is-open');
-        if (lastFocus) lastFocus.focus();
-      }
-      document.querySelectorAll('[data-reel]').forEach(function (el) { el.addEventListener('click', openReel); });
-      closeBtn.addEventListener('click', closeReel);
-      modal.addEventListener('click', function (e) { if (e.target === modal) closeReel(); });
-      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && modal.classList.contains('is-open')) closeReel(); });
     })();
   </script>
 
