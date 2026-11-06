@@ -5,10 +5,11 @@ Static HTML/CSS/JS, no build step. Deployed on Vercel from this repo.
 ## Pages
 
 ```
-index.html                Homepage: product-leadership first, with doors to speaking and Hoops Creating Hope
-talks.html                Speaking: keynotes, workshops, and the booking form (Formspree)
+index.html                Homepage: product leadership first, with doors to speaking and Hoops Creating Hope
+talks.html                Speaking: past events, keynotes, workshops, and the booking form (Formspree)
+resume.pdf                Linked from the hero "Download resume" button
 robots.txt, sitemap.xml   Crawler hints (update the domain here if a custom domain is attached)
-resume.pdf                Linked from the hero. Add this file; the link 404s until it exists.
+vercel.json               Security headers + redirects for retired pages (about, book, hoops-creating-hope)
 ```
 
 `index.html` and `talks.html` each carry their own inline `<style>`; there is no shared stylesheet.
@@ -16,30 +17,27 @@ resume.pdf                Linked from the hero. Add this file; the link 404s unt
 ## Assets
 
 ```
-images/web/               Optimized WebP photos with responsive widths (<name>-480/800/1200.webp),
-                          video poster frames (yt-<id>.webp), and the FIBA logo
-images/og-image.jpg       1200x630 social share image (JPEG for widest crawler support)
+images/web/               Optimized WebP photos (<name>-480/800/1200.webp), video posters, FIBA logo
+images/og-share.jpg       1200x630 social share card (used by both pages' Open Graph / Twitter tags)
+images/favicon.svg        SJ monogram; also favicon-32.png, apple-touch-icon.png, /favicon.ico
 images/*.png, *.mp4       Logo strip assets
+images/*.jpg|JPG|JPEG     Original full-size photos (source files for images/web; not loaded by the pages)
 ```
 
-To add or replace a photo, export WebP at 480w and 800w (plus 1200w for large hero-style
-images), name them `<name>-<width>.webp`, and reference them with `srcset`. Keep below-fold
-images `loading="lazy"`; only the hero image is eager.
+To add or replace a photo, export WebP at 480w and 800w (plus 1200w for wide images), name them
+`<name>-<width>.webp`, and reference them with `srcset`. Keep below-fold images `loading="lazy"`.
+
+If you change the share card, give it a new filename so LinkedIn, iMessage and Slack fetch it fresh,
+then re-run LinkedIn's Post Inspector on the site URL.
 
 ## Embeds
 
-YouTube videos and the speaker reel (TikTok) are click-to-load. Nothing from those hosts is
-requested until a visitor presses play. To change a video, edit the `data-yt="<id>"`
-attribute (and swap the poster in `images/web/`).
-
-## Legacy files (not linked from the site)
-
-`about.html`, `book.html`, `hoops-creating-hope.html`, `css/style.css`, `js/main.js`,
-`extras.css`, `extras.js`, and the original full-size photos in `images/` are left over from
-earlier versions. They are safe to delete once you no longer need them.
+YouTube videos and the speaker reel (TikTok) are click-to-load: nothing from those hosts is requested
+until a visitor presses play. To change a video, edit the `data-yt="<id>"` attribute and swap the poster.
 
 ## Local preview
 
 ```bash
 python3 -m http.server 8000
 ```
+(Redirects in vercel.json only apply on Vercel, not in this local preview.)
