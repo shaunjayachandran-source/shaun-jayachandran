@@ -1,4 +1,9 @@
 {
+  "redirects": [
+    { "source": "/about.html", "destination": "/#about", "permanent": true },
+    { "source": "/book.html", "destination": "/talks.html#book", "permanent": true },
+    { "source": "/hoops-creating-hope.html", "destination": "/#impact", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)",
